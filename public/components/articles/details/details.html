@@ -1,0 +1,14 @@
+<div class="">
+  <a href="#/articles">Go back</a>
+  <h1>{{vm.article.title}}</h1>
+  <small>Posted on: <span ng-bind="vm.article.date | date: 'MM/dd/yyyy'"></span></small>
+  <hr>
+  <div class="">
+    {{vm.article.body}}
+  </div>
+  <div class="actions">
+    <a class="btn btn-default" href="#/edit/{{vm.article._id}}"> Edit</a>
+    <a class="btn btn-danger" ng-click="vm.delete()"> Delete</a>
+
+  </div>
+</div>

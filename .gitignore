@@ -1,0 +1,15 @@
+node_modules/
+bower_components/
+kss/styleguide/
+tests/coverage/
+dist/
+project-review/
+.tmp/
+.sass-cache/
+src/app/app.config.constants.js
+config/environment/local.js
+.awspublish-*
+*~
+.idea
+*.log
+*.swp

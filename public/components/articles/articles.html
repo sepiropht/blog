@@ -1,0 +1,38 @@
+
+  <div class="col-md-9 articles" ng-repeat="article in vm.articles">
+                    <!-- Blog Posts -->
+                    <div class="news-v3 bg-color-white margin-bottom-60">
+                        <img class="img-responsive full-width" src="https://i.ytimg.com/vi/yiEeiMN2Khs/maxresdefault.jpg" alt="">
+                        <div class="news-v3-in">
+                            <ul class="list-inline posted-info">
+                                <li>By <a href="#">Sepiropht</a></li>
+                                <li>In <a href="#">{{article.category}}</a></li>
+                                <li>{{article.date}}</li>
+                            </ul>
+                            <h2><a href="#/details/{{article._id}}">{{article.title}}</a></h2>
+                            <p>{{article.body | limitTo: 200}}</p>
+                            <ul class="post-shares">
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-speech"></i>
+                                        <span>26</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-share"></i>
+                                        <span>98</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="rounded-x icon-heart"></i>
+                                        <span>30</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div ng-if='vm.articles === false'>
+      No articles
+    </div>

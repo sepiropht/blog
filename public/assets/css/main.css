@@ -1,0 +1,34 @@
+ul {
+    list-style: none;
+}
+.content{
+    background-color:#EEEEEE;
+}
+
+section > div {
+    margin-top:5em;
+    height: 20em;
+    
+    background-color: #FFFFFF;
+}
+.annonce-title img {
+    width: 5%;
+}
+h3 {
+    background-color: #00D1DE;
+    color:#FFFFFF;
+   }
+.job-req{
+    width: 30%;
+    margin:auto;
+}
+.job-req img {
+    width: 60%;
+    float:left;
+}
+.article img
+{
+    width: 20%;
+    float:left;
+    
+}

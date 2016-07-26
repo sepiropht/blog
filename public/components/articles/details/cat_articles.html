@@ -1,0 +1,18 @@
+
+<h3  class="heading"> {{vm.category}} Articles </h3>
+<div class="row">
+    <div ng-repeat="article in vm.cat_articles">
+      <div class="col-md-12">
+        <div class="articles">
+          <h5>{{article.title}}</h5>
+          <p>
+            {{article.body | limitTo: 200}}
+          </p>
+            <a class ='btn btn-default' href="#/details/{{article._id}}"> Read Article</a>
+        </div>
+      </div>
+    </div>
+    <div ng-if='vm.articles === false'>
+      No articles
+    </div>
+</div>
