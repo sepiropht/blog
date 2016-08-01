@@ -160,6 +160,14 @@ h6, .h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
+
+}
+.footer-v1 {
+  position: relative;
+  position: fixed;
+   bottom:0;
+   left:0;
+ width: 100%;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -175,6 +183,7 @@ h6, .h6 {
   border-bottom: #ccc solid 1px;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  margin-left:
 
 }
 .body-text{

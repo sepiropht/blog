@@ -46,7 +46,7 @@
             <div class="topbar">
                 <ul class="loginbar pull-right">
                     <li class="hoverSelector">
-                    <li><a href="page_login.html">Login</a></li>
+                    <li style="visibility:hidden"><a href="page_login.html">Login</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -65,13 +65,13 @@
                 <ul class="nav navbar-nav">
                     <!-- Home -->
                     <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             Home
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="#/portofolio" class="dropdown-toggle" data-toggle="dropdown">
-                            Portofolio
+                        <a href="#/add" class="dropdown-toggle" data-toggle="dropdown">
+                            Add new Article
                         </a>
                     </li>
                     <!-- End Home -->
@@ -89,7 +89,7 @@
     <div class="breadcrumbs-v1">
         <div class="container">
             <span>Sepiropht</span>
-            <h1>JS s'new</h1>
+            <h1>JS lover</h1>
         </div>
     </div>
     <!--=== End Breadcrumbs v1 ===-->
@@ -99,7 +99,7 @@
         <div class="container content-sm">
             <div class="row">
                 <!-- Blog Sidebar -->
-                <div class="col-md-3">
+                <div class="col-md-3" style="height:4000px">
                     <div class="headline-v2"><h2>Welcome</h2></div>
                     <!-- Trending -->
                     <p>
@@ -133,86 +133,10 @@
                     </ul>
                     <!-- End Latest Links -->
 
-                    <div class="headline-v2"><h2>Tags</h2></div>
-                    <!-- Tags v2 -->
-                    <ul class="list-inline tags-v2 margin-bottom-50">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Economy</a></li>
-                        <li><a href="#">Sport</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Books</a></li>
-                        <li><a href="#">Elections</a></li>
-                        <li><a href="#">Flickr</a></li>
-                        <li><a href="#">Politics</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Web Hosting</a></li>
-                        <li><a href="#">Wrapbootstrap</a></li>
-                        <li><a href="#">Art</a></li>
-                    </ul>
+
                     <!-- End Tags v2 -->
 
-                    <div class="headline-v2"><h2>Photostream</h2></div>
-                    <!-- Photostream -->
-                    <ul class="list-inline blog-photostream margin-bottom-50">
-                        <li>
-                            <a href="assets/img/main/img22.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 1">
-                                <span><img class="img-responsive" src="assets/img/main/img22.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img23.jpg" rel="gallery" class="ffancybox img-hover-v2" title="Image 2">
-                                <span><img class="img-responsive" src="assets/img/main/img23.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img4.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 3">
-                                <span><img class="img-responsive" src="assets/img/main/img4.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img9.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 4">
-                                <span><img class="img-responsive" src="assets/img/main/img9.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img25.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 5">
-                                <span><img class="img-responsive" src="assets/img/main/img25.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img6.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 6">
-                                <span><img class="img-responsive" src="assets/img/main/img6.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img20.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 7">
-                                <span><img class="img-responsive" src="assets/img/main/img20.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img3.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 8">
-                                <span><img class="img-responsive" src="assets/img/main/img3.jpg" alt=""></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="assets/img/main/img7.jpg" rel="gallery" class="fancybox img-hover-v2" title="Image 9">
-                                <span><img class="img-responsive" src="assets/img/main/img7.jpg" alt=""></span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- End Photostream -->
 
-                    <div class="headline-v2"><h2>Newsletter</h2></div>
-                    <!-- Blog Newsletter -->
-                    <div class="blog-newsletter">
-                        <p>Subscribe to our newsletter for good news, sent out every month.</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Email">
-                            <span class="input-group-btn">
-                                <button class="btn-u" type="button">Subscribe</button>
-                            </span>
-                        </div>
-                    </div>
                     <!-- End Blog Newsletter -->
                 </div>
                 <div ui-view>
