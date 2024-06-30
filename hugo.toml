@@ -12,7 +12,7 @@ pygmentsStyle = "monokai"
 [params]
   footer = "The Marauders"
   description = "Sky above, sand below and peace within"
-  avatarURL = "/images/avatar.webp"
+  avatarURL = "/images/gorille-crypto.png"
   AvatarAltText = "avatar"
   avatarSize = "size-m"
   ShowBackToTopButton = true # true or false for "back to top" button on posts
