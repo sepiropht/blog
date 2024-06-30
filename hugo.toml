@@ -1,5 +1,5 @@
 baseURL = "https://blog.sepiropht.me"
-title = "Gokarna"
+title = "sepiropht"
 theme = "gokarna"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -37,15 +37,12 @@ pygmentsStyle = "monokai"
     </script>
   """
   socialIcons = [
-    {name = "twitter", url = "https://example.com"},
-    {name = "linkedin", url = "https://example.com"},
-    {name = "stackoverflow", url = "https://example.com"},
-    {name = "dribbble", url = "https://example.com"},
-    {name = "instagram", url = "https://example.com"},
-    {name = "twitch", url = "https://example.com"},
-    {name = "email", url = "mailto:example@example.com"}
+    {name = "twitter", url = "https://twitter.com/sepiropht"},
+    {name = "linkedin", url = "https://www.linkedin.com/in/william-mbotta-elimbi/"},
+    {name = "instagram", url = ""},
+    {name = "email", url = "mailto:sepiropht@sepiropht.me"}
   ]
-  metaKeywords = ["blog", "gokarna", "hugo"]
+  metaKeywords = ["blog", "sepiropht", "hugo"]
 
 [menu]
   [[menu.main]]
