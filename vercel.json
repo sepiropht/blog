@@ -1,6 +1,10 @@
 {
   "redirects": [
     {
+      "source": "/.well-known/lnurlp/sepiropht",
+      "destination": "/api/lnurlp"
+    },
+    {
       "source": "/.well-known/nostr.json",
       "destination": "/api/nostr"
     }
