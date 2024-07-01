@@ -1,5 +1,5 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/.well-known/lnurlp/sepiropht",
       "destination": "/api/lnurlp"
