@@ -1,4 +1,9 @@
 export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Content-Type', 'application/json')
+  res.setHeader('Access-Control-Allow-Methods', 'GET')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+
   if (req.method === 'GET' && req.url === '/.well-known/lnurlp/sepiropht') {
     res.status(200).json(
       res.json({
