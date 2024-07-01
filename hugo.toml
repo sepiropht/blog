@@ -1,4 +1,4 @@
-baseURL = "https://blog.sepiropht.me"
+baseURL = "https://sepiropht.me"
 title = "sepiropht"
 theme = "gokarna"
 languageCode = "en"
@@ -38,8 +38,6 @@ pygmentsStyle = "monokai"
   """
   socialIcons = [
     {name = "twitter", url = "https://twitter.com/sepiropht"},
-    {name = "linkedin", url = "https://www.linkedin.com/in/william-mbotta-elimbi/"},
-    {name = "instagram", url = ""},
     {name = "email", url = "mailto:sepiropht@sepiropht.me"}
   ]
   metaKeywords = ["blog", "sepiropht", "hugo"]
@@ -72,20 +70,12 @@ pygmentsStyle = "monokai"
   [[menu.main]]
     identifier = "github"
     pre = "<span data-feather='github'></span>"
-    url = "https://github.com/526avijitgupta/gokarna"
+    url = "https://github.com/sepiropht"
     weight = 5
 
-  [[menu.main]]
-    identifier = "buymeacoffee"
-    pre = "<span data-feather='coffee'></span>"
-    url = "https://www.buymeacoffee.com/avijitgupta"
-    weight = 6
 
-  [[menu.main]]
-    identifier = "rss"
-    pre = "<span data-feather='rss'></span>"
-    url = "/index.xml"
-    weight = 7
+
+
 
 [markup]
   [markup.tableOfContents]
