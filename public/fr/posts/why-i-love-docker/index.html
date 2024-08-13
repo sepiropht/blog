@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Why i love docker</title>
+    <meta name="description" content="Sky above, sand below and peace within">
+    <meta name="keywords" content='blog, sepiropht, hugo, docker, self-hosting, docker-compose'>
+
+    <meta property="og:url" content="http://localhost:1313/fr/posts/why-i-love-docker/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Why i love docker">
+    <meta property="og:description" content="Sky above, sand below and peace within">
+    <meta property="og:image" content="http://localhost:1313/images/gorille-crypto.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/gorille-crypto.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why i love docker">
+    <meta name="twitter:description" content="Sky above, sand below and peace within">
+    <meta property="twitter:domain" content="http://localhost:1313/fr/posts/why-i-love-docker/">
+    <meta property="twitter:url" content="http://localhost:1313/fr/posts/why-i-love-docker/">
+    <meta name="twitter:image" content="http://localhost:1313/images/gorille-crypto.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/fr/posts/why-i-love-docker/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.9a920d7dabdbad8363b6a0a94e29a9dfebdb7ee64cfcb193a0145e512ef2bdab.js" integrity="sha256-mpINfavbrYNjtqCpTimp3&#43;vbfuZM/LGToBReUS7yvas="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+    <script>
+      
+      setThemeByUserPref()
+    </script>
+    <script
+      async
+      src="https://analytics.sepiropht.me/script.js"
+      data-website-id="ae8a6792-160d-46af-afcb-435979ba069e"
+    ></script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/gorille-crypto.png' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">sepiropht</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/"><span data-feather='home'></span> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/"><span data-feather='book'></span> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/projects/"><span data-feather='code'></span> Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/"><span data-feather='tag'></span> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/sepiropht"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                <a>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/"><span data-feather='home'></span> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/"><span data-feather='book'></span> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/projects/"><span data-feather='code'></span> Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/"><span data-feather='tag'></span> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/sepiropht"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Why i love docker</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">mars 6, 2020
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/fr/tags/docker">docker</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/fr/tags/self-hosting">self-hosting</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/fr/tags/docker-compose">docker-compose</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h2 id="1-laccident">1. L&rsquo;accident</h2>
+<p>Ce matin j&rsquo;ai eu un problème, mon serveur, un rasperry 2 acheté en 2016, ne demarre plus. J&rsquo;utilise cette vétuste machine pour héberger beacoup de service (wireguard, nextcloud, bitwarden, serveur odps etc&hellip;).<br>
+Après quelques essais infructeux, j&rsquo;abondonne l&rsquo;idéé de le réparer et j&rsquo;opte pour utiliser un autre de mes serveurs à la place.
+Je debranche le disque dur externe de mon raspberry et je le rebranche sur mon autre serveur.<br>
+Et en 10 minutes tous les services sur la nouvelles machines fonctionnent comme sur le raspberry avec toutes les données. Comment j&rsquo;ai fait ça ?</p>
+<p>Simplement</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose up -d
+</span></span></code></pre></div><h2 id="2-comment-jai-commencé"> 2. Comment j&rsquo;ai commencé.</h2>
+<p>je suis un utilisateur quasi-exclusif de linux depuis une quizaine d&rsquo;année maintenant sur mon laptop, d&rsquo;abord ubuntu/debian et puis arch pour flexer un peu. Mais je suis pas un utilisateurs avancé, je fais des trucs assez basics en fait. J&rsquo;utilise le shell uniquement quand j&rsquo;ai un soucis ou pour mon travail en tant dev javascript.</p>
+<p>Evidement comme beaucoup je pense, j&rsquo;avais acheté quelques raspberry à l&rsquo;époque, mais c&rsquo;était surtout un jouet, même s&rsquo;il est vrai j&rsquo;avais reussis à installer un serveur privé git et aussi à streamer ma bibiotheque musical grace à mpd.</p>
+<p>Mais c&rsquo;est tout recement que j&rsquo;ai commencé à installer de manière systèmatique pleins de services nextcloud, photoprism, bitwarden et tant d&rsquo;aures&hellip;</p>
+<p>L&rsquo;installation de chacun de ses services peut être longue et fastidieuse, par exemple <a href="https://docs.nextcloud.com/server/latest/admin_manual/installation/example_ubuntu.html">l&rsquo;installation de nextcloud</a>, même si tout ce passe bien ça ne prendra pas 10 minutes :)</p>
+<p>Et après il faudra encore récupérer les anciennes données pour nextcloud par exemple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cp -r /mnt/storage/nextcloud/var/www/html /new_nextcloud_dir
+</span></span></code></pre></div><p>Et ensuite il faudra re-faire la configuration post-intallation, créer les comptes &hellip;et refaire ça pour tous les services qui ont chacun un fonctionnement différent.</p>
+<p>Docker et docker compose simplifie grandement ce processus.</p>
+<h2 id="3-comment-ça-fonctionne">3. Comment ça fonctionne</h2>
+<p>Sur mon vieux raspberry j&rsquo;avais sur mon disque externe plein de repertoires comme ceci.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>old@serveur:/mnt/seagate$ ls
+</span></span><span style="display:flex;"><span>nextcloud/ photoprism/ bitwarden/ wireguard/ odps/
+</span></span></code></pre></div><p>Tout ces repertoires sont structurés de la même façon plus ou moins, au hazard nextcloud par exemple</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>old@serveur:/mnt/seagate$ ls
+</span></span><span style="display:flex;"><span>data  db  docker-compose.yml  nextcloud.sql  redis
+</span></span></code></pre></div><p>Le fichier qu&rsquo;on va modifier ici c&rsquo;est docker-compose.yml, les fichiers ou repertoires sont générés par le contenaires et contiennent les données qu &lsquo;on a généré en utilisant le service.</p>
+<p>En général je n&rsquo;ecris pas moi même les docker-compose.yml, tous les projets on un en général, ou alors en cherchant vous trouverer quelq&rsquo;un qui en fait un.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># docker-compose.yml file</span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  nc:
+</span></span><span style="display:flex;"><span>    image: nextcloud:apache
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      - POSTGRES_HOST<span style="color:#f92672">=</span>db
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_USER<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - REDIS_HOST<span style="color:#f92672">=</span>redis
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - 4080:80
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./data:/var/www/html <span style="color:#75715e"># je modifie uniquement ces lignes</span>
+</span></span><span style="display:flex;"><span>    depends_on:
+</span></span><span style="display:flex;"><span>      - redis
+</span></span><span style="display:flex;"><span>      - db
+</span></span><span style="display:flex;"><span>  db:
+</span></span><span style="display:flex;"><span>    image: postgres:15-alpine
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_USER<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./db:/var/lib/postgresql/data <span style="color:#75715e"># je modifie uniquement ces lignes</span>
+</span></span><span style="display:flex;"><span>    expose:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">5432</span>
+</span></span><span style="display:flex;"><span>  redis:
+</span></span><span style="display:flex;"><span>    image: redis:alpine
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./redis:/data <span style="color:#75715e"># je modifie uniquement ces lignes</span>
+</span></span><span style="display:flex;"><span>    expose:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">6379</span>
+</span></span><span style="display:flex;"><span>~
+</span></span></code></pre></div><p>Les conteneurs Docker sont des processus isolés qui partagent le noyau du système d&rsquo;exploitation hôte mais qui fonctionnent dans des environnements compartimentés (appelés &ldquo;espaces de noms&rdquo;) qui les séparent du reste du système et des autres conteneurs. En termes de communication avec le monde extérieur, les conteneurs peuvent être configurés pour interagir via des réseaux, mais par défaut, ils sont isolés.</p>
+<p>Concernant la persistance des données, par défaut, un conteneur Docker ne conserve pas les données une fois arrêté ou supprimé, car tout ce qui est écrit dans son système de fichiers interne est éphémère. Pour persister des données au-delà du cycle de vie d&rsquo;un conteneur, il faut explicitement monter des volumes ou des répertoires. Cela permet de sauvegarder les données dans le système de fichiers de l&rsquo;hôte ou sur un stockage externe.</p>
+<p>Lors de la définition d&rsquo;un volume ou d&rsquo;un montage de répertoire, le chemin de gauche (dans la syntaxe Docker) désigne l&rsquo;emplacement des fichiers sur la machine hôte, et le chemin de droite indique l&rsquo;endroit où ces fichiers seront accessibles à l&rsquo;intérieur du conteneur.</p>
+<p>La modification que j&rsquo;effectue indique juste à docker que les données seront toujours dans le repertoire courant qui est lui même je vous le rappelle situé sur mon disque externe.</p>
+<p>Tout ça permet d&rsquo;avoir tout ce qu&rsquo;il faut pour faire marcher nos services, localisés aux même endroits dans mon disque externes, la configuration et les données.</p>
+<p>C&rsquo;est veritablement ce qui me plait dans docker cette séparation clair entre les données, et l&rsquo;application.</p>
+<p>C&rsquo;est notamment ce qui permet de debrancher ce disque dur de le monter ailleurs. Si docker compose est déja installé sur la machine je fais juste</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>new@serveur:$ cd /mnt/seagate/nextcloud
+</span></span><span style="display:flex;"><span>new@serveur:/mnt/seagate/nextcloud$ docker compose up -d
+</span></span><span style="display:flex;"><span>new@serveur:$ cd /mnt/seagate/bitwarden
+</span></span><span style="display:flex;"><span>new@serveur:/mnt/seagate/bitwarden$ docker compose up -d
+</span></span><span style="display:flex;"><span>new@serveur:$ cd /mnt/seagate/wireguard
+</span></span><span style="display:flex;"><span>new@serveur:/mnt/seagate/wireguard$ docker compose up -d
+</span></span></code></pre></div><p>Et c&rsquo;est tout ! Vous retrouver votre installation extactement comme vous l&rsquo;aviez laisser, je bient dit tout. Les connections avec les base de données les utilisateurs, les dernières modifs, tout ce passe comme si vous n&rsquo;aviez pas changé de machine !
+Même le cache redis est restauré à l&rsquo;état où il était, la dernière fois que le service a fonctionné sur mon pi.</p>
+<p>Je trouve ça vraiment génial, la hype autour de docker n&rsquo;était vraiment pas exagérée, je me prends même à réver que tous les logiciels que j&rsquo;utilise fonctionnent de cette façon même sur mon laptop.</p>
+<p>Pour la petite histoire comme j&rsquo;ai la flemme de rentrer dans chaque repertoire j&rsquo;ai écris un petit script qui le fait à ma place.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Find all directories that are exactly one level deep and contain a docker-compose.yml file</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> dir in <span style="color:#66d9ef">$(</span>find . -mindepth <span style="color:#ae81ff">2</span> -maxdepth <span style="color:#ae81ff">2</span> -type f -name <span style="color:#e6db74">&#34;docker-compose.yml&#34;</span> -exec dirname <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span><span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Entering directory: </span>$dir<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  cd <span style="color:#e6db74">&#34;</span>$dir<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Start docker compose in the current directory</span>
+</span></span><span style="display:flex;"><span>  docker compose up -d
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><p>Il faut toutefois remarquer que ce n&rsquo;est pas toujours utilse au lancement quand vous avez selectionner l&rsquo;option <code>restart: always</code>  votre conf de docker compose. Le daemon docker se charge lui même de reveillé tous les services au démarage du serveur.</p>
+<h2 id="4-pour-les-mis-à-jour-cest-encore-plus-simple">4. Pour les mis à jour c&rsquo;est encore plus simple</h2>
+<p>Je ne l&rsquo;ai pas dis mais quand on fait <code>docker compose up -d</code> pour la première fois il y a en fait trois commandes qui sont éxécutés</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose pull
+</span></span><span style="display:flex;"><span>$ docker compose build
+</span></span><span style="display:flex;"><span>$ docker compose start
+</span></span></code></pre></div><p>Les autres fois c&rsquo;est équivalent d&rsquo; un <code>start</code> juste.
+Si on veut mettre à jour son container il faut d&rsquo;abord changer le numéro de version ou si vous aimer vivre dangereusement vous le laisser le flag <code>latest</code> à côté du nom de votre image et comme ça il ira toujours chercher la dernière image.</p>
+<p>Pour mettre à jour donc</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose pull
+</span></span><span style="display:flex;"><span>$ docker compose up -d // il re-start le container uniquement si docker pull à trouver une image plus récente.
+</span></span></code></pre></div><h2 id="5-conclusion">5. Conclusion</h2>
+<p>Sincèrement je sais pas ce que vous en penser, mais moi je trouve ça simple, élégant, ultra-pratique.</p>
+<p>Il existe des milliers d&rsquo;images docker et le principe sera à chaque fois le même.</p>
+<p>Wordpress ? docker compose. Un cms ? docker compose . Streaming video, audio ? docker compose.</p>
+<p>Bref la prochaine fois que vous penser avoir besoin d&rsquo;un saas, ayez juste ce petit relfexe de faire cette requête dans votre moteur de recherche préféré: <code>mon problème self-hosted </code> .</p>
+<p>Si vous avez trouver votre bonheur chercher le <code>docker-compose.yml</code> , faites la modifs qui va bien pour les volumes et le monde vous appartient !
+Je vous conseille ce <a href="https://belginux.com/">site</a> qui recense un nombre incalculable de service installabe avec simplement <code>docker compose</code></p>
+<p>On verra plus tard comment accéder à ces services, la plupart du temps je privilégie le vpn, ça m&rsquo;évite d&rsquo;exposer mes services sur internet, et bien sûr wireguard s&rsquo;installe en un clin d&rsquo;oeil avec son <a href="https://github.com/wg-easy/wg-easy">docker compose</a> , (bon il faut avouer qu&rsquo;il y a quand même la redirection du ports udp depuis votre routeur vers votre instance). Vous aurez même en bonus une jolie interface web avec authentification et possibilité de génerérer un qr-code pour chaque client.
+Ou alors si vous utiliser un vps, comment associer chaque service à un domain, c&rsquo;est hyper simple en vrai. Mais ça ne l&rsquo;était pas pour moi jusqu&rsquo;en fin 2022.</p>
+<p>D&rsquo;ici là, à bientôt et merci de m&rsquo;avoir lu jusqu&rsquo;ici.</p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-laccident">1. L&rsquo;accident</a></li>
+        <li><a href="#2-comment-jai-commencé"> 2. Comment j&rsquo;ai commencé.</a></li>
+        <li><a href="#3-comment-ça-fonctionne">3. Comment ça fonctionne</a></li>
+        <li><a href="#4-pour-les-mis-à-jour-cest-encore-plus-simple">4. Pour les mis à jour c&rsquo;est encore plus simple</a></li>
+        <li><a href="#5-conclusion">5. Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+</main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 The Marauders</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

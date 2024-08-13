@@ -3,6 +3,21 @@ title = "sepiropht"
 theme = "gokarna"
 languageCode = "en"
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    [languages.en.params]
+      contentDir = 'content/en' 
+      languageName = "English"
+      weight = 1
+
+  [languages.fr]
+    [languages.fr.params]
+    contentDir = 'content/fr'
+    languageName = "Français"
+    weight = 2
+ 
 enableEmoji = true
 enableRobotsTXT = true
 
