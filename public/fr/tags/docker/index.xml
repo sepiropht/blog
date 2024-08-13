@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on sepiropht</title>
-    <link>http://localhost:1313/fr/tags/docker/</link>
+    <link>https://sepiropht.me/fr/tags/docker/</link>
     <description>Recent content in Docker on sepiropht</description>
     <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Fri, 06 Mar 2020 21:29:01 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/fr/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sepiropht.me/fr/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why i love docker</title>
-      <link>http://localhost:1313/fr/posts/why-i-love-docker/</link>
+      <link>https://sepiropht.me/fr/posts/why-i-love-docker/</link>
       <pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate>
-      <guid>http://localhost:1313/fr/posts/why-i-love-docker/</guid>
+      <guid>https://sepiropht.me/fr/posts/why-i-love-docker/</guid>
       <description>1. L&amp;rsquo;accident Ce matin j&amp;rsquo;ai eu un problème, mon serveur, un rasperry 2 acheté en 2016, ne demarre plus. J&amp;rsquo;utilise cette vétuste machine pour héberger beacoup de service (wireguard, nextcloud, bitwarden, serveur odps etc&amp;hellip;).&#xA;Après quelques essais infructeux, j&amp;rsquo;abondonne l&amp;rsquo;idéé de le réparer et j&amp;rsquo;opte pour utiliser un autre de mes serveurs à la place. Je debranche le disque dur externe de mon raspberry et je le rebranche sur mon autre serveur.</description>
     </item>
   </channel>

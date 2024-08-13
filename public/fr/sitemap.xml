@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fr/posts/why-i-love-docker/</loc>
+    <loc>https://sepiropht.me/fr/posts/why-i-love-docker/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/why-i-love-docker/"
+                href="https://sepiropht.me/en/posts/why-i-love-docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/posts/why-i-love-docker/"
+                href="https://sepiropht.me/fr/posts/why-i-love-docker/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/tags/docker/</loc>
+    <loc>https://sepiropht.me/fr/tags/docker/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fr/tags/docker-compose/</loc>
+    <loc>https://sepiropht.me/fr/tags/docker-compose/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fr/posts/</loc>
+    <loc>https://sepiropht.me/fr/posts/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/"
+                href="https://sepiropht.me/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/posts/"
+                href="https://sepiropht.me/fr/posts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/tags/self-hosting/</loc>
+    <loc>https://sepiropht.me/fr/tags/self-hosting/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fr/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/fr/tags/</loc>
+    <loc>https://sepiropht.me/fr/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://sepiropht.me/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/tags/"
+                href="https://sepiropht.me/fr/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/categories/</loc>
+    <loc>https://sepiropht.me/fr/tags/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://sepiropht.me/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/categories/"
+                href="https://sepiropht.me/fr/tags/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/fr/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/categories/"
                 />
   </url>
 </urlset>

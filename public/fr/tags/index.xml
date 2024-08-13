@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on sepiropht</title>
-    <link>http://localhost:1313/fr/tags/</link>
+    <link>https://sepiropht.me/fr/tags/</link>
     <description>Recent content in Tags on sepiropht</description>
     <generator>Hugo</generator>
     <language>fr</language>
     <lastBuildDate>Fri, 06 Mar 2020 21:29:01 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sepiropht.me/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/fr/tags/docker/</link>
+      <link>https://sepiropht.me/fr/tags/docker/</link>
       <pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate>
-      <guid>http://localhost:1313/fr/tags/docker/</guid>
+      <guid>https://sepiropht.me/fr/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker-Compose</title>
-      <link>http://localhost:1313/fr/tags/docker-compose/</link>
+      <link>https://sepiropht.me/fr/tags/docker-compose/</link>
       <pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate>
-      <guid>http://localhost:1313/fr/tags/docker-compose/</guid>
+      <guid>https://sepiropht.me/fr/tags/docker-compose/</guid>
       <description></description>
     </item>
     <item>
       <title>Self-Hosting</title>
-      <link>http://localhost:1313/fr/tags/self-hosting/</link>
+      <link>https://sepiropht.me/fr/tags/self-hosting/</link>
       <pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate>
-      <guid>http://localhost:1313/fr/tags/self-hosting/</guid>
+      <guid>https://sepiropht.me/fr/tags/self-hosting/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,85 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/posts/why-i-love-docker/</loc>
+    <loc>https://sepiropht.me/en/posts/why-i-love-docker/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/posts/why-i-love-docker/"
+                href="https://sepiropht.me/fr/posts/why-i-love-docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/why-i-love-docker/"
+                href="https://sepiropht.me/en/posts/why-i-love-docker/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/configuration/</loc>
+    <loc>https://sepiropht.me/en/tags/configuration/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/installation/</loc>
+    <loc>https://sepiropht.me/en/tags/installation/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/tags/markdown/</loc>
+    <loc>https://sepiropht.me/en/tags/markdown/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/en/posts/</loc>
+    <loc>https://sepiropht.me/en/posts/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/posts/"
+                href="https://sepiropht.me/fr/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/posts/"
+                href="https://sepiropht.me/en/posts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://sepiropht.me/en/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/"
+                href="https://sepiropht.me/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/"
+                href="https://sepiropht.me/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://sepiropht.me/en/tags/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/tags/"
+                href="https://sepiropht.me/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/tags/"
+                href="https://sepiropht.me/en/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/projects/bludhaven/</loc>
+    <loc>https://sepiropht.me/en/projects/bludhaven/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>https://sepiropht.me/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/fr/categories/"
+                href="https://sepiropht.me/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/categories/"
+                href="https://sepiropht.me/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/projects/hydra/</loc>
+    <loc>https://sepiropht.me/en/projects/hydra/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/projects/</loc>
+    <loc>https://sepiropht.me/en/projects/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/projects/tatooine/</loc>
+    <loc>https://sepiropht.me/en/projects/tatooine/</loc>
   </url>
 </urlset>
