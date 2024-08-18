@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>http://localhost:1313/en/sitemap.xml</loc>
-    
-      <lastmod>2020-03-06T21:29:01+08:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/fr/sitemap.xml</loc>
-    
-      <lastmod>2020-03-06T21:29:01+08:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sepiropht.me/posts/why-i-love-docker/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/posts/why-i-love-docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/posts/why-i-love-docker/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/tags/configuration/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+  </url><url>
+    <loc>https://sepiropht.me/tags/installation/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+  </url><url>
+    <loc>https://sepiropht.me/tags/markdown/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+  </url><url>
+    <loc>https://sepiropht.me/posts/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/posts/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/tags/</loc>
+    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/tags/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/projects/bludhaven/</loc>
+  </url><url>
+    <loc>https://sepiropht.me/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/categories/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/projects/hydra/</loc>
+  </url><url>
+    <loc>https://sepiropht.me/projects/</loc>
+  </url><url>
+    <loc>https://sepiropht.me/projects/tatooine/</loc>
+  </url>
+</urlset>

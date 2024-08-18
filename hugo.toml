@@ -1,16 +1,16 @@
-baseURL = "https://sepiropht.me"
+bbaseURL = "https://sepiropht.me"
 title = "sepiropht"
 theme = "gokarna"
 languageCode = "en"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false  # This should be false to keep English at the root
+defaultContentLanguageInSubdir = false  # Ensure this is false
 
 [languages]
 
   [languages.en]
     languageName = "English"
     weight = 1
-    baseUrl = "https://sepiropht.me"  # English is at the root, so no subdirectory
+    baseUrl = "https://sepiropht.me"  # Root URL for English content
     
     [languages.en.params]
       customParam = "someValue"
@@ -25,7 +25,7 @@ defaultContentLanguageInSubdir = false  # This should be false to keep English a
   [languages.fr]
     languageName = "Français"
     weight = 2
-    baseURL = "https://sepiropht.me/fr"  # French version is under /fr
+    baseURL = "https://sepiropht.me/fr"  # French version under /fr
     
     [languages.fr.params]
       customParam = "uneValeur"
@@ -34,8 +34,10 @@ defaultContentLanguageInSubdir = false  # This should be false to keep English a
     [[languages.fr.menu.main]]
       identifier = "posts"
       name = "Articles"
-      url = "posts/"  # French posts should be under /fr/posts/
+      url = "/posts/"  # French posts should be under /fr/posts/
       weight = 1
+
+
 
 enableEmoji = true
 enableRobotsTXT = true
