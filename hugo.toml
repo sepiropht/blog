@@ -10,7 +10,7 @@ defaultContentLanguageInSubdir = true
   [languages.en]
     languageName = "English"
     weight = 1
-    baseUrl = "https://sepiropht.me/en"
+    baseUrl = "https://sepiropht.me"
     
     [languages.en.params]
       customParam = "someValue"

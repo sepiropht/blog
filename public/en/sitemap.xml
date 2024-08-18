@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sepiropht.me/en/posts/why-i-love-docker/</loc>
+    <loc>https://sepiropht.me/posts/why-i-love-docker/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -12,19 +12,19 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://sepiropht.me/en/posts/why-i-love-docker/"
+                href="https://sepiropht.me/posts/why-i-love-docker/"
                 />
   </url><url>
-    <loc>https://sepiropht.me/en/tags/configuration/</loc>
+    <loc>https://sepiropht.me/tags/configuration/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>https://sepiropht.me/en/tags/installation/</loc>
+    <loc>https://sepiropht.me/tags/installation/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>https://sepiropht.me/en/tags/markdown/</loc>
+    <loc>https://sepiropht.me/tags/markdown/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
   </url><url>
-    <loc>https://sepiropht.me/en/posts/</loc>
+    <loc>https://sepiropht.me/posts/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -34,10 +34,10 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://sepiropht.me/en/posts/"
+                href="https://sepiropht.me/posts/"
                 />
   </url><url>
-    <loc>https://sepiropht.me/en/</loc>
+    <loc>https://sepiropht.me/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -47,10 +47,10 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://sepiropht.me/en/"
+                href="https://sepiropht.me/"
                 />
   </url><url>
-    <loc>https://sepiropht.me/en/tags/</loc>
+    <loc>https://sepiropht.me/tags/</loc>
     <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -60,12 +60,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://sepiropht.me/en/tags/"
+                href="https://sepiropht.me/tags/"
                 />
   </url><url>
-    <loc>https://sepiropht.me/en/projects/bludhaven/</loc>
+    <loc>https://sepiropht.me/projects/bludhaven/</loc>
   </url><url>
-    <loc>https://sepiropht.me/en/categories/</loc>
+    <loc>https://sepiropht.me/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -74,13 +74,13 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://sepiropht.me/en/categories/"
+                href="https://sepiropht.me/categories/"
                 />
   </url><url>
-    <loc>https://sepiropht.me/en/projects/hydra/</loc>
+    <loc>https://sepiropht.me/projects/hydra/</loc>
   </url><url>
-    <loc>https://sepiropht.me/en/projects/</loc>
+    <loc>https://sepiropht.me/projects/</loc>
   </url><url>
-    <loc>https://sepiropht.me/en/projects/tatooine/</loc>
+    <loc>https://sepiropht.me/projects/tatooine/</loc>
   </url>
 </urlset>
