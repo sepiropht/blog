@@ -6,18 +6,37 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
 [languages]
-  [languages.en]
-    [languages.en.params]
-      contentDir = 'content/en' 
-      languageName = "English"
-      weight = 1
 
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    baseUrl = "https://sepiropht.me/en"
+    
+    [languages.en.params]
+      customParam = "someValue"
+      anotherParam = "anotherValue"
+
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "posts/"
+      weight = 1
+    
   [languages.fr]
-    [languages.fr.params]
-    contentDir = 'content/fr'
     languageName = "Français"
     weight = 2
- 
+    baseURL = "https://sepiropht.me/fr"
+    
+    [languages.fr.params]
+      customParam = "uneValeur"
+      anotherParam = "uneAutreValeur"
+
+    [[languages.fr.menu.main]]
+      identifier = "posts"
+      name = "Articles"
+      url = "posts/"
+      weight = 1
+
 enableEmoji = true
 enableRobotsTXT = true
 

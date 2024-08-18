@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>https://sepiropht.me/en/sitemap.xml</loc>
+    <loc>http://localhost:1313/en/sitemap.xml</loc>
     
       <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>https://sepiropht.me/fr/sitemap.xml</loc>
+    <loc>http://localhost:1313/fr/sitemap.xml</loc>
     
       <lastmod>2020-03-06T21:29:01+08:00</lastmod>
     
