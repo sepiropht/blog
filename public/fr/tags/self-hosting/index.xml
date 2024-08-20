@@ -6,14 +6,14 @@
     <description>Recent content in Self-Hosting on sepiropht</description>
     <generator>Hugo</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 06 Mar 2020 21:29:01 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2024 12:19:38 +0000</lastBuildDate>
     <atom:link href="https://sepiropht.me/fr/tags/self-hosting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pourquoi j&#39;aime docker</title>
       <link>https://sepiropht.me/fr/posts/why-i-love-docker/</link>
-      <pubDate>Fri, 06 Mar 2020 21:29:01 +0800</pubDate>
+      <pubDate>Tue, 20 Aug 2024 12:19:38 +0000</pubDate>
       <guid>https://sepiropht.me/fr/posts/why-i-love-docker/</guid>
-      <description>1. L&amp;rsquo;accident Ce matin j&amp;rsquo;ai eu un problème, mon serveur, un rasperry 2 acheté en 2016, ne demarre plus. J&amp;rsquo;utilise cette vétuste machine pour héberger beacoup de service (wireguard, nextcloud, bitwarden, serveur odps etc&amp;hellip;).&#xA;Après quelques essais infructeux, j&amp;rsquo;abondonne l&amp;rsquo;idéé de le réparer et j&amp;rsquo;opte pour utiliser un autre de mes serveurs à la place. Je debranche le disque dur externe de mon raspberry et je le rebranche sur mon autre serveur.</description>
+      <description>1. L&amp;rsquo;accident Ce matin, j&amp;rsquo;ai eu un problème : mon serveur, un Raspberry Pi 2 acheté en 2016, ne démarre plus. J&amp;rsquo;utilisais cette vétuste machine pour héberger beaucoup de services (WireGuard, Nextcloud, Bitwarden, serveur ODPS, etc.).&#xA;Après quelques essais infructueux, j&amp;rsquo;abandonne l&amp;rsquo;idée de le réparer et j&amp;rsquo;opte pour utiliser un autre de mes serveurs à la place. Je débranche le disque dur externe de mon Raspberry Pi et je le rebranche sur mon autre serveur.</description>
     </item>
   </channel>
 </rss>

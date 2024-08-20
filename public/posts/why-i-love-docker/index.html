@@ -18,19 +18,19 @@
 
     
     <title>Why i love docker</title>
-    <meta name="description" content="A guide to getting started with Gokarna">
-    <meta name="keywords" content='blog, sepiropht, hugo, installation, configuration, markdown'>
+    <meta name="description" content="Sky above, sand below and peace within">
+    <meta name="keywords" content='blog, sepiropht, hugo, docker, self-hosting, docker-compose'>
 
     <meta property="og:url" content="https://sepiropht.me/posts/why-i-love-docker/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Why i love docker">
-    <meta property="og:description" content="A guide to getting started with Gokarna">
+    <meta property="og:description" content="Sky above, sand below and peace within">
     <meta property="og:image" content="https://sepiropht.me/images/gorille-crypto.png">
     <meta property="og:image:secure_url" content="https://sepiropht.me/images/gorille-crypto.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Why i love docker">
-    <meta name="twitter:description" content="A guide to getting started with Gokarna">
+    <meta name="twitter:description" content="Sky above, sand below and peace within">
     <meta property="twitter:domain" content="https://sepiropht.me/posts/why-i-love-docker/">
     <meta property="twitter:url" content="https://sepiropht.me/posts/why-i-love-docker/">
     <meta name="twitter:image" content="https://sepiropht.me/images/gorille-crypto.png">
@@ -141,24 +141,135 @@
     <div class="post container">
     <div class="post-header-section">
         <h1>Why i love docker</h1>
-        <small role="doc-subtitle">A guide to getting started with Gokarna</small>
-        <p class="post-date">March 6, 2020
+        <small role="doc-subtitle"></small>
+        <p class="post-date">August 20, 2024
         
         </p>
 
         <ul class="post-tags">
         
-            <li class="post-tag"><a href="https://sepiropht.me/tags/installation">installation</a></li>
+            <li class="post-tag"><a href="https://sepiropht.me/tags/docker">docker</a></li>
         
-            <li class="post-tag"><a href="https://sepiropht.me/tags/configuration">configuration</a></li>
+            <li class="post-tag"><a href="https://sepiropht.me/tags/self-hosting">self-hosting</a></li>
         
-            <li class="post-tag"><a href="https://sepiropht.me/tags/markdown">markdown</a></li>
+            <li class="post-tag"><a href="https://sepiropht.me/tags/docker-compose">docker-compose</a></li>
         
         </ul>
     </div>
 
     <div class="post-content">
-        
+        <h2 id="1-the-problem">1. The problem</h2>
+<p>This morning, I had a problem: my server, a Raspberry Pi 2 bought in 2016, no longer starts. I used this old machine to host many services (WireGuard, Nextcloud, Bitwarden, ODPS server, etc.).</p>
+<p>After a few unsuccessful attempts, I gave up on the idea of repairing it and decided to use another one of my servers instead. I unplugged the external hard drive from my Raspberry Pi and plugged it into my other server.</p>
+<p>And within 10 minutes, all the services on the new machine were running just like they did on the Raspberry Pi, with all the data intact. How did I do that?</p>
+<p>Simply:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose up -d
+</span></span></code></pre></div><h2 id="2-how-i-started">2. How I Started</h2>
+<p>I’ve been an almost exclusive Linux user for about fifteen years now on my laptop, starting with Ubuntu/Debian and then Arch, just to show off a bit. But I&rsquo;m not an advanced user—I mostly do pretty basic stuff. I only use the shell when I have an issue or for my work as a JavaScript developer.</p>
+<p>Of course, like many, I bought a few Raspberry Pis back in the day, but it was mostly a toy. Even though I did manage to install a private Git server and stream my music library using MPD.</p>
+<p>But it&rsquo;s only recently that I started systematically installing a lot of services: Nextcloud, PhotoPrism, Bitwarden, and many more&hellip;</p>
+<p>Installing each of these services can be long and tedious, for example, installing Nextcloud. Even if everything goes well, it won&rsquo;t take just 10 minutes :)</p>
+<p>And after that, you’ll still need to retrieve the old data for Nextcloud, for example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cp -r /mnt/storage/nextcloud/var/www/html /new_nextcloud_dir
+</span></span></code></pre></div><p>Then you’ll need to redo the post-installation configuration, create accounts, and repeat this process for every service, each with its own way of working.</p>
+<p>Docker and Docker Compose greatly simplify this process.</p>
+<h2 id="3-how-it-works">3. How It Works</h2>
+<p>On my old Raspberry Pi, I had many directories on my external drive like these:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>old@server:/mnt/seagate$ ls nextcloud/ photoprism/ bitwarden/ wireguard/ odps/
+</span></span></code></pre></div><p>All these directories are structured more or less the same way. For example, Nextcloud:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>old@server:/mnt/seagate/nextcloud$ ls
+</span></span><span style="display:flex;"><span>data  db  docker-compose.yml  nextcloud.sql  redis
+</span></span></code></pre></div><p>The file we’re going to modify here is docker-compose.yml. The files or directories are generated by the containers and contain the data we generated while using the service.</p>
+<p>In general, I don&rsquo;t write the docker-compose.yml files myself. Most projects have one, or if not, you can usually find someone who has made one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># docker-compose.yml file</span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  nc:
+</span></span><span style="display:flex;"><span>    image: nextcloud:apache
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      - POSTGRES_HOST<span style="color:#f92672">=</span>db
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_USER<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - REDIS_HOST<span style="color:#f92672">=</span>redis
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - 4080:80
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./data:/var/www/html <span style="color:#75715e"># I only modify these lines</span>
+</span></span><span style="display:flex;"><span>    depends_on:
+</span></span><span style="display:flex;"><span>      - redis
+</span></span><span style="display:flex;"><span>      - db
+</span></span><span style="display:flex;"><span>  db:
+</span></span><span style="display:flex;"><span>    image: postgres:15-alpine
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      - POSTGRES_PASSWORD<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_DB<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>      - POSTGRES_USER<span style="color:#f92672">=</span>nextcloud
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./db:/var/lib/postgresql/data <span style="color:#75715e"># I only modify these lines</span>
+</span></span><span style="display:flex;"><span>    expose:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">5432</span>
+</span></span><span style="display:flex;"><span>  redis:
+</span></span><span style="display:flex;"><span>    image: redis:alpine
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./redis:/data <span style="color:#75715e"># I only modify these lines</span>
+</span></span><span style="display:flex;"><span>    expose:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">6379</span>
+</span></span></code></pre></div><p>Docker containers are isolated processes that share the host operating system’s kernel but run in compartmentalized environments (called &ldquo;namespaces&rdquo;) that separate them from the rest of the system and from other containers. In terms of communication with the outside world, containers can be configured to interact via networks, but by default, they are isolated.</p>
+<p>Regarding data persistence, by default, a Docker container does not retain data once stopped or deleted because anything written to its internal filesystem is ephemeral. To persist data beyond the lifecycle of a container, you must explicitly mount volumes or directories. This allows you to save data in the host’s filesystem or on external storage.</p>
+<p>When defining a volume or directory mount, the left-hand path (in Docker syntax) specifies the location of files on the host machine, and the right-hand path indicates where these files will be accessible inside the container.</p>
+<p>The modification I make simply tells Docker that the data will always be in the current directory, which is itself located on my external drive.</p>
+<p>This allows all the necessary components to keep our services running to be located in the same places on my external drive: configuration and data.</p>
+<p>This clear separation between data and application is what I truly appreciate about Docker.</p>
+<p>It’s what allows me to unplug this hard drive and mount it elsewhere. If Docker Compose is already installed on the machine, I just do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>new@server:$ cd /mnt/seagate/nextcloud
+</span></span><span style="display:flex;"><span>new@server:/mnt/seagate/nextcloud$ docker compose up -d
+</span></span><span style="display:flex;"><span>new@server:$ cd /mnt/seagate/bitwarden
+</span></span><span style="display:flex;"><span>new@server:/mnt/seagate/bitwarden$ docker compose up -d
+</span></span><span style="display:flex;"><span>new@server:$ cd /mnt/seagate/wireguard
+</span></span><span style="display:flex;"><span>new@server:/mnt/seagate/wireguard$ docker compose up -d
+</span></span></code></pre></div><p>And that’s it! You find your setup exactly as you left it. I really mean everything: the database connections, users, the latest changes—it all feels like you never switched machines! Even the Redis cache is restored to the state it was in the last time the service ran on my Pi.</p>
+<p>I find this really amazing. The hype around Docker was definitely not exaggerated. I even dream that all the software I use could work this way, even on my laptop.</p>
+<p>For the record, since I’m too lazy to go into each directory manually, I wrote a little script to do it for me:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Find all directories that are exactly one level deep and contain a docker-compose.yml file</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> dir in <span style="color:#66d9ef">$(</span>find . -mindepth <span style="color:#ae81ff">2</span> -maxdepth <span style="color:#ae81ff">2</span> -type f -name <span style="color:#e6db74">&#34;docker-compose.yml&#34;</span> -exec dirname <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span><span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Entering directory: </span>$dir<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  cd <span style="color:#e6db74">&#34;</span>$dir<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Start docker compose in the current directory</span>
+</span></span><span style="display:flex;"><span>  docker compose up -d
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><p>However, it’s worth noting that this isn’t always necessary at startup if you’ve selected the restart: always option in your Docker Compose configuration. The Docker daemon itself takes care of reviving all services when the server starts.</p>
+<h2 id="4-updating-is-even-simpler">4. Updating is Even Simpler</h2>
+<p>I didn’t mention it earlier, but when you run docker compose up -d for the first time, three commands are actually executed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose pull
+</span></span><span style="display:flex;"><span>$ docker compose build
+</span></span><span style="display:flex;"><span>$ docker compose start
+</span></span></code></pre></div><p>In subsequent runs, it’s equivalent to just a start.</p>
+<p>If you want to update your container, you first need to change the version number, or if you like living dangerously, you can leave the latest tag next to your image name, so it always fetches the latest image.</p>
+<p>To update:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose
+</span></span></code></pre></div><p>Vous avez dit :
+continue
+ChatGPT a dit :
+ChatGPT
+Certainly! Here’s the continuation:</p>
+<p>To update:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Copier le code
+</span></span><span style="display:flex;"><span>$ docker compose pull
+</span></span><span style="display:flex;"><span>$ docker compose up -d  <span style="color:#75715e"># It restarts the container only if `docker pull` found a newer image.</span>
+</span></span></code></pre></div><h2 id="5-conclusion">5. Conclusion</h2>
+<p>Honestly, I don’t know what you think, but I find this approach simple, elegant, and ultra-convenient.</p>
+<p>There are thousands of Docker images available, and the principle is always the same.</p>
+<p>WordPress? Docker Compose. A CMS? Docker Compose. Video or audio streaming? Docker Compose.</p>
+<p>So, next time you think you might need a SaaS solution, just try this small reflex: search for my problem self-hosted in your favorite search engine.</p>
+<p>If you find something that fits your needs, look for the docker-compose.yml, make the necessary modifications for the volumes, and the world is yours!</p>
+<p>I recommend this site, which lists an incredible number of services that can be installed simply with docker compose.</p>
+<p>We’ll discuss later how to access these services; most of the time, I prefer using a VPN, as it avoids exposing my services on the internet. Of course, WireGuard installs in a snap with its own docker compose (though you’ll need to forward UDP ports from your router to your instance). You even get a nice web interface with authentication and the ability to generate a QR code for each client as a bonus.</p>
+<p>Or, if you’re using a VPS, I can show you how to associate each service with a domain. It’s really simple, although it wasn’t for me until late 2022.</p>
+<p>Until then, see you soon, and thanks for reading this far.</p>
+
         
     </div>
 
@@ -208,7 +319,19 @@
 
 <aside class="post-toc">
     <nav id="toc">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-the-problem">1. The problem</a></li>
+        <li><a href="#2-how-i-started">2. How I Started</a></li>
+        <li><a href="#3-how-it-works">3. How It Works</a></li>
+        <li><a href="#4-updating-is-even-simpler">4. Updating is Even Simpler</a></li>
+        <li><a href="#5-conclusion">5. Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </nav>
 </aside>
 

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sepiropht.me/fr/posts/why-i-love-docker/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,13 +16,33 @@
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/tags/docker/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/tags/docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/tags/docker/"
+                />
   </url><url>
     <loc>https://sepiropht.me/fr/tags/docker-compose/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/tags/docker-compose/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/tags/docker-compose/"
+                />
   </url><url>
     <loc>https://sepiropht.me/fr/posts/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -35,10 +55,20 @@
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/tags/self-hosting/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/tags/self-hosting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/tags/self-hosting/"
+                />
   </url><url>
     <loc>https://sepiropht.me/fr/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -51,7 +81,7 @@
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/tags/</loc>
-    <lastmod>2020-03-06T21:29:01+08:00</lastmod>
+    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
