@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on sepiropht</title>
-    <link>http://localhost:1314/fr/tags/aws/</link>
+    <link>https://sepiropht.me/fr/tags/aws/</link>
     <description>Recent content in Aws on sepiropht</description>
     <generator>Hugo</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 21 Aug 2024 12:19:38 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1314/fr/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Aug 2024 14:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sepiropht.me/fr/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comment je sauvegarde mes données</title>
-      <link>http://localhost:1314/fr/posts/how-do-i-backup-my-homelab/</link>
-      <pubDate>Wed, 21 Aug 2024 12:19:38 +0000</pubDate>
-      <guid>http://localhost:1314/fr/posts/how-do-i-backup-my-homelab/</guid>
+      <link>https://sepiropht.me/fr/posts/how-do-i-backup-my-homelab/</link>
+      <pubDate>Thu, 22 Aug 2024 14:00:00 +0000</pubDate>
+      <guid>https://sepiropht.me/fr/posts/how-do-i-backup-my-homelab/</guid>
       <description>Dans mon dernier article, j&amp;rsquo;expliquais comment Docker m&amp;rsquo;avait sauvé lorsque mon Raspberry Pi, qui hébergeait tous mes services, m&amp;rsquo;avait lâché du jour au lendemain. En effet, Docker permet de bien compartimenter configurations et données, et de choisir où on veut les stocker, le disque dur externe en l&amp;rsquo;occurrence pour moi. En cas de panne, il suffit juste de prendre le disque dur et le connecter à une autre machine et c&amp;rsquo;est fini.</description>
     </item>
   </channel>

@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sepiropht.me/fr/posts/how-do-i-backup-my-homelab/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/posts/how-do-i-backup-my-homelab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/posts/how-do-i-backup-my-homelab/"
+                />
+  </url><url>
     <loc>https://sepiropht.me/fr/posts/why-i-love-docker/</loc>
     <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
@@ -13,6 +26,22 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://sepiropht.me/fr/posts/why-i-love-docker/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/fr/tags/auto-hebergemenent/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sepiropht.me/fr/tags/aws/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/tags/aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/tags/aws/"
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/posts/</loc>
@@ -28,6 +57,9 @@
                 href="https://sepiropht.me/fr/posts/"
                 />
   </url><url>
+    <loc>https://sepiropht.me/fr/tags/sauvegarde/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://sepiropht.me/fr/</loc>
     <lastmod>2024-08-22T14:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +71,19 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://sepiropht.me/fr/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/fr/tags/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/tags/"
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/tags/docker/</loc>
@@ -78,19 +123,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://sepiropht.me/fr/tags/self-hosting/"
-                />
-  </url><url>
-    <loc>https://sepiropht.me/fr/tags/</loc>
-    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://sepiropht.me/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://sepiropht.me/fr/tags/"
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/categories/</loc>

@@ -6,8 +6,15 @@
     <description>Recent content in Posts on sepiropht</description>
     <generator>Hugo</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 20 Aug 2024 12:19:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2024 14:00:00 +0000</lastBuildDate>
     <atom:link href="https://sepiropht.me/fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comment je sauvegarde mes données</title>
+      <link>https://sepiropht.me/fr/posts/how-do-i-backup-my-homelab/</link>
+      <pubDate>Thu, 22 Aug 2024 14:00:00 +0000</pubDate>
+      <guid>https://sepiropht.me/fr/posts/how-do-i-backup-my-homelab/</guid>
+      <description>Dans mon dernier article, j&amp;rsquo;expliquais comment Docker m&amp;rsquo;avait sauvé lorsque mon Raspberry Pi, qui hébergeait tous mes services, m&amp;rsquo;avait lâché du jour au lendemain. En effet, Docker permet de bien compartimenter configurations et données, et de choisir où on veut les stocker, le disque dur externe en l&amp;rsquo;occurrence pour moi. En cas de panne, il suffit juste de prendre le disque dur et le connecter à une autre machine et c&amp;rsquo;est fini.</description>
+    </item>
     <item>
       <title>Pourquoi j&#39;aime docker</title>
       <link>https://sepiropht.me/fr/posts/why-i-love-docker/</link>
