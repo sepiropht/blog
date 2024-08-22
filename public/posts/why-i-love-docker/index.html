@@ -249,15 +249,7 @@
 </span></span></code></pre></div><p>In subsequent runs, it’s equivalent to just a start.</p>
 <p>If you want to update your container, you first need to change the version number, or if you like living dangerously, you can leave the latest tag next to your image name, so it always fetches the latest image.</p>
 <p>To update:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose
-</span></span></code></pre></div><p>Vous avez dit :
-continue
-ChatGPT a dit :
-ChatGPT
-Certainly! Here’s the continuation:</p>
-<p>To update:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Copier le code
-</span></span><span style="display:flex;"><span>$ docker compose pull
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker compose pull
 </span></span><span style="display:flex;"><span>$ docker compose up -d  <span style="color:#75715e"># It restarts the container only if `docker pull` found a newer image.</span>
 </span></span></code></pre></div><h2 id="5-conclusion">5. Conclusion</h2>
 <p>Honestly, I don’t know what you think, but I find this approach simple, elegant, and ultra-convenient.</p>

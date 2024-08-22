@@ -159,19 +159,6 @@ If you want to update your container, you first need to change the version numbe
 To update:
 
 ```bash
-$ docker compose
-```
-
-Vous avez dit :
-continue
-ChatGPT a dit :
-ChatGPT
-Certainly! Here’s the continuation:
-
-To update:
-
-```bash
-Copier le code
 $ docker compose pull
 $ docker compose up -d  # It restarts the container only if `docker pull` found a newer image.
 ```
