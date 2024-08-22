@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker-Compose on sepiropht</title>
+    <link>https://sepiropht.me/fr/tags/docker-compose/</link>
+    <description>Recent content in Docker-Compose on sepiropht</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 20 Aug 2024 12:19:38 +0000</lastBuildDate>
+    <atom:link href="https://sepiropht.me/fr/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pourquoi j&#39;aime docker</title>
+      <link>https://sepiropht.me/fr/posts/why-i-love-docker/</link>
+      <pubDate>Tue, 20 Aug 2024 12:19:38 +0000</pubDate>
+      <guid>https://sepiropht.me/fr/posts/why-i-love-docker/</guid>
+      <description>1. L&amp;rsquo;accident Ce matin, j&amp;rsquo;ai eu un problème : mon serveur, un Raspberry Pi 2 acheté en 2016, ne démarre plus. J&amp;rsquo;utilisais cette vétuste machine pour héberger beaucoup de services (WireGuard, Nextcloud, Bitwarden, serveur ODPS, etc.).&#xA;Après quelques essais infructueux, j&amp;rsquo;abandonne l&amp;rsquo;idée de le réparer et j&amp;rsquo;opte pour utiliser un autre de mes serveurs à la place. Je débranche le disque dur externe de mon Raspberry Pi et je le rebranche sur mon autre serveur.</description>
+    </item>
+  </channel>
+</rss>

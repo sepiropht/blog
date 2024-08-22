@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sepiropht</title>
+    <link>https://sepiropht.me/</link>
+    <description>Recent content on sepiropht</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Aug 2024 12:19:38 +0000</lastBuildDate>
+    <atom:link href="https://sepiropht.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why i love docker</title>
+      <link>https://sepiropht.me/posts/why-i-love-docker/</link>
+      <pubDate>Tue, 20 Aug 2024 12:19:38 +0000</pubDate>
+      <guid>https://sepiropht.me/posts/why-i-love-docker/</guid>
+      <description>1. The problem This morning, I had a problem: my server, a Raspberry Pi 2 bought in 2016, no longer starts. I used this old machine to host many services (WireGuard, Nextcloud, Bitwarden, ODPS server, etc.).&#xA;After a few unsuccessful attempts, I gave up on the idea of repairing it and decided to use another one of my servers instead. I unplugged the external hard drive from my Raspberry Pi and plugged it into my other server.</description>
+    </item>
+    <item>
+      <title>Blüdhaven</title>
+      <link>https://sepiropht.me/projects/bludhaven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sepiropht.me/projects/bludhaven/</guid>
+      <description>History Blüdhaven was a former whaling town, which was officially incorporated as a &amp;ldquo;Commonwealth&amp;rdquo; in 1912. The town had a generally poor socio-economic populace, owing in part to failed efforts to transform itself into a manufacturing and shipping center.</description>
+    </item>
+    <item>
+      <title>Hydra</title>
+      <link>https://sepiropht.me/projects/hydra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sepiropht.me/projects/hydra/</guid>
+      <description>Motto Cut off one head and two will take their place</description>
+    </item>
+    <item>
+      <title>Tatooine</title>
+      <link>https://sepiropht.me/projects/tatooine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sepiropht.me/projects/tatooine/</guid>
+      <description>A long time ago in a galaxy far, far away&amp;hellip;. A project was planned, but never completed</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/fr/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=fr/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Comment je sauvegarde mes données</title>
+    <meta name="description" content="Sky above, sand below and peace within">
+    <meta name="keywords" content='blog, sepiropht, hugo, aws, auto-hebergemenent, sauvegarde'>
+
+    <meta property="og:url" content="http://localhost:1314/fr/posts/how-do-i-backup-my-homelab/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Comment je sauvegarde mes données">
+    <meta property="og:description" content="Sky above, sand below and peace within">
+    <meta property="og:image" content="http://localhost:1314/images/gorille-crypto.png">
+    <meta property="og:image:secure_url" content="http://localhost:1314/images/gorille-crypto.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comment je sauvegarde mes données">
+    <meta name="twitter:description" content="Sky above, sand below and peace within">
+    <meta property="twitter:domain" content="http://localhost:1314/fr/posts/how-do-i-backup-my-homelab/">
+    <meta property="twitter:url" content="http://localhost:1314/fr/posts/how-do-i-backup-my-homelab/">
+    <meta name="twitter:image" content="http://localhost:1314/images/gorille-crypto.png">
+
+    
+    <link rel="canonical" href="http://localhost:1314/fr/posts/how-do-i-backup-my-homelab/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.9a920d7dabdbad8363b6a0a94e29a9dfebdb7ee64cfcb193a0145e512ef2bdab.js" integrity="sha256-mpINfavbrYNjtqCpTimp3&#43;vbfuZM/LGToBReUS7yvas="></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  
+    
+</head>
+<body>
+    <script>
+      
+      setThemeByUserPref()
+    </script>
+    <script
+      async
+      src="https://analytics.sepiropht.me/script.js"
+      data-website-id="ae8a6792-160d-46af-afcb-435979ba069e"
+    ></script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1314/fr/">
+                <img src='/images/gorille-crypto.png' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1314/fr/">sepiropht</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1314/fr/posts/"> Articles </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                <a>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1314/fr/posts/"> Articles </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Comment je sauvegarde mes données</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">août 21, 2024
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1314/fr/tags/aws">aws</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1314/fr/tags/auto-hebergemenent">auto-hebergemenent</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1314/fr/tags/sauvegarde">sauvegarde</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>Dans mon dernier article, j&rsquo;expliquais comment Docker m&rsquo;avait sauvé lorsque mon Raspberry Pi, qui hébergeait tous mes services, m&rsquo;avait lâché du jour au lendemain. En effet, Docker permet de bien compartimenter configurations et données, et de choisir où on veut les stocker, le disque dur externe en l&rsquo;occurrence pour moi. En cas de panne, il suffit juste de prendre le disque dur et le connecter à une autre machine et c&rsquo;est fini.</p>
+<p>Ce genre d&rsquo;accidents arrive assez souvent malheureusement, et la méthode que je viens d&rsquo;énoncer est assez efficace pour résoudre ce problème.
+En revanche, que se passe-t-il si c&rsquo;est le disque dur externe qui lâche ou pire si j&rsquo;ai un incendie ? Dans ce cas, je perds tout ?</p>
+<p>Ce genre d&rsquo;incident est plus rare. Je n&rsquo;ai jamais subi une perte de disque dur. Tous les disques durs que j&rsquo;ai achetés la décennie précédente fonctionnent encore. Donc il a été plus difficile pour moi de construire une infrastructure résiliente face à ce genre de problème. J&rsquo;y suis quand même parvenu et je vais présenter comment je procède. Je vais vous faire découvrir la déduplication avec Borg Backup et Amazon S3 Glacier.</p>
+<h2 id="1-règle-3-2-1">1. Règle 3-2-1</h2>
+<p>Pour la mise en place de plan de backup, je suis ce principe qui semble faire consensus d&rsquo;avoir trois copies différentes de ses données :</p>
+<ul>
+<li>Utiliser au minimum 3 copies</li>
+<li>Utiliser deux types de supports différents</li>
+<li>Et avoir une copie hors site</li>
+</ul>
+<p>La copie hors site, c&rsquo;est ce qui permet de survivre à un incendie par exemple.<br>
+C&rsquo;est bon pour la vue d&rsquo;ensemble et le principe directeur, voyons voir comment je l&rsquo;applique.</p>
+<h2 id="2-borg-backup-et-déduplication">2. Borg Backup et déduplication</h2>
+<h3 id="1-installer-borg-backup">1. Installer Borg Backup</h3>
+<p>Le principal problème quand on fait des sauvegardes, c&rsquo;est la redondance des données entre les différentes sauvegardes. Heureusement des outils comme Borg existent, il nous permet de faire des sauvegardes incrémentales, c&rsquo;est-à-dire, la première fois il sauvegarde l&rsquo;ensemble de vos fichiers, mais les autres fois il enregistre seulement les modifications ce qui permet d&rsquo;économiser de la bande passante et aussi de l&rsquo;espace sur le disque de sauvegarde.</p>
+<p>Si Borg Backup n&rsquo;est pas encore installé :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt install borgbackup
+</span></span></code></pre></div><h3 id="2-initialiser-le-dépôt">2. Initialiser le dépôt</h3>
+<p>Créez un dépôt Borg à l&rsquo;emplacement de votre choix, ici /mnt/seagate/. Ce dépôt contiendra toutes les sauvegardes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ borg init --encryption<span style="color:#f92672">=</span>repokey /mnt/seagate/
+</span></span></code></pre></div><h3 id="3-créer-une-sauvegarde">3. Créer une sauvegarde</h3>
+<p>Pour créer une sauvegarde, utilisez la commande suivante :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ borg create --progress --stats /mnt/seagate/borg-repo::<span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span> /mnt/ssd
+</span></span></code></pre></div><p>Le repertoire est mon disque dur externe où je stocke mes docker compose et leur données:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/mnt/ssd$ ls
+</span></span><span style="display:flex;"><span>docker-hub  homarr  nextcloud2  nostr photoprism vaultwaarden  wireguard
+</span></span></code></pre></div><p>Vous pouvez être plus fin en indiquant dans une chaine de caractère tous les repertoires que vous voulez intégrer</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ borg create --progress --stats /mnt/seagate/borg-repo::<span style="color:#66d9ef">$(</span>date +%Y-%m-%d<span style="color:#66d9ef">)</span> <span style="color:#e6db74">&#39;/mnt/ssd/nextcloud/data /mnt/ssd/docker-hub/data&#39;</span>
+</span></span></code></pre></div><p>Pour la restauration vous pouvez lister d&rsquo;abord, pour afficher le nom de la version que vous voulez restaurer</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>borg list /mnt/seagate/borg-repo
+</span></span><span style="display:flex;"><span>2024-07-20-Jul                       Sat, 2024-07-20 04:22:06 <span style="color:#f92672">[</span>7817b88dcd86c1cf5c70934e5beca141ca8cc3a72137f9d10649fd0a8207d39d<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>2024-07-21-Jul                       Sun, 2024-07-21 04:22:06 <span style="color:#f92672">[</span>6df4a3e576a2bee8ce290adbcf876c53e670e22f3e8b192e9e0ca36540595b69<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>2024-08-06-août                      Tue, 2024-08-06 02:26:11 <span style="color:#f92672">[</span>c0090b647cd385bc87d75d17749be4011f2bcca522eadda2e825df4e5031c455<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>2024-08-07-août                      Wed, 2024-08-07 07:07:01 <span style="color:#f92672">[</span>89c3ab26e928b244b7a9fd952c95e416a2003c232ab98d8b0dda3c5ff4ae1f46<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>2024-08-08-août                      Thu, 2024-08-08 04:00:08 <span style="color:#f92672">[</span>87d75f01dced5048c363e6ebfe756232026d1f1e557085fa9e1c4e239986065e<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ borg extract /mnt/seagate/borg-repo::2024-08-08-août  --target /mnt/restore-point
+</span></span></code></pre></div><p>Et voila nous avons 2 copies sur 2 support différents, maintenant il faut la copie hors site</p>
+<h2 id="3-sauvegarde-hors-site-avec-amazon-s3-glacier">3. Sauvegarde hors site avec amazon s3 glacier</h2>
+<p>Oui j&rsquo;utilse amazon, c&rsquo;est vraiment pas chère pour stocker de grosses données, je paye moin de 1 dollars par mois pour 300 giga, j&rsquo;ai pas envie de dépenser plus pour un problème que n&rsquo;ai jamais eu et que je n&rsquo;aurai peut être jamais. Il faut aussi savoir que borg backup crypte les données chez vous en local, il ne faut juste surtout ne pas perdre la passpharase, donc pour la vie privé il y a pas de soucis. Le seul inconvénient c&rsquo;est que pour récuprer les données il faut pas être pressé, çà peut prendre 2 jours.</p>
+<h3 id="étapes-pour-configurer-la-synchronisation-avec-amazon-s3-en-utilisant-aws-cli">Étapes pour configurer la synchronisation avec Amazon S3 en utilisant AWS CLI</h3>
+<h4 id="1-installer-aws-cli">1. Installer AWS CLI</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install awscli
+</span></span></code></pre></div><h4 id="2-configurer-aws-cli">2. Configurer AWS CLI</h4>
+<p>Configurez AWS CLI avec vos informations d&rsquo;accès AWS :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws configure
+</span></span></code></pre></div><p>Vous serez invité à entrer les informations suivantes :</p>
+<ul>
+<li>AWS Access Key ID : Votre clé d&rsquo;accès AWS.</li>
+<li>AWS Secret Access Key : Votre clé secrète AWS.</li>
+<li>Default region name : La région AWS dans laquelle votre bucket S3 est situé (par exemple, us-west-2).</li>
+<li>Default output format : Vous pouvez laisser vide ou choisir json.</li>
+</ul>
+<p>Il faut maintenant créer un bucket amazon, et faire bien attention a créer un bucket glacier deep archive</p>
+<p>une fois cela fais on peut alors faire un</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aws s3 sync /mnt/seagate/borg-repo s3://my-borg-backups
+</span></span></code></pre></div><p>Pour la restauration</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ aws s3 sync s3://my-borg-backups /mnt/restore-point
+</span></span></code></pre></div><p>Je vous montre le script final pour la sauvegarde</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>REPOSITORY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/mnt/seagate/borg-repo&#34;</span>
+</span></span><span style="display:flex;"><span>SOURCE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/mnt/ssd/&#34;</span>
+</span></span><span style="display:flex;"><span>BORG_S3_BACKUP_BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bucket-name&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export BORG_PASSPHRASE<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;PASSPHRASE&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Backup to borg repo</span>
+</span></span><span style="display:flex;"><span>borg create -v --stats $REPOSITORY::<span style="color:#66d9ef">$(</span>date +%Y-%m-%d-%h<span style="color:#66d9ef">)</span> $SOURCE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Backup to s3</span>
+</span></span><span style="display:flex;"><span>aws s3 sync $REPOSITORY s3://$BORG_S3_BACKUP_BUCKET --storage-class DEEP_ARCHIVE --delete
+</span></span></code></pre></div><p>Au final j&rsquo;appelle mon script dans une tache cron tous les jours</p>
+<p>Et voila si vous êtes arrivez jusqu&rsquo;ici vous avez maintenant un système automatiser de backup 3-2-1 qui applique la déduplication et avec une copie hors site.</p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-règle-3-2-1">1. Règle 3-2-1</a></li>
+        <li><a href="#2-borg-backup-et-déduplication">2. Borg Backup et déduplication</a>
+          <ul>
+            <li><a href="#1-installer-borg-backup">1. Installer Borg Backup</a></li>
+            <li><a href="#2-initialiser-le-dépôt">2. Initialiser le dépôt</a></li>
+            <li><a href="#3-créer-une-sauvegarde">3. Créer une sauvegarde</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-sauvegarde-hors-site-avec-amazon-s3-glacier">3. Sauvegarde hors site avec amazon s3 glacier</a>
+          <ul>
+            <li><a href="#étapes-pour-configurer-la-synchronisation-avec-amazon-s3-en-utilisant-aws-cli">Étapes pour configurer la synchronisation avec Amazon S3 en utilisant AWS CLI</a>
+              <ul>
+                <li><a href="#1-installer-aws-cli">1. Installer AWS CLI</a></li>
+                <li><a href="#2-configurer-aws-cli">2. Configurer AWS CLI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+</main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 The Marauders</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
