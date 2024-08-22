@@ -15,6 +15,32 @@
                 href="https://sepiropht.me/fr/posts/why-i-love-docker/"
                 />
   </url><url>
+    <loc>https://sepiropht.me/fr/posts/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/posts/"
+                />
+  </url><url>
+    <loc>https://sepiropht.me/fr/</loc>
+    <lastmod>2024-08-22T14:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://sepiropht.me/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://sepiropht.me/fr/"
+                />
+  </url><url>
     <loc>https://sepiropht.me/fr/tags/docker/</loc>
     <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
@@ -41,19 +67,6 @@
                 href="https://sepiropht.me/fr/tags/docker-compose/"
                 />
   </url><url>
-    <loc>https://sepiropht.me/fr/posts/</loc>
-    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://sepiropht.me/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://sepiropht.me/fr/posts/"
-                />
-  </url><url>
     <loc>https://sepiropht.me/fr/tags/self-hosting/</loc>
     <lastmod>2024-08-20T12:19:38+00:00</lastmod>
     <xhtml:link
@@ -65,19 +78,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://sepiropht.me/fr/tags/self-hosting/"
-                />
-  </url><url>
-    <loc>https://sepiropht.me/fr/</loc>
-    <lastmod>2024-08-20T12:19:38+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://sepiropht.me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://sepiropht.me/fr/"
                 />
   </url><url>
     <loc>https://sepiropht.me/fr/tags/</loc>
