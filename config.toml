@@ -1,0 +1,34 @@
+baseURL = "https://bis-hugo.vercel.app/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+theme = "paper"
+[languages]
+
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    
+    [languages.en.params]
+      customParam = "someValue"
+      anotherParam = "anotherValue"
+
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "/posts/"  # English posts should be at /posts/
+      weight = 1
+    
+  [languages.fr]
+    languageName = "Français"
+    weight = 2
+    
+    [languages.fr.params]
+      customParam = "uneValeur"
+      anotherParam = "uneAutreValeur"
+
+    [[languages.fr.menu.main]]
+      identifier = "posts"
+      name = "Articles"
+      url = "/fr/posts/"  # French posts should be under /fr/posts/
+      weight = 1
