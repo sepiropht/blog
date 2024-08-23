@@ -6,9 +6,15 @@ theme = "gokarna"
 
 [params]
   customFooterHTML = '''
-    {{ if not hugo.IsServer }}
-      <script defer src="https://analytics.sepiropht.me/script.js" data-website-id="ae8a6792-160d-46af-afcb-435979ba069e"></script>
-    {{ end }}
+    <script>
+      if (window.location.hostname !== 'localhost') {
+        const script = document.createElement('script');
+        script.src = 'https://analytics.sepiropht.me/script.js';
+        script.defer = true;
+        script.dataset.websiteId = 'ae8a6792-160d-46af-afcb-435979ba069e';
+        document.body.appendChild(script);
+      }
+    </script>
   '''
 [languages]
 
