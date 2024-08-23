@@ -1,6 +1,6 @@
-baseURL = "https://bis-hugo.vercel.app/"
+baseURL = "https://elimbi.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Elimbi"
 
 theme = "paper"
 [languages]
