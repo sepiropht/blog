@@ -5,8 +5,10 @@ title = "Elimbi"
 theme = "gokarna"
 
 [params]
-  customHeadHTML = '''
-    <script defer src="https://analytics.sepiropht.me/script.js" data-website-id="ae8a6792-160d-46af-afcb-435979ba069e"></script>
+  customFooterHTML = '''
+    {{ if not hugo.IsServer }}
+      <script defer src="https://analytics.sepiropht.me/script.js" data-website-id="ae8a6792-160d-46af-afcb-435979ba069e"></script>
+    {{ end }}
   '''
 [languages]
 
