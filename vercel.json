@@ -3,19 +3,5 @@
     "env": {
       "HUGO_VERSION": "0.133.0"
     }
-  },
-  "github": {
-    "enabled": true,
-    "submodules": true
-  },
-  "rewrites": [
-    {
-      "source": "/.well-known/lnurlp/sepiropht",
-      "destination": "/api/lnurlp"
-    },
-    {
-      "source": "/.well-known/nostr.json",
-      "destination": "/api/nostr"
-    }
-  ]
+  }
 }
