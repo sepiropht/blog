@@ -1,6 +1,6 @@
 bbaseURL = "https://elimbi.com/"
 title = "elimbi"
-theme = "gokarna"
+theme = "paper"
 languageCode = "en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false  # Ensure this is false
