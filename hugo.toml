@@ -1,5 +1,5 @@
-bbaseURL = "https://sepiropht.me"
-title = "sepiropht"
+bbaseURL = "https://elimbi.com/"
+title = "elimbi"
 theme = "gokarna"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -10,7 +10,6 @@ defaultContentLanguageInSubdir = false  # Ensure this is false
   [languages.en]
     languageName = "English"
     weight = 1
-    baseUrl = "https://sepiropht.me"  # Root URL for English content
     
     [languages.en.params]
       customParam = "someValue"
@@ -25,7 +24,6 @@ defaultContentLanguageInSubdir = false  # Ensure this is false
   [languages.fr]
     languageName = "Français"
     weight = 2
-    baseURL = "https://sepiropht.me/fr"  # French version under /fr
     
     [languages.fr.params]
       customParam = "uneValeur"
@@ -34,7 +32,7 @@ defaultContentLanguageInSubdir = false  # Ensure this is false
     [[languages.fr.menu.main]]
       identifier = "posts"
       name = "Articles"
-      url = "/posts/"  # French posts should be under /fr/posts/
+      url = "/fr/posts/"  # French posts should be under /fr/posts/
       weight = 1
 
 

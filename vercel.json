@@ -1,4 +1,9 @@
 {
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.133.0"
+    }
+  },
   "rewrites": [
     {
       "source": "/.well-known/lnurlp/sepiropht",
