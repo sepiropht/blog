@@ -2,7 +2,7 @@ baseURL = "https://elimbi.com/"
 languageCode = "en-us"
 title = "Elimbi"
 
-theme = "paper"
+theme = "gokarna"
 [languages]
 
   [languages.en]
