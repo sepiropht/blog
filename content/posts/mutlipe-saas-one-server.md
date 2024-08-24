@@ -10,6 +10,8 @@ showTableOfContents: true
 draft: false
 ---
 
+## 1. Probleme
+
 The problem: I have a single VPS in the cloud, and I have many apps that I code myself or services (Bitwarden, Nextcloud...) that I want to expose to the public.
 So sometimes I may want to have more than one domain for a single machine. Is that possible?
 
@@ -20,7 +22,7 @@ I had used cloud services like Vercel and Netlify a lot in the past, but I wante
 
 There are well-known tools to handle these issues, like Apache and Nginx. But I adopted a newcomer that is ultra-simple in terms of configuration.
 
-## 1. Discovering Caddy
+## 2. Discovering Caddy
 
 The prerequisite is, of course, to have one or more domain names pointing to your VPS. Then, you need to install Caddy. There are two approaches: you can either use your Linux distribution’s package manager, or you can install Caddy using Docker Compose.
 

@@ -1,6 +1,6 @@
 ---
 weight: 10
-title: 'Managing Multiple SaaS on a Single Server with Caddy'
+title: 'Plusieurs saas sur un serveur'
 image: 'img/post3.webp'
 date: 2024-08-24T12:19:38.315Z
 description: ''
@@ -10,13 +10,15 @@ showTableOfContents: true
 draft: false
 ---
 
+## 1. Le problème
+
 Le problème : J'ai un seul VPS dans le cloud, et j'ai de nombreuses applications que je code moi-même ou des services (Bitwarden, Nextcloud...) que je veux exposer au public. Donc parfois, je peux vouloir avoir plus d'un domaine pour une seule machine. Est-ce possible ? La réponse est oui.
 
 Cela peut sembler trivial pour beaucoup de gens, mais en décembre 2022, je n'étais pas sûr que c'était possible et comment le faire. J'avais beaucoup utilisé des services cloud comme Vercel et Netlify par le passé, mais je voulais comprendre comment les choses fonctionnent réellement en coulisses lorsqu'on gère soi-même l'infrastructure.
 
 Il existe des outils bien connus pour gérer ces problèmes, comme Apache et Nginx. Mais j'ai adopté un petit nouveau qui est ultra simple en termes de configuration.
 
-## 1. Discovering Caddy
+## 2. Decouverte de Caddy
 
 Le prérequis est, bien entendu, d'avoir un ou plusieurs noms de domaine qui pointent vers votre VPS. Ensuite, vous devez installer Caddy. Il y a deux approches : vous pouvez soit utiliser le gestionnaire de paquets de votre distribution Linux, soit installer Caddy en utilisant Docker Compose.
 
