@@ -18,7 +18,7 @@ theme = "gokarna"
 
     <!-- Newsletter Subscription Form -->
 <div id="newsletter-form" style="display: flex; justify-content: center; align-items: center; margin-top: 20px; ">
-  <form method="post" action="http://listmonk.sepiropht.me/subscription/form" class="listmonk-form" style="display: flex; border: 1px solid #007bff; border-radius: 4px; overflow: hidden;">
+  <form method="post" action="https://listmonk.sepiropht.me/subscription/form" class="listmonk-form" style="display: flex; border: 1px solid #007bff; border-radius: 4px; overflow: hidden;">
     <input type="hidden" name="nonce" />
     <input type="email" name="email" required placeholder="Type your email..." 
            style="padding: 10px; border: none; outline: none; flex: 1; min-width: 200px; font-size: 1rem;"/>
