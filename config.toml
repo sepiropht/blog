@@ -4,18 +4,35 @@ title = "Elimbi"
 
 theme = "gokarna"
 
-
-
 [params]
-
   socialIcons = [
     {name = "twitter", url = "https://twitter.com/sepiropht"},
     {name = "email", url = "mailto:sepiropht@sepiropht.me"}
   ]
-  metaKeywords = ["blog", "sepiropht", "hugo"]
-
+  metaKeywords = ["blog", "sepiropht", "self-hosting", "no-google"]
+  showPostsOnHomePage = "recent"
 
   customFooterHTML = '''
+
+
+
+    <!-- Newsletter Subscription Form -->
+<div id="newsletter-form" style="display: flex; justify-content: center; align-items: center; margin-top: 20px; ">
+  <form method="post" action="http://listmonk.sepiropht.me/subscription/form" class="listmonk-form" style="display: flex; border: 1px solid #007bff; border-radius: 4px; overflow: hidden;">
+    <input type="hidden" name="nonce" />
+    <input type="email" name="email" required placeholder="Type your email..." 
+           style="padding: 10px; border: none; outline: none; flex: 1; min-width: 200px; font-size: 1rem;"/>
+    
+    <button type="submit" 
+            style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;  font-size: 1rem;">
+      Subscribe
+    </button>
+    <p style="display: none;">
+          <input id="d0765" type="checkbox" name="l" checked value="d076588b-cabe-4c89-9b38-900aeac54f5b" />
+    </p>
+  </form>
+</div>
+
     <script>
       if (window.location.hostname !== 'localhost') {
         const script = document.createElement('script');
@@ -39,8 +56,8 @@ theme = "gokarna"
       });
     </script>
 '''
-[languages]
 
+[languages]
   [languages.en]
     languageName = "English"
     weight = 1
@@ -52,8 +69,9 @@ theme = "gokarna"
     [[languages.en.menu.main]]
       identifier = "posts"
       name = "Posts"
-      url = "/posts/"  # English posts should be at /posts/
+      url = "/posts/"
       weight = 1
+
     
   [languages.fr]
     languageName = "Français"
@@ -66,5 +84,6 @@ theme = "gokarna"
     [[languages.fr.menu.main]]
       identifier = "posts"
       name = "Articles"
-      url = "/fr/posts/"  # French posts should be under /fr/posts/
+      url = "/fr/posts/"
       weight = 1
+
