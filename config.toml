@@ -11,6 +11,7 @@ theme = "gokarna"
   ]
   metaKeywords = ["blog", "sepiropht", "self-hosting", "no-google"]
   showPostsOnHomePage = "recent"
+  avatarURL = "/img/me.jpg"
 
   customFooterHTML = '''
 
@@ -71,6 +72,11 @@ theme = "gokarna"
       name = "Posts"
       url = "/posts/"
       weight = 1
+    [[languages.en.menu.main]]
+      identifier = "books"
+      name = "Books"
+      url = "/books/"
+      weight = 1
 
     
   [languages.fr]
@@ -87,3 +93,8 @@ theme = "gokarna"
       url = "/fr/posts/"
       weight = 1
 
+    [[languages.fr.menu.main]]
+      identifier = "books"
+      name = "Livres"
+      url = "/books/"
+      weight = 1
