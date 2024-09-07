@@ -3,7 +3,7 @@
   function shouldAddNewsletter() {
     const url = window.location.pathname
     const parts = url.split('/').filter(Boolean)
-    return url.includes('post') && parts[parts.length - 1] !== 'post'
+    return url.includes('posts/') && parts[parts.length - 1] !== 'posts'
   }
 
   // Function to add the newsletter form

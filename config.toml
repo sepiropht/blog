@@ -12,7 +12,11 @@ theme = "gokarna"
   metaKeywords = ["blog", "sepiropht", "self-hosting", "no-google"]
   showPostsOnHomePage = "recent"
   avatarURL = "/img/me.jpg"
-  customHeadHtml= ''''''
+  customHeadHtml= '''
+
+  <link rel="stylesheet" href="/styles/footer.css">
+  
+  '''
   customFooterHTML = '''
     <script>
       if (window.location.hostname !== 'localhost') {
