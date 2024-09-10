@@ -2,7 +2,7 @@
 weight: 10
 title: 'Comment je sauvegarde mes données'
 date: 2024-08-22T14:00:00.315Z
-description: ''
+description: 'Ne perdez plus vous données'
 tags: ['aws', 'auto-hebergemenent', 'sauvegarde']
 type: post
 showTableOfContents: true

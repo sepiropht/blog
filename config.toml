@@ -1,10 +1,10 @@
 baseURL = "https://elimbi.com/"
 languageCode = "en-us"
 title = "William Elimbi"
-
 theme = "gokarna"
 
 [params]
+  description = "Self sovereign and self-hosting"
   socialIcons = [
     {name = "twitter", url = "https://twitter.com/sepiropht"},
     {name = "email", url = "mailto:sepiropht@sepiropht.me"}
@@ -12,10 +12,8 @@ theme = "gokarna"
   metaKeywords = ["blog", "sepiropht", "self-hosting", "no-google"]
   showPostsOnHomePage = "recent"
   avatarURL = "/img/me.jpg"
-  customHeadHtml= '''
-
+  customHeadHtml = '''
   <link rel="stylesheet" href="/styles/footer.css">
-  
   '''
   customFooterHTML = '''
     <script>
@@ -30,19 +28,16 @@ theme = "gokarna"
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-      var userLang = navigator.language || navigator.userLanguage; 
+        var userLang = navigator.language || navigator.userLanguage; 
         if (userLang && userLang.indexOf('fr') !== -1) {
-          // Check if the URL already contains '/fr/'
           if (!window.location.pathname.startsWith('/fr/')) {
-            // Prepend '/fr/' to the current pathname
             window.location.href = '/fr' + window.location.pathname;
           }
         }
       });
     </script>
-   <script src="/js/footer.js"></script>
-
-'''
+    <script src="/js/footer.js"></script>
+  '''
 
 [languages]
   [languages.en]
@@ -59,7 +54,6 @@ theme = "gokarna"
       url = "/posts/"
       weight = 1
 
-    
   [languages.fr]
     languageName = "Français"
     weight = 2
@@ -73,4 +67,3 @@ theme = "gokarna"
       name = "Articles"
       url = "/fr/posts/"
       weight = 1
-

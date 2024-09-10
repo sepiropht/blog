@@ -3,7 +3,7 @@ weight: 10
 title: 'Mon homelab'
 image: 'img/post3.webp'
 date: 2024-09-10T11:11:38.315Z
-description: ''
+description: 'A brief resume of my homelab in 2024'
 tags: ['docker', 'self-hosting', 'nextcloud', 'homelab']
 type: post
 showTableOfContents: true

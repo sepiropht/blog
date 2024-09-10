@@ -2,7 +2,7 @@
 weight: 10
 title: 'Why i love docker'
 date: 2024-08-20T12:19:38.315Z
-description: ''
+description: 'Docker is an amazing tech'
 tags: ['docker', 'self-hosting', 'docker-compose']
 type: post
 showTableOfContents: true

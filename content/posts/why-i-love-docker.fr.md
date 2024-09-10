@@ -2,7 +2,7 @@
 weight: 10
 title: "Pourquoi j'aime docker"
 date: 2024-08-20T12:19:38.315Z
-description: ''
+description: 'Docker est magique'
 tags: ['docker', 'self-hosting', 'docker-compose']
 type: post
 showTableOfContents: true

@@ -3,7 +3,7 @@ weight: 10
 title: 'Managing Multiple SaaS on a Single Server with Caddy'
 image: 'img/post3.webp'
 date: 2024-08-24T12:19:38.315Z
-description: ''
+description: 'Mutlipe domain in on vps'
 tags: ['docker', 'self-hosting', 'saas', 'caddy']
 type: post
 showTableOfContents: true

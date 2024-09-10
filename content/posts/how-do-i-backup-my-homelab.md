@@ -2,7 +2,7 @@
 weight: 10
 title: 'How I Back Up My Data'
 date: 2024-08-22T14:00:00.315Z
-description: ''
+description: "Don't lost your data"
 tags: ['aws', 'self-hosting', 'backup']
 type: post
 showTableOfContents: true
