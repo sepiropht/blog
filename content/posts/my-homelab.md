@@ -98,6 +98,10 @@ volumes:
 
 This allows me to access and browse the files downloaded with Transmission from Nextcloud. And I do the same thing between Jellyfin and Transmission. So all downloaded files automatically appear in the Jellyfin library.
 
+I also use [Musidex](https://github.com/Uriopass/Musidex) a lot, an app that allows downloading YouTube videos and automatically converts them to mp3. I use it like Wallabag for long videos. It's made by a single developer, so the development isn't very sustained. I also have a modest contribution to my credit from over 2 years ago.
+
+It has a nice React web app, with a mobile app that allows downloading tracks for offline use. The backend is in Rust, so it's very light during execution, but good luck compiling it. I needed the 4GB Raspberry Pi for that, and even then, it took a very long time.
+
 ### - Wireguard
 
 The last on the list will be Wireguard, which I install simply thanks to [wg-easy](https://github.com/wg-easy/wg-easy). Installation takes 2 minutes thanks to docker-compose, and you even get a nice web interface to which you can add an authentication screen.

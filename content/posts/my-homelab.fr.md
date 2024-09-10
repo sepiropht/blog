@@ -92,7 +92,10 @@ volumes:
   - '/mnt/ssd/nextcloud2/data/data/sepiropht/files:/output'
 ```
 
-Ca permet de pourvoir accèder au parcourir les fichiers téléchargés avec transmission depuis nextlcoud. Et je fais la même chose entre jellyfin et transmisison. Donc tous fichiers téléchargés apparaîssent automatiquement dans la bibliothèque Jellyfin traduire ça
+Ca permet de pourvoir accèder au parcourir les fichiers téléchargés avec transmission depuis nextlcoud. Et je fais la même chose entre jellyfin et transmisison. Donc tous fichiers téléchargés apparaîssent automatiquement dans la bibliothèque Jellyfin.
+
+J'utilise aussi beaucoup [Musidex](https://github.com/Uriopass/Musidex) une app qui permet de telécharger des videos de youtube et qui convertis automatiquement en mp3. je l'utilise comme wallabag pour les longues vidéos. Elle est faite par seul dévéloppeur, donc le developpement n'est pas trop soutenue. J'ai aussi une modeste contribution à mon actif il y a plus de 2 ans.
+Il y a une jolie web app en react, avec une app mobile qui permet de télécharger les pistes pour faire du hors connexion. Le backend est en rust donc c'est très léger à l'execution par contre bon courage pour le compiler. Il m'a fallu la rpi de 4go pour ça et même là c'était très long.
 
 ## - Wireguard
 
