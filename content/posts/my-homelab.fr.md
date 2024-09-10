@@ -84,6 +84,15 @@ Je ne l'ai pas précisé plus haut donc je le fais maintenant mais ma liseuse Ko
 ## - Audio and Video Streaming
 
 J'utilise Jellyfin pour streamer films et séries. J'aime particulièrement le fait qu'il ait un client mobile et même desktop indépendant du navigateur. Pour la musique, j'utilise Navidrome, une autre app faite en Go + React que j'apprécie aussi particulièrement. Le serveur implémente le protocole Subsonic, ce qui permet d'utiliser une multitude de clients, même si je n'en ai pas encore trouvé un open source et bien.
+J'utilise transmisson pour les torrent. J'indique à mon conteneur transmission le path de mon repertoire nextcloud
+
+```yaml
+#docker-compose.yml de transmission
+volumes:
+  - '/mnt/ssd/nextcloud2/data/data/sepiropht/files:/output'
+```
+
+Ca permet de pourvoir accèder au parcourir les fichiers téléchargés avec transmission depuis nextlcoud. Et je fais la même chose entre jellyfin et transmisison. Donc tous fichiers téléchargés apparaîssent automatiquement dans la bibliothèque Jellyfin traduire ça
 
 ## - Wireguard
 
