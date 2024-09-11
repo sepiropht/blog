@@ -47,7 +47,7 @@ It has been quite successful !
 I have my little micro-SaaS that I launched at the beginning of the year, it doesn't bring me anything, and I don't think that's going to change. However, it's the first time one of my side projects has gone this far. Since the app has been running, I've already seen hundreds of users pass through. The downside is that they test but don't come back. So I thought about adding a dialog box in the interface that allows me to interact with users and possibly better understand their needs.
 
 Of course, it's out of the question to pay for a service for this. I turned to a self-hosted solution, you know the drill now: [Chatwoot](https://github.com/chatwoot/chatwoot). I installed the server on one of my VPSs, the app is in Ruby, which isn't such a common language, and then I was able to add my website by copying a piece of code that I pasted in the body, following the docs on how to add their element in a Next.js app. I was stuck, but Claude 3 helped me.
-This is what it looks like on the site.
+
 There's also a mobile app that can send me notifications if a user interacts with the dialog box.
 All this has been in place for a few days, and I'm still waiting for my first message, maybe from you?
 

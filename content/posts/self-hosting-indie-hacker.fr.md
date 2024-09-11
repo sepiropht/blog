@@ -47,8 +47,8 @@ Il a eu pas mal de succès.
 
 J'ai mon petit micro-saas que j'ai lancé en début d'années, il me rapporte rien et je ne pense pas que ça va changer. Toutefois c'est la première fois qu'un des mes side project va aussi loin. Depuis que l'app tourne j'ai déja vu des centaines d'utilsateurs passé. Le bémol c'est qu'ils testent mais ne reviennent pas. J'ai donc pensé rajouter un boite de dialogue dans l'interface qui me permet d'interegir avec les utilissateurs et eventuelement mieu comprendre leur besoin.
 
-C'est bien entendu hors de question de payé un services pour ça. Je me suis tourné vers une solution en auto-hébéergement, vous connaissez la chanson maintenant: [chatwood](https://github.com/chatwoot/chatwoot). J'ai installé le serveur sur un de mes vps, l'app est en ruby, ce language n'est pas si courant, et ensuite j'ai pu rajouter mon site web en copiant bout de code que j'ai collé dans le body, en suivant la docs d comment rajouter leur élémént dans une app Next.sj j'étais bloqué, mais claude3 m'a aider.
-Voila à quoi ça ressemble sur le site.
+C'est bien entendu hors de question de payé un services pour ça. Je me suis tourné vers une solution en auto-hébéergement, vous connaissez la chanson maintenant: [chatwood](https://github.com/chatwoot/chatwoot). J'ai installé le serveur sur un de mes vps, l'app est en ruby, ce language n'est pas si courant, et ensuite j'ai pu rajouter mon site web en copiant bout de code que j'ai collé dans le body, en suivant la docs sur comment rajouter leur élémént dans une app Next.js j'étais bloqué, mais `Claude 3` m'a aider.
+
 Il y a aussi une app mobile qui pourra m'envoyer des notifications si jamais un utilisateurs intéragis avec la boite de dialogue.
 Tout ça est en place depuis quelques jours et j'attends toujours mon prmeier message peut être vous ?
 
