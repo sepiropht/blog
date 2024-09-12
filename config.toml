@@ -48,8 +48,14 @@ theme = "gokarna"
       customParam = "someValue"
       anotherParam = "anotherValue"
 
+   [[languages.en.menu.main]]
+     name = "Home"
+     pre = "<span data-feather='home'></span>"
+     url = "/"
+     weight = 1
     [[languages.en.menu.main]]
       identifier = "posts"
+      pre = "<span data-feather='book'></span>"
       name = "Posts"
       url = "/posts/"
       weight = 1
@@ -68,7 +74,14 @@ theme = "gokarna"
       anotherParam = "uneAutreValeur"
 
     [[languages.fr.menu.main]]
+     name = "Accueil"
+     pre = "<span data-feather='home'></span>"
+     url = "/"
+     weight = 1
+
+    [[languages.fr.menu.main]]
       identifier = "posts"
+      pre = "<span data-feather='book'></span>"
       name = "Articles"
       url = "/fr/posts/"
       weight = 1
