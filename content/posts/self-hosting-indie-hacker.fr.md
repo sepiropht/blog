@@ -2,7 +2,7 @@
 weight: 10
 title: 'Auto-hébérgement pour le indie-hacker'
 image: 'img/post3.webp'
-date: 2024-09-12T14:19:38.315Z
+date: 2024-09-13T14:19:38.315Z
 description: 'Comment utiliser au maximum les services auto-héberger quand on est indie-hacker'
 tags: ['docker', 'auto-hébergement', 'mail', 'indie-hacker']
 type: post

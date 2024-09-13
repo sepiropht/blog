@@ -2,7 +2,7 @@
 weight: 10
 title: 'Self-hosting for indie-hacker'
 image: 'img/post3.webp'
-date: 2024-09-12T14:19:38.315Z
+date: 2024-09-13T14:19:38.315Z
 description: "How to maximize the use of self-hosted services when you're an indie hacker"
 tags: ['docker', 'auto-hébergement', 'mail', 'indie-hacker']
 type: post
