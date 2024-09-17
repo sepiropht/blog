@@ -13,14 +13,14 @@ draft: false
 je connais v depuis pas mal d'années et j'avoue que j'avais un peu arrété de suivre le développement du language depuis quelques temps. C'est un language qui promet beaucoup, ça sembe presque trop beau pour être vrai. La simplicité d'un language dynamique, avec une syntaxe à la go (en [mieux](https://github.com/vlang/v/wiki/V-for-Go-developers)), mais avec des perfs avec la [c/c++/rust](https://vlang.io/compare) mais tout en gardant une bonne [vitesse de compilation.](https://vlang.io/compilation_speed)
 
 ```v
-printeln('hello world!')
+println('hello world!')
 ```
 
 Difficile de faire plus simple. Dans un vrai programme toutefois on aura le classique point d'entrée main
 
 ```
 fn main () {
-    printeln('hello world!')
+    println('hello world!')
 }
 ```
 
