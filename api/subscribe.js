@@ -155,7 +155,7 @@ export default async function handler(req, res) {
 
       // Send the email
       await transporter.sendMail({
-        from: process.env.EMAIL_FROM || '"Sepiropht Blog" <newsletter@sepiropht.me>',
+        from: process.env.EMAIL_FROM || '"Sepiropht Blog" <sepiropht@sepiropht.me>',
         to: email,
         subject: 'Welcome to Our Newsletter!',
         html: htmlEmail,
