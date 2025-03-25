@@ -1,13 +1,12 @@
-import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export async function POST(request) {
+export async function POST(_, res) {
   try {
     const data = await request.json();
     const { email } = data;
     
     if (!email) {
-      return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+      return res.json({ error: 'Email is required' }, { status: 400 });
     }
 
     // Add subscriber to Listmonk
@@ -36,7 +35,7 @@ export async function POST(request) {
     
     if (!subscribeResponse.ok) {
       console.error('Error adding subscriber:', subscribeData);
-      return NextResponse.json({ error: 'Failed to add subscriber' }, { status: 500 });
+      return res.json({ error: 'Failed to add subscriber' }, { status: 500 });
     }
 
     // Step 2: Send welcome email using Nodemailer
@@ -152,9 +151,9 @@ export async function POST(request) {
       // We'll still return success even if the welcome email fails
     }
 
-    return NextResponse.json({ success: true });
+    return res.json({ success: true });
   } catch (error) {
     console.error('Subscription error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return res.json({ error: 'Internal server error' }, { status: 500 });
   }
 } 
