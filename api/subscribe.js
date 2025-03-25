@@ -1,24 +1,48 @@
 import nodemailer from 'nodemailer';
 
-export async function POST(_, res) {
+// Create the transporter outside the handler for better performance
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
+  secure: false,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
+
+// Export the handler as a default export for Vercel serverless functions
+export default async function handler(req, res) {
+  // Ensure the request method is POST
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
-    const data = await request.json();
+    // Parse the request body
+    const data = req.body; // In Vercel, req.body is automatically parsed as JSON for POST requests
     const { email } = data;
-    
+
+    // Validate email
     if (!email) {
-      return res.json({ error: 'Email is required' }, { status: 400 });
+      return res.status(400).json({ error: 'Email is required' });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'A valid email is required' });
     }
 
     // Add subscriber to Listmonk
     const auth = btoa(`${process.env.LISTMONK_USER}:${process.env.LISTMONK_TOKEN}`);
     const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-    
+
     // Step 1: Add subscriber to list
     const subscribeResponse = await fetch('https://listmonk.sepiropht.me/api/subscribers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Basic ${auth}`
+        'Authorization': `Basic ${auth}`,
       },
       body: JSON.stringify({
         email: email,
@@ -26,31 +50,23 @@ export async function POST(_, res) {
         status: 'enabled',
         lists: [4],
         attribs: {
-          join_date: currentDate
-        }
-      })
+          join_date: currentDate,
+        },
+      }),
     });
 
     const subscribeData = await subscribeResponse.json();
-    
+
     if (!subscribeResponse.ok) {
       console.error('Error adding subscriber:', subscribeData);
-      return res.json({ error: 'Failed to add subscriber' }, { status: 500 });
+      return res.status(500).json({
+        error: 'Failed to add subscriber',
+        details: subscribeData.message || 'Unknown error',
+      });
     }
 
     // Step 2: Send welcome email using Nodemailer
     try {
-      // Create a transporter
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
-        secure: false,
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASSWORD,
-        },
-      });
-
       // Create a beautiful HTML email
       const htmlEmail = `
         <!DOCTYPE html>
@@ -148,12 +164,15 @@ export async function POST(_, res) {
       console.log('Welcome email sent successfully');
     } catch (emailError) {
       console.error('Error sending welcome email:', emailError);
-      // We'll still return success even if the welcome email fails
+      return res.status(200).json({
+        success: true,
+        warning: 'Subscriber added, but failed to send welcome email',
+      });
     }
 
-    return res.json({ success: true });
+    return res.status(200).json({ success: true });
   } catch (error) {
     console.error('Subscription error:', error);
-    return res.json({ error: 'Internal server error' }, { status: 500 });
+    return res.status(500).json({ error: 'Internal server error' });
   }
-} 
+}
