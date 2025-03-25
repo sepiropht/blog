@@ -12,17 +12,14 @@
 
     const newsletterHTML = `
         <div id="newsletter-form" style="display: flex; justify-content: center; align-items: center; margin-top: 20px; padding: 0 15px;">
-          <form method="post" action="https://listmonk.sepiropht.me/subscription/form" class="listmonk-form" style="display: flex; flex-direction: column; width: 80%; max-width: 400px; border: 1px solid #007bff; border-radius: 4px; overflow: hidden;">
+          <form id="subscription-form" style="display: flex; flex-direction: column; width: 80%; max-width: 400px; border: 1px solid #007bff; border-radius: 4px; overflow: hidden;">
             <div style="display: flex; flex-direction: column; width: 100%;">
-              <input type="hidden" name="nonce" />
               <input type="email" name="email" required placeholder="Type your email..." style="padding: 10px; border: none; outline: none; width: 100%; font-size: 1rem;" />
               <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; font-size: 1rem; width: 100%;">
                 Subscribe
               </button>
             </div>
-            <p style="display: none;">
-              <input id="d0765" type="checkbox" name="l" checked value="d076588b-cabe-4c89-9b38-900aeac54f5b" />
-            </p>
+            <div id="subscription-message" style="padding: 10px; text-align: center; display: none;"></div>
           </form>
         </div>
       `
@@ -36,6 +33,55 @@
 
     // Apply responsive styles
     applyStyles()
+    
+    // Add event listener for form submission
+    setupFormSubmission()
+  }
+
+  // Function to handle form submission
+  function setupFormSubmission() {
+    const form = document.getElementById('subscription-form')
+    const messageDiv = document.getElementById('subscription-message')
+    
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault()
+      
+      const emailInput = form.querySelector('input[name="email"]')
+      const email = emailInput.value.trim()
+      
+      if (!email) return
+      
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        })
+        
+        const data = await response.json()
+        
+        if (response.ok) {
+          messageDiv.textContent = 'Thank you for subscribing!'
+          messageDiv.style.color = 'green'
+          emailInput.value = ''
+        } else {
+          messageDiv.textContent = data.error || 'Failed to subscribe. Please try again.'
+          messageDiv.style.color = 'red'
+        }
+      } catch (error) {
+        messageDiv.textContent = 'An error occurred. Please try again later.'
+        messageDiv.style.color = 'red'
+      }
+      
+      messageDiv.style.display = 'block'
+      
+      // Hide the message after 5 seconds
+      setTimeout(() => {
+        messageDiv.style.display = 'none'
+      }, 5000)
+    })
   }
 
   // Function to apply responsive styles
