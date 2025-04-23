@@ -6,7 +6,7 @@ export default (_, res) => {
     status: 'OK',
     tag: 'payRequest',
     commentAllowed: 255,
-    callback: `https://${process.env.DOMAIN}/api/lnurl-callback`,
+    callback: `${process.env.DOMAIN}/api/lnurl-callback`,
     metadata:
       '[["text/plain","Sats for Sepiropht"]]',
     minSendable: 1000,

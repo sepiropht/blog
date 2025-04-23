@@ -1,4 +1,14 @@
+import https from 'https'; // Re-add https import
+
+// Re-add agent creation
+const agent = new https.Agent({
+  rejectUnauthorized: false, // Bypass TLS verification
+});
+
 export default async (req, res) => {
+  // Log the domain being used
+  console.log(`Invoice - Domain: ${process.env.DOMAIN}`);
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -17,13 +27,20 @@ export default async (req, res) => {
       memo: memo || 'Payment to sepiropht@sepiropht.me', // Optional description
     });
 
+    // *** Add Logging Here ***
+    console.log(`Attempting to fetch: ${lndUrlString}`);
+    const headers = {
+      'Grpc-Metadata-macaroon': macaroon,
+      'Content-Type': 'application/json',
+    };
+    console.log('Using headers:', headers);
+    // ***********************
+
     const response = await fetch(lndUrlString, {
       method: 'POST',
-      headers: {
-        'Grpc-Metadata-macaroon': macaroon,
-        'Content-Type': 'application/json',
-      },
+      headers: headers, // Use the logged headers object
       body: postData,
+      agent: agent, // Add agent back to fetch options
     });
 
     const responseData = await response.json();
@@ -49,10 +66,8 @@ export default async (req, res) => {
     });
 
   } catch (error) {
-    console.error('Error creating invoice:', error.message);
-    const errorMessage = error.code === 'UNABLE_TO_VERIFY_LEAF_SIGNATURE' || error.code === 'CERT_HAS_EXPIRED' || error instanceof TypeError
-      ? 'Network error or TLS certificate issue'
-      : 'Internal server error';
+    console.error('Error creating invoice:', error.message, error); // Log the full error object
+    const errorMessage = error instanceof TypeError ? 'Network error or failed to fetch' : 'Internal server error';
     return res.status(500).json({ error: errorMessage });
   }
 };
