@@ -6,7 +6,6 @@ const agent = new https.Agent({
 });
 
 export default async (req, res) => {
-  // Log the domain being used
   console.log(`Invoice - Domain: ${process.env.DOMAIN}`);
 
   if (req.method !== 'POST') {

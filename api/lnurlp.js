@@ -6,7 +6,7 @@ export default (_, res) => {
     status: 'OK',
     tag: 'payRequest',
     commentAllowed: 255,
-    callback: `${process.env.DOMAIN}/api/lnurl-callback`,
+    callback: `https://elimbi.com/api/lnurl-callback`,
     metadata:
       '[["text/plain","Sats for Sepiropht"]]',
     minSendable: 1000,
