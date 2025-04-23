@@ -1,4 +1,4 @@
-import axios from 'axios';
+// Removed https import and agent creation
 
 export default async (req, res) => {
   if (req.method !== 'GET') {
@@ -12,24 +12,37 @@ export default async (req, res) => {
   }
 
   try {
-    const lndUrl = `${process.env.DOMAIN}/v1/invoice/${paymentHash}`;
+    const lndUrlString = `${process.env.DOMAIN}/v1/invoice/${paymentHash}`;
     const macaroon = process.env.MACAROON;
 
-    const response = await axios.get(lndUrl, {
+    const response = await fetch(lndUrlString, {
+      method: 'GET',
       headers: {
         'Grpc-Metadata-macaroon': macaroon,
       },
-      httpsAgent: new (require('https').Agent)({ rejectUnauthorized: false }),
+      // Removed agent property - fetch will use default TLS validation
     });
 
-    const { settled } = response.data;
+    const responseData = await response.json();
 
+    if (!response.ok) {
+      console.error(`LND API Error (${response.status}):`, responseData);
+      const errorMessage = responseData?.error || responseData?.message || 'Failed to check payment';
+      return res.status(response.status).json({ error: errorMessage });
+    }
+
+    const { settled } = responseData;
     return res.status(200).json({
       paid: settled,
-      details: response.data,
+      details: responseData,
     });
+
   } catch (error) {
     console.error('Error checking payment:', error.message);
-    return res.status(500).json({ error: 'Failed to check payment' });
+    // Certificate validation errors might appear here as TypeError in some Node versions
+    const errorMessage = error.code === 'UNABLE_TO_VERIFY_LEAF_SIGNATURE' || error.code === 'CERT_HAS_EXPIRED' || error instanceof TypeError
+      ? 'Network error or TLS certificate issue'
+      : 'Internal server error';
+     return res.status(500).json({ error: errorMessage });
   }
-}
+};
