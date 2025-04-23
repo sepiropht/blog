@@ -6,9 +6,9 @@ export default (_, res) => {
     status: 'OK',
     tag: 'payRequest',
     commentAllowed: 255,
-    callback: 'https://getalby.com/lnurlp/sepiropht/callback',
+    callback: `https://${process.env.DOMAIN}/api/lnurl-callback`,
     metadata:
-      '[["text/identifier","sepiropht@getalby.com"],["text/plain","Sats for Sepiropht"]]',
+      '[["text/plain","Sats for Sepiropht"]]',
     minSendable: 1000,
     maxSendable: 11000000000,
     payerData: {
