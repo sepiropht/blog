@@ -26,7 +26,7 @@ theme = "gokarna"
         const script = document.createElement('script');
         script.src = 'https://analytics.sepiropht.me/script.js';
         script.defer = true;
-        script.dataset.websiteId = 'ae8a6792-160d-46af-afcb-435979ba069e';
+        script.dataset.websiteId = 'd2ab5694-fea7-4132-aaa1-b7a43471cbb4';
         document.body.appendChild(script);
       }
     </script>
@@ -65,6 +65,12 @@ theme = "gokarna"
       url = "/posts/"
       weight = 1
     [[languages.en.menu.main]]
+      identifier = "books"
+      pre = "<span data-feather='book-open'></span>"
+      name = "Books"
+      url = "/books/"
+      weight = 2
+    [[languages.en.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
      url = "/index.xml"
@@ -90,6 +96,12 @@ theme = "gokarna"
       name = "Articles"
       url = "/fr/posts/"
       weight = 1
+    [[languages.fr.menu.main]]
+      identifier = "books"
+      pre = "<span data-feather='book-open'></span>"
+      name = "Livres"
+      url = "/fr/books/"
+      weight = 2
     [[languages.fr.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
