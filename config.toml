@@ -2,6 +2,8 @@ baseURL = "https://elimbi.com/"
 languageCode = "en-us"
 title = "William Elimbi"
 theme = "gokarna"
+relativeURLs = true
+canonifyURLs = false
 
 [params]
   showBackToTopButton = true 
@@ -64,12 +66,18 @@ theme = "gokarna"
       name = "Posts"
       url = "/posts/"
       weight = 1
+    [[languages.en.menu.main]]
+      identifier = "journal"
+      pre = "<span data-feather='edit-3'></span>"
+      name = "Thoughts"
+      url = "/journal/"
+      weight = 2
     # [[languages.en.menu.main]]
     #   identifier = "books"
     #   pre = "<span data-feather='book-open'></span>"
     #   name = "Books"
     #   url = "/books/"
-    #   weight = 2
+    #   weight = 3
     [[languages.en.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
@@ -96,12 +104,18 @@ theme = "gokarna"
       name = "Articles"
       url = "/fr/posts/"
       weight = 1
+    [[languages.fr.menu.main]]
+      identifier = "journal"
+      pre = "<span data-feather='edit-3'></span>"
+      name = "Pensées"
+      url = "/fr/journal/"
+      weight = 2
     # [[languages.fr.menu.main]]
     #   identifier = "books"
     #   pre = "<span data-feather='book-open'></span>"
     #   name = "Livres"
     #   url = "/fr/books/"
-    #   weight = 2
+    #   weight = 3
     [[languages.fr.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
