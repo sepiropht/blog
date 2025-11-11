@@ -21,6 +21,7 @@ canonifyURLs = false
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <script defer src="https://tubetotext.com/widget.js" data-api-key="ttw_4WxfIeb3v7CyEOn1l0z4d42bbPgmUVVZ"></script>
   '''
   customFooterHTML = '''
     <script>
@@ -72,12 +73,12 @@ canonifyURLs = false
       name = "Thoughts"
       url = "/journal/"
       weight = 2
-    # [[languages.en.menu.main]]
-    #   identifier = "books"
-    #   pre = "<span data-feather='book-open'></span>"
-    #   name = "Books"
-    #   url = "/books/"
-    #   weight = 3
+    [[languages.en.menu.main]]
+      identifier = "books"
+      pre = "<span data-feather='book-open'></span>"
+      name = "Books"
+      url = "/books/"
+      weight = 3
     [[languages.en.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
@@ -110,12 +111,12 @@ canonifyURLs = false
       name = "Pensées"
       url = "/fr/journal/"
       weight = 2
-    # [[languages.fr.menu.main]]
-    #   identifier = "books"
-    #   pre = "<span data-feather='book-open'></span>"
-    #   name = "Livres"
-    #   url = "/fr/books/"
-    #   weight = 3
+    [[languages.fr.menu.main]]
+      identifier = "books"
+      pre = "<span data-feather='book-open'></span>"
+      name = "Livres"
+      url = "/fr/books/"
+      weight = 3
     [[languages.fr.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
