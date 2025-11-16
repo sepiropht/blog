@@ -7,7 +7,7 @@ description: "A review of Chris Miller's book about the global battle for semico
 tags: ['books', 'technology', 'geopolitics', 'semiconductors', 'economics']
 type: post
 showTableOfContents: true
-draft: true
+draft: false
 ---
 
 ## About the Author

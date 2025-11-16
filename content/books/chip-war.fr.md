@@ -7,7 +7,7 @@ description: "Une critique du livre de Chris Miller sur la bataille mondiale pou
 tags: ['livres', 'technologie', 'géopolitique', 'semi-conducteurs', 'économie']
 type: post
 showTableOfContents: true
-draft: true
+draft: false
 ---
 
 Encore une recommandation qui vient de X, le réseau social de Musk. L'auteur propose de brosser un portrait général des semi-conducteurs. Une technologie ô combien importante dans le monde moderne.
