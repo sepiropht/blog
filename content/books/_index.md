@@ -3,6 +3,18 @@ title: 'Books'
 type: page
 ---
 
+[![Cover of Chip War](/img/chip-war-en.jpg)](/books/chip-war/)
+
+### [Chip War: The Fight for the World's Most Critical Technology - by Chris Miller](/books/chip-war/)
+
+**Date read:** October 2025
+
+The global battle for semiconductor supremacy and how microchips became the most critical technology of our time. Miller explores how chips power everything from smartphones to missiles, and why they've become the new oil in geopolitical conflicts.
+
+**Publisher:** Simon & Schuster UK | **Rating:** [À compléter]
+
+---
+
 [![Cover of The Secret of Our Success](/img/secret-of-our-success-en.jpg)](/books/secret-of-our-success/)
 
 ### [The Secret of Our Success - by Joseph Henrich](/books/secret-of-our-success/)
