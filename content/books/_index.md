@@ -11,7 +11,7 @@ type: page
 
 The global battle for semiconductor supremacy and how microchips became the most critical technology of our time. Miller explores how chips power everything from smartphones to missiles, and why they've become the new oil in geopolitical conflicts.
 
-**Publisher:** Simon & Schuster UK | **Rating:** [À compléter]
+**Publisher:** Simon & Schuster UK | **Rating:** 10/10
 
 ---
 

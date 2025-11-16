@@ -11,7 +11,7 @@ type: page
 
 La bataille mondiale pour la suprématie des semi-conducteurs et comment les puces sont devenues la technologie la plus critique de notre époque. Miller explore comment les puces alimentent tout, des smartphones aux missiles, et pourquoi elles sont devenues le nouveau pétrole dans les conflits géopolitiques.
 
-**Éditeur:** Saint-Simon | **Note:** [À compléter]
+**Éditeur:** Saint-Simon | **Note:** 10/10
 
 ---
 
