@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <!-- Titre -->
+  <text x="300" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2937">
+    Architecture Transformer Simplifiée
+  </text>
+
+  <!-- Entrée -->
+  <rect x="225" y="60" width="150" height="40" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="85" text-anchor="middle" font-size="14" fill="#1f2937">Phrase d'entrée</text>
+
+  <!-- Flèche -->
+  <line x1="300" y1="100" x2="300" y2="130" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Embeddings -->
+  <rect x="200" y="130" width="200" height="50" rx="8" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">Embeddings</text>
+  <text x="300" y="168" text-anchor="middle" font-size="11" fill="#4b5563">+ Positional Encoding</text>
+
+  <!-- Flèche -->
+  <line x1="300" y1="180" x2="300" y2="210" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Self-Attention Block -->
+  <g>
+    <rect x="150" y="210" width="300" height="180" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+    <text x="300" y="235" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">
+      Self-Attention Mechanism
+    </text>
+
+    <!-- Q, K, V -->
+    <rect x="170" y="250" width="60" height="40" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+    <text x="200" y="275" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">Q</text>
+    <text x="200" y="290" text-anchor="middle" font-size="9" fill="#78350f">Query</text>
+
+    <rect x="270" y="250" width="60" height="40" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+    <text x="300" y="275" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">K</text>
+    <text x="300" y="290" text-anchor="middle" font-size="9" fill="#78350f">Key</text>
+
+    <rect x="370" y="250" width="60" height="40" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+    <text x="400" y="275" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">V</text>
+    <text x="400" y="290" text-anchor="middle" font-size="9" fill="#78350f">Value</text>
+
+    <!-- Formule attention -->
+    <text x="300" y="320" text-anchor="middle" font-size="12" fill="#92400e">↓</text>
+    <rect x="180" y="325" width="240" height="30" rx="5" fill="#fed7aa" stroke="#f59e0b" stroke-width="1"/>
+    <text x="300" y="345" text-anchor="middle" font-size="11" font-family="monospace" fill="#92400e">
+      Attention = softmax(Q·K^T)·V
+    </text>
+
+    <!-- Multi-Head -->
+    <text x="300" y="370" text-anchor="middle" font-size="10" fill="#78350f" font-style="italic">
+      (Multi-Head: parallélisation)
+    </text>
+  </g>
+
+  <!-- Flèche -->
+  <line x1="300" y1="390" x2="300" y2="420" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Add & Norm -->
+  <rect x="225" y="420" width="150" height="35" rx="5" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="300" y="442" text-anchor="middle" font-size="12" fill="#312e81">Add & Normalize</text>
+
+  <!-- Flèche -->
+  <line x1="300" y1="455" x2="300" y2="485" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Feed-Forward -->
+  <rect x="200" y="485" width="200" height="60" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+  <text x="300" y="510" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">
+    Feed-Forward Network
+  </text>
+  <text x="300" y="528" text-anchor="middle" font-size="10" fill="#047857">
+    (Réseau dense classique)
+  </text>
+
+  <!-- Flèche -->
+  <line x1="300" y1="545" x2="300" y2="575" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Add & Norm 2 -->
+  <rect x="225" y="575" width="150" height="35" rx="5" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="300" y="597" text-anchor="middle" font-size="12" fill="#312e81">Add & Normalize</text>
+
+  <!-- Note répétition -->
+  <text x="300" y="630" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">
+    ↻ Répété N fois (ex: 6 couches dans GPT)
+  </text>
+
+  <!-- Flèche -->
+  <line x1="300" y1="640" x2="300" y2="670" stroke="#6b7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Sortie -->
+  <rect x="200" y="670" width="200" height="40" rx="5" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+  <text x="300" y="695" text-anchor="middle" font-size="14" fill="#7f1d1d">Prédiction mot suivant</text>
+
+  <!-- Définitions pour les flèches -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6b7280" />
+    </marker>
+  </defs>
+
+  <!-- Annotations -->
+  <g>
+    <text x="50" y="300" font-size="11" fill="#6b7280" text-anchor="end">
+      ← Le cœur du
+    </text>
+    <text x="50" y="315" font-size="11" fill="#6b7280" text-anchor="end">
+      Transformer
+    </text>
+
+    <text x="550" y="520" font-size="10" fill="#6b7280">
+      Chaque mot
+    </text>
+    <text x="550" y="535" font-size="10" fill="#6b7280">
+      "regarde"
+    </text>
+    <text x="550" y="550" font-size="10" fill="#6b7280">
+      tous les
+    </text>
+    <text x="550" y="565" font-size="10" fill="#6b7280">
+      autres
+    </text>
+  </g>
+</svg>

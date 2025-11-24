@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Titre -->
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">
+    Mécanisme d'Attention : "Le chat noir dort sur le tapis"
+  </text>
+
+  <!-- Définition des mots -->
+  <g id="words">
+    <!-- Le -->
+    <circle cx="80" cy="150" r="35" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="80" y="155" text-anchor="middle" font-size="14" fill="#1e40af">Le</text>
+
+    <!-- chat -->
+    <circle cx="200" cy="150" r="35" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+    <text x="200" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">chat</text>
+
+    <!-- noir -->
+    <circle cx="320" cy="150" r="35" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="320" y="155" text-anchor="middle" font-size="14" fill="#1e40af">noir</text>
+
+    <!-- dort -->
+    <circle cx="440" cy="150" r="35" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="440" y="155" text-anchor="middle" font-size="14" fill="#1e40af">dort</text>
+
+    <!-- sur -->
+    <circle cx="560" cy="150" r="35" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="560" y="155" text-anchor="middle" font-size="14" fill="#1e40af">sur</text>
+
+    <!-- tapis -->
+    <circle cx="680" cy="150" r="35" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="680" y="155" text-anchor="middle" font-size="14" fill="#1e40af">tapis</text>
+  </g>
+
+  <!-- Flèches d'attention depuis "chat" -->
+  <g id="attention-arrows">
+    <!-- chat -> noir (fort) -->
+    <line x1="230" y1="145" x2="285" y2="145" stroke="#ef4444" stroke-width="5" marker-end="url(#arrow-red)" opacity="0.8"/>
+    <text x="257" y="135" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">Fort</text>
+
+    <!-- chat -> dort (fort) -->
+    <path d="M 220,125 Q 320,80 420,125" fill="none" stroke="#ef4444" stroke-width="5" marker-end="url(#arrow-red)" opacity="0.8"/>
+    <text x="320" y="90" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">Fort</text>
+
+    <!-- chat -> tapis (moyen) -->
+    <path d="M 225,130 Q 450,50 655,130" fill="none" stroke="#f59e0b" stroke-width="4" marker-end="url(#arrow-orange)" opacity="0.7"/>
+    <text x="450" y="50" text-anchor="middle" font-size="11" fill="#d97706">Moyen</text>
+
+    <!-- chat -> Le (faible) -->
+    <path d="M 180,125 Q 130,100 100,125" fill="none" stroke="#d1d5db" stroke-width="2" marker-end="url(#arrow-gray)" opacity="0.5"/>
+    <text x="130" y="110" text-anchor="middle" font-size="10" fill="#9ca3af">Faible</text>
+
+    <!-- chat -> sur (faible) -->
+    <path d="M 230,160 Q 390,220 540,160" fill="none" stroke="#d1d5db" stroke-width="2" marker-end="url(#arrow-gray)" opacity="0.5"/>
+    <text x="390" y="230" text-anchor="middle" font-size="10" fill="#9ca3af">Faible</text>
+  </g>
+
+  <!-- Labels explicatifs -->
+  <g id="labels">
+    <text x="200" y="220" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">
+      Mot focalisé
+    </text>
+    <text x="200" y="235" text-anchor="middle" font-size="10" fill="#78350f">
+      (chaque mot "regarde" les autres)
+    </text>
+
+    <text x="320" y="240" text-anchor="middle" font-size="11" fill="#dc2626">
+      ↑ Couleur = attribut
+    </text>
+
+    <text x="440" y="240" text-anchor="middle" font-size="11" fill="#dc2626">
+      ↑ Action
+    </text>
+
+    <text x="680" y="240" text-anchor="middle" font-size="11" fill="#d97706">
+      ↑ Contexte/lieu
+    </text>
+  </g>
+
+  <!-- Explication du mécanisme -->
+  <rect x="50" y="280" width="700" height="100" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+
+  <text x="400" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">
+    Comment fonctionne l'attention ?
+  </text>
+
+  <text x="400" y="330" text-anchor="middle" font-size="12" fill="#4b5563">
+    Chaque mot calcule des "scores d'attention" avec tous les autres mots
+  </text>
+
+  <text x="400" y="350" text-anchor="middle" font-size="12" fill="#4b5563">
+    Les scores élevés → le mot est pertinent pour comprendre le contexte
+  </text>
+
+  <text x="400" y="370" text-anchor="middle" font-size="11" font-family="monospace" fill="#6b7280">
+    Score = softmax(Query · Key^T) → pondère les Values
+  </text>
+
+  <!-- Définitions pour les flèches -->
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ef4444" />
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#d1d5db" />
+    </marker>
+  </defs>
+</svg>

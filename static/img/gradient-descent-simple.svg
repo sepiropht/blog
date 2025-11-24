@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="700" height="500">
+  <!-- Titre -->
+  <text x="350" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2937">
+    Descente de Gradient : Navigation dans la Surface de Perte
+  </text>
+
+  <!-- Axes -->
+  <line x1="100" y1="400" x2="650" y2="400" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowaxis)"/>
+  <text x="670" y="405" font-size="14" fill="#4b5563">w (poids)</text>
+
+  <line x1="100" y1="400" x2="100" y2="70" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowaxis)"/>
+  <text x="90" y="55" font-size="14" fill="#4b5563" text-anchor="end">Perte ℒ</text>
+
+  <!-- Parabole (courbe de perte) -->
+  <path d="M 110,380 Q 200,100 350,60 T 590,380"
+        fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.6"/>
+
+  <!-- Surface de la parabole (remplissage) -->
+  <path d="M 110,380 Q 200,100 350,60 T 590,380 L 590,400 L 110,400 Z"
+        fill="#dbeafe" opacity="0.3"/>
+
+  <!-- Trajectoire de descente avec points -->
+  <g>
+    <!-- Point 1 (départ) -->
+    <circle cx="150" cy="300" r="10" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <text x="150" y="330" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="bold">Départ</text>
+    <text x="150" y="345" text-anchor="middle" font-size="10" fill="#6b7280">(w=1.0, ℒ=32)</text>
+
+    <!-- Flèche 1 -->
+    <path d="M 155,305 Q 200,240 240,195"
+          fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arroworange)"/>
+    <text x="200" y="245" font-size="11" fill="#f59e0b">Itération 1</text>
+
+    <!-- Point 2 -->
+    <circle cx="245" cy="190" r="8" fill="#f59e0b" stroke="#c2410c" stroke-width="2"/>
+    <text x="270" y="195" font-size="10" fill="#c2410c">ℒ=11.5</text>
+
+    <!-- Flèche 2 -->
+    <path d="M 248,195 Q 280,140 310,105"
+          fill="none" stroke="#eab308" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowyellow)"/>
+    <text x="280" y="145" font-size="11" fill="#eab308">Itération 2</text>
+
+    <!-- Point 3 -->
+    <circle cx="315" cy="100" r="8" fill="#eab308" stroke="#a16207" stroke-width="2"/>
+    <text x="340" y="105" font-size="10" fill="#a16207">ℒ=5.2</text>
+
+    <!-- Flèche 3 -->
+    <path d="M 318,105 Q 330,80 343,70"
+          fill="none" stroke="#84cc16" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowgreen)"/>
+    <text x="330" y="88" font-size="11" fill="#84cc16">...</text>
+
+    <!-- Point minimum -->
+    <circle cx="350" cy="60" r="12" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <text x="350" y="40" text-anchor="middle" font-size="12" fill="#15803d" font-weight="bold">Minimum</text>
+    <text x="350" y="25" text-anchor="middle" font-size="10" fill="#6b7280">(w≈0.5, ℒ≈0)</text>
+
+    <!-- Étoile pour le minimum -->
+    <path d="M 350,60 L 355,72 L 368,72 L 358,80 L 362,92 L 350,84 L 338,92 L 342,80 L 332,72 L 345,72 Z"
+          fill="#fef08a" stroke="#ca8a04" stroke-width="1"/>
+  </g>
+
+  <!-- Gradient (flèche tangente) au point de départ -->
+  <g>
+    <line x1="150" y1="300" x2="200" y2="220" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowred)"/>
+    <text x="175" y="255" font-size="11" fill="#dc2626" font-weight="bold">Gradient</text>
+    <text x="175" y="268" font-size="9" fill="#dc2626">(direction)</text>
+  </g>
+
+  <!-- Learning rate illustration -->
+  <g>
+    <rect x="480" y="200" width="180" height="100" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+    <text x="570" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">
+      Learning Rate η
+    </text>
+    <text x="570" y="245" text-anchor="middle" font-size="10" fill="#4b5563">
+      Petit η → petits pas
+    </text>
+    <text x="570" y="260" text-anchor="middle" font-size="10" fill="#4b5563">
+      (lent mais sûr)
+    </text>
+    <line x1="500" y1="275" x2="540" y2="275" stroke="#22c55e" stroke-width="2"/>
+    <text x="545" y="279" font-size="9" fill="#22c55e">✓ converge</text>
+
+    <text x="570" y="292" text-anchor="middle" font-size="10" fill="#4b5563">
+      Grand η → grands pas
+    </text>
+    <line x1="500" y1="305" x2="540" y2="305" stroke="#ef4444" stroke-width="2"/>
+    <path d="M 540,305 L 545,300 L 550,305 L 555,300 L 560,305"
+          fill="none" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="565" y="309" font-size="9" fill="#ef4444">✗ oscille</text>
+  </g>
+
+  <!-- Formule de mise à jour -->
+  <rect x="150" y="420" width="400" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="440" text-anchor="middle" font-size="13" fill="#92400e" font-weight="bold">
+    Formule de mise à jour :
+  </text>
+  <text x="350" y="460" text-anchor="middle" font-size="14" font-family="monospace" fill="#78350f">
+    w ← w - η × ∂ℒ/∂w
+  </text>
+
+  <!-- Définitions pour les flèches -->
+  <defs>
+    <marker id="arrowaxis" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6b7280" />
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#dc2626" />
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrowyellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#eab308" />
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#84cc16" />
+    </marker>
+  </defs>
+</svg>
