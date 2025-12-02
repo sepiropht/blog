@@ -3,6 +3,18 @@ title: 'Livres'
 type: page
 ---
 
+[![Cover of The 10,000 Year Explosion](/img/the-10000-year-explosion-fr.jpg)](/fr/books/the-10000-year-explosion/)
+
+### [The 10,000 Year Explosion: How Civilization Accelerated Human Evolution - by Gregory Cochran, Henry Harpending](/fr/books/the-10000-year-explosion/)
+
+**Date de lecture:** Novembre 2025
+
+Le livre soutient que l'évolution humaine s'est considérablement accélérée au cours des 10 000 dernières années, en particulier après l'essor de la civilisation, entraînant diverses adaptations au sein de différentes populations humaines.
+
+**Publisher:**  | **Rating:** 
+
+---
+
 [![Couverture de La guerre des semi-conducteurs](/img/chip-war-fr.jpg)](/fr/books/chip-war/)
 
 ### [La guerre des semi-conducteurs - par Chris Miller](/fr/books/chip-war/)

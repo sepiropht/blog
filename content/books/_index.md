@@ -3,6 +3,18 @@ title: 'Books'
 type: page
 ---
 
+[![Cover of The 10,000 Year Explosion](/img/the-10000-year-explosion-en.jpg)](/books/the-10000-year-explosion/)
+
+### [The 10,000 Year Explosion: How Civilization Accelerated Human Evolution - by Gregory Cochran, Henry Harpending](/books/the-10000-year-explosion/)
+
+**Date read:** November 2025
+
+The book argues that human evolution has accelerated significantly in the last 10,000 years, particularly after the rise of civilization, leading to various adaptations in different human populations.
+
+**Publisher:**  | **Rating:** 
+
+---
+
 [![Cover of Chip War](/img/chip-war-en.jpg)](/books/chip-war/)
 
 ### [Chip War: The Fight for the World's Most Critical Technology - by Chris Miller](/books/chip-war/)
