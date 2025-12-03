@@ -1,6 +1,6 @@
 ---
 title: "The 10,000 Year Explosion: How Civilization Accelerated Human Evolution"
-date: 2025-11-25
+date: 2025-11-25T10:00:00Z
 draft: false
 authors: ["Gregory Cochran", "Henry Harpending"]
 tags: ["Evolution", "Genetics", "History"]
