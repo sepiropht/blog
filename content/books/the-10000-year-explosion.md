@@ -1,10 +1,13 @@
 ---
+weight: 10
 title: "The 10,000 Year Explosion: How Civilization Accelerated Human Evolution"
-date: 2025-11-25T10:00:00Z
-draft: false
-authors: ["Gregory Cochran", "Henry Harpending"]
-tags: ["Evolution", "Genetics", "History"]
 image: "/img/the-10000-year-explosion-en.jpg"
+date: 2025-11-25T10:00:00Z
+description: "The book argues that human evolution has accelerated significantly in the last 10,000 years, particularly after the rise of civilization, leading to various adaptations in different human populations."
+tags: ["Evolution", "Genetics", "History"]
+type: post
+showTableOfContents: true
+draft: false
 amazon: "https://www.amazon.com/10-000-Year-Explosion-Civilization-Accelerated/dp/0465002218"
 ---
 
