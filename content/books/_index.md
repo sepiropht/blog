@@ -3,6 +3,18 @@ title: 'Books'
 type: page
 ---
 
+[![Cover of Ultrasociety](/img/ultrasociety-en.jpg)](/books/ultrasociety/)
+
+### [Ultrasociety: How 15,000 Years of War, Peace, and Trade Made Humans the Greatest Cooperators on Earth - by Peter Turchin](/books/ultrasociety/)
+
+**Date read:** November 2025
+
+The central point of this work is that humans continue to evolve, contrary to what one might initially believe. This evolution has even accelerated over the last 15,000 years.
+
+**Publisher:**  | **Rating:** 
+
+---
+
 [![Cover of The 10,000 Year Explosion](/img/the-10000-year-explosion-en.jpg)](/books/the-10000-year-explosion/)
 
 ### [The 10,000 Year Explosion: How Civilization Accelerated Human Evolution - by Gregory Cochran, Henry Harpending](/books/the-10000-year-explosion/)

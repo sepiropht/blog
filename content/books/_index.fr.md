@@ -3,6 +3,18 @@ title: 'Livres'
 type: page
 ---
 
+[![Cover of Ultrasociety](/img/ultrasociety-fr.jpg)](/fr/books/ultrasociety/)
+
+### [Ultrasociety: Comment 15 000 ans de guerre, de paix et de commerce ont fait des humains les plus grands coopérateurs sur Terre - par Peter Turchin](/fr/books/ultrasociety/)
+
+**Date de lecture:** Novembre 2025
+
+Le point central de cet ouvrage est que les humains continuent d'évoluer, contrairement à ce que l'on pourrait croire de prime abord. Cette évolution s'est même accélérée ces 15 000 dernières années.
+
+**Éditeur:**  | **Note:** 
+
+---
+
 [![Cover of The 10,000 Year Explosion](/img/the-10000-year-explosion-fr.jpg)](/fr/books/the-10000-year-explosion/)
 
 ### [The 10,000 Year Explosion: How Civilization Accelerated Human Evolution - by Gregory Cochran, Henry Harpending](/fr/books/the-10000-year-explosion/)
