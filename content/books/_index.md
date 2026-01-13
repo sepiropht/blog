@@ -3,6 +3,18 @@ title: 'Books'
 type: page
 ---
 
+[![Cover of The WEIRDest People in the World](/img/the-weirdest-people-in-the-world.jpg)](/books/the-weirdest-people-in-the-world/)
+
+### [The WEIRDest People in the World - by Joseph Henrich](/books/the-weirdest-people-in-the-world/)
+
+**Date read:** December 2025
+
+How the West Became Psychologically Peculiar and Particularly Prosperous.
+
+**Publisher:** Farrar, Straus and Giroux | **Rating:** 10/10
+
+---
+
 [![Cover of Ultrasociety](/img/ultrasociety-en.jpg)](/books/ultrasociety/)
 
 ### [Ultrasociety: How 15,000 Years of War, Peace, and Trade Made Humans the Greatest Cooperators on Earth - by Peter Turchin](/books/ultrasociety/)
