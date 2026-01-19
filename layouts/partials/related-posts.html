@@ -1,0 +1,21 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if $related }}
+<div class="related-posts">
+    <h3>{{ if eq .Language.Lang "fr" }}Articles similaires{{ else }}Similar Articles{{ end }}</h3>
+    <div class="related-posts-list">
+        {{ range $related }}
+        <a href="{{ .RelPermalink }}" class="related-post-item">
+            {{ if .Params.image }}
+            <div class="related-post-image" style="background-image: url('{{ .Params.image }}');"></div>
+            {{ else }}
+            <div class="related-post-image related-post-no-image"></div>
+            {{ end }}
+            <div class="related-post-content">
+                <h4>{{ .Title }}</h4>
+                <span class="related-post-date">{{ dateFormat "January 2, 2006" .Date }}</span>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

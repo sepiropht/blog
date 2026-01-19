@@ -1,3 +1,108 @@
 .footer span {
   display: none !important;
 }
+
+/* Related Posts Section */
+.related-posts {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+}
+
+.related-posts h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.related-posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-post-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--card-background, #f8f8f8);
+}
+
+.related-post-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.related-post-image {
+  width: 100%;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--border-color, #e0e0e0);
+}
+
+.related-post-no-image {
+  background: linear-gradient(135deg, var(--border-color, #e0e0e0) 0%, var(--card-background, #f8f8f8) 100%);
+}
+
+.related-post-content {
+  padding: 1rem;
+}
+
+.related-post-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.related-post-date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .related-posts {
+    border-top-color: #444;
+  }
+
+  .related-post-item {
+    background: #2a2a2a;
+  }
+
+  .related-post-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .related-post-image {
+    background-color: #444;
+  }
+
+  .related-post-no-image {
+    background: linear-gradient(135deg, #444 0%, #2a2a2a 100%);
+  }
+}
+
+/* Gokarna dark theme class support */
+body.dark .related-posts {
+  border-top-color: #444;
+}
+
+body.dark .related-post-item {
+  background: #2a2a2a;
+}
+
+body.dark .related-post-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .related-post-image {
+  background-color: #444;
+}
+
+body.dark .related-post-no-image {
+  background: linear-gradient(135deg, #444 0%, #2a2a2a 100%);
+}
