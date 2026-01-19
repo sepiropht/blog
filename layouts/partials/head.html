@@ -37,6 +37,55 @@
     <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
     <link rel="canonical" href="{{ .Permalink }}">
 
+    <!-- Schema.org structured data for articles -->
+    {{ if and (eq .Type "post") (not .Date.IsZero) }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": {{ .Title | jsonify }},
+        "description": {{ .Description | default "" | jsonify }},
+        "image": {{ with .Params.image }}{{ absURL . | jsonify }}{{ else }}""{{ end }},
+        "author": {
+            "@type": "Person",
+            "name": {{ .Site.Title | jsonify }},
+            "url": {{ .Site.BaseURL | jsonify }}
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": {{ .Site.Title | jsonify }}
+        },
+        "datePublished": "{{ .Date.Format "2006-01-02" }}",
+        "dateModified": "{{ if not .Lastmod.IsZero }}{{ .Lastmod.Format "2006-01-02" }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": {{ .Permalink | jsonify }}
+        }{{ with .Params.tags }},
+        "keywords": {{ delimit . ", " | jsonify }}{{ end }}
+    }
+    </script>
+    {{ end }}
+
+    <!-- Schema.org structured data for book reviews -->
+    {{ if and (eq .Type "books") (not .Date.IsZero) }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "Book",
+            "name": {{ .Title | jsonify }}
+        },
+        "author": {
+            "@type": "Person",
+            "name": {{ .Site.Title | jsonify }}
+        },
+        "datePublished": "{{ .Date.Format "2006-01-02" }}",
+        "reviewBody": {{ .Description | default "" | jsonify }}
+    }
+    </script>
+    {{ end }}
+
     {{ $cssNormalize := resources.Get "css/normalize.min.css" }}
     <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print">
 

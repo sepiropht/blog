@@ -17,8 +17,9 @@ canonifyURLs = false
     weight = 10
 
 [params]
-  showBackToTopButton = true 
+  showBackToTopButton = true
   description = "Self sovereign and self-hosting"
+  dateFormat = "January 2, 2006"
   socialIcons = [
     {name = "twitter", url = "https://twitter.com/sepiropht"},
     {name = "email", url = "mailto:sepiropht@sepiropht.me"}
