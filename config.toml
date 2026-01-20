@@ -87,7 +87,7 @@ canonifyURLs = false
     [[languages.en.menu.main]]
       identifier = "books"
       pre = "<span data-feather='book-open'></span>"
-      name = "Books"
+      name = "Reading"
       url = "/books/"
       weight = 3
     [[languages.en.menu.main]]
