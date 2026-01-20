@@ -4,7 +4,7 @@ description: "Ce que je fais, lis et pense en ce moment"
 type: page
 ---
 
-## 20 janvier 2026
+## 19 janvier 2026
 
 En ce moment je lis un livre de Isaac Asimov. J'ai découvert cet auteur car je voulais lire un peu de science fiction, genre qui m'est totalement étranger. J'ai donc naturellement choisi de lire son livre sur l'histoire de l'empire romain en 2 tomes ! L'un sur la république et l'autre sur l'empire.
 

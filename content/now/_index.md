@@ -4,7 +4,7 @@ description: "What I'm currently doing, reading, and thinking about"
 type: page
 ---
 
-## January 20, 2026
+## January 19, 2026
 
 Right now I'm reading a book by Isaac Asimov. I discovered this author because I wanted to read some science fiction, a genre that's completely foreign to me. So I naturally chose to read his book on the history of the Roman Empire in 2 volumes! One on the republic and the other on the empire.
 
