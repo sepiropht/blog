@@ -20,12 +20,3 @@ J'ai aussi une question : comment parvenait-il à prouver que c'était bien lui 
 
 ![Position d'échecs - Les blancs jouent et gagnent](/img/chess-now.gif)
 
----
-
-Je lance cette page "en ce moment" pour partager ce sur quoi je travaille. Inspiré par [nownownow.com](https://nownownow.com/about).
-
-**Lecture :** Je termine [The WEIRDest People in the World](/fr/books/the-weirdest-people-in-the-world/) de Joseph Henrich.
-
-**Projets :** Je teste [Readest](/fr/posts/readest-ebook-reader/) comme nouveau lecteur d'ebooks sur tous mes appareils.
-
-**Écriture :** Je viens de publier un article sur mon workflow de bibliothèque numérique et Readest.

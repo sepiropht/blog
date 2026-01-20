@@ -20,12 +20,3 @@ Afterwards I played a chess game in division 4. In France I'm making my big come
 
 ![Chess position - White to play and win](/img/chess-now.gif)
 
----
-
-Starting this "now" page to share what I'm up to. Inspired by [nownownow.com](https://nownownow.com/about).
-
-**Reading:** Finishing [The WEIRDest People in the World](/books/the-weirdest-people-in-the-world/) by Joseph Henrich.
-
-**Building:** Testing [Readest](/posts/readest-ebook-reader/) as my new ebook reader across devices.
-
-**Writing:** Just published an article about my digital library workflow and Readest.
