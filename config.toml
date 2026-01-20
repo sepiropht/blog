@@ -91,6 +91,12 @@ canonifyURLs = false
       url = "/books/"
       weight = 3
     [[languages.en.menu.main]]
+      identifier = "now"
+      pre = "<span data-feather='clock'></span>"
+      name = "Now"
+      url = "/now/"
+      weight = 4
+    [[languages.en.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
      url = "/index.xml"
@@ -128,6 +134,12 @@ canonifyURLs = false
       name = "Livres"
       url = "/fr/books/"
       weight = 3
+    [[languages.fr.menu.main]]
+      identifier = "now"
+      pre = "<span data-feather='clock'></span>"
+      name = "Now"
+      url = "/fr/now/"
+      weight = 4
     [[languages.fr.menu.main]]
      identifier = "rss"
      pre = "<span data-feather='rss'></span>"
