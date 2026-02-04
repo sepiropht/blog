@@ -3,6 +3,18 @@ title: 'Books'
 type: page
 ---
 
+[![Cover of The Roman Republic](/img/the-roman-republic-en.jpg)](/books/the-roman-republic/)
+
+### [The Roman Republic - by Isaac Asimov](/books/the-roman-republic/)
+
+**Date read:** January 2026
+
+The Roman Republic by Isaac Asimov traces the history of a small, semi-civilized tribe that achieved a great dream of glory.
+
+**Publisher:** Houghton Mifflin | **Rating:** 10/10
+
+---
+
 [![Cover of The WEIRDest People in the World](/img/the-weirdest-people-in-the-world.jpg)](/books/the-weirdest-people-in-the-world/)
 
 ### [The WEIRDest People in the World - by Joseph Henrich](/books/the-weirdest-people-in-the-world/)

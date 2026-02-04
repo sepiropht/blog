@@ -3,6 +3,18 @@ title: 'Livres'
 type: page
 ---
 
+[![Couverture de La République Romaine](/img/the-roman-republic-fr.jpg)](/fr/books/the-roman-republic/)
+
+### [La République Romaine - par Isaac Asimov](/fr/books/the-roman-republic/)
+
+**Date de lecture:** Janvier 2026
+
+La République Romaine d'Isaac Asimov retrace l'histoire d'une petite tribu semi-civilisée qui a réalisé un grand rêve de gloire.
+
+**Éditeur:** Les Belles Lettres | **Note:** 10/10
+
+---
+
 [![Couverture de The WEIRDest People in the World](/img/the-weirdest-people-in-the-world.jpg)](/fr/books/the-weirdest-people-in-the-world/)
 
 ### [The WEIRDest People in the World - par Joseph Henrich](/fr/books/the-weirdest-people-in-the-world/)
