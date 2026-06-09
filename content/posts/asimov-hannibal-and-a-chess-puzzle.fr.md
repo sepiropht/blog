@@ -1,10 +1,13 @@
 ---
-title: "En ce moment"
-description: "Ce que je fais, lis et pense en ce moment"
-type: page
+weight: 10
+title: 'Lire Asimov sur Rome, et un problème d''échecs'
+date: 2026-01-19T00:00:00.000Z
+description: "Ce que je lis et pense en ce moment : Hannibal, Carthage, et une partie d'échecs de mon retour en compétition."
+tags: ['journal', 'history', 'chess', 'reading']
+type: post
+showTableOfContents: false
+draft: false
 ---
-
-## 19 janvier 2026
 
 En ce moment je lis un livre de Isaac Asimov. J'ai découvert cet auteur car je voulais lire un peu de science fiction, genre qui m'est totalement étranger. J'ai donc naturellement choisi de lire son livre sur l'histoire de l'empire romain en 2 tomes ! L'un sur la république et l'autre sur l'empire.
 
@@ -19,4 +22,3 @@ J'ai aussi une question : comment parvenait-il à prouver que c'était bien lui 
 À la suite j'ai joué une partie d'échecs en division 4. En France je fais mon grand retour après 10 ans d'absence. Pour l'instant le bilan est un peu mitigé : 2 défaites et 1 victoire. Je joue donc cette 4ème partie contre une adversaire qui vient de commencer les échecs en compétition. Les blancs jouent et gagnent, trouvez le gain !
 
 ![Position d'échecs - Les blancs jouent et gagnent](/img/chess-now.gif)
-

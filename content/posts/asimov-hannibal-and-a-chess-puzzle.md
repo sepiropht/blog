@@ -1,10 +1,13 @@
 ---
-title: "Now"
-description: "What I'm currently doing, reading, and thinking about"
-type: page
+weight: 10
+title: 'Reading Asimov on Rome, and a Chess Puzzle'
+date: 2026-01-19T00:00:00.000Z
+description: "What I'm currently reading and thinking about: Hannibal, Carthage, and a chess game from my comeback."
+tags: ['journal', 'history', 'chess', 'reading']
+type: post
+showTableOfContents: false
+draft: false
 ---
-
-## January 19, 2026
 
 Right now I'm reading a book by Isaac Asimov. I discovered this author because I wanted to read some science fiction, a genre that's completely foreign to me. So I naturally chose to read his book on the history of the Roman Empire in 2 volumes! One on the republic and the other on the empire.
 
@@ -19,4 +22,3 @@ I also have a question: how did he manage to prove it was really him when he met
 Afterwards I played a chess game in division 4. In France I'm making my big comeback after 10 years of absence. So far the results are a bit mixed: 2 losses and 1 win. So I'm playing this 4th game against an opponent who just started competitive chess. White to play and win, find the winning move!
 
 ![Chess position - White to play and win](/img/chess-now.gif)
-
