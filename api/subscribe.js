@@ -48,7 +48,7 @@ export default async function handler(req, res) {
         email: email,
         name: '',
         status: 'enabled',
-        lists: [4],
+        lists: [3],
         attribs: {
           join_date: currentDate,
         },
