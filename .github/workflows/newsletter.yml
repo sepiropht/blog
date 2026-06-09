@@ -1,0 +1,38 @@
+name: Newsletter on new post
+
+# Sends a Listmonk campaign to all subscribers (list 3) whenever a new
+# post is added to content/posts/ on master.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'content/posts/**.md'
+
+# Avoid overlapping runs sending duplicate campaigns.
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so we can diff against the push base
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Send newsletter for newly added posts
+        env:
+          LISTMONK_URL: https://listmonk.elimbi.com
+          LISTMONK_USER: ${{ secrets.LISTMONK_USER }}
+          LISTMONK_TOKEN: ${{ secrets.LISTMONK_TOKEN }}
+          LIST_ID: '3'
+          SITE_URL: https://elimbi.com
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          SEND_MODE: running # set to 'draft' to create campaigns without sending
+        run: node .github/scripts/send-newsletter.mjs
