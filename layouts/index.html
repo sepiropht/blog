@@ -1,18 +1,4 @@
 {{ define "main" }}
-{{ if isset .Site.Params "socialicons" }}
-<div class="social-icons">
-    <ul class="social-icons-list">
-        {{ range .Site.Params.SocialIcons }}
-        <li class="social-icon">
-            <a href="{{ .url }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} aria-label="Learn more on {{ .name }}">
-                <img class="svg-inject" src="/svg/icons/{{ .name }}.svg" alt="">
-            </a>
-        </li>
-        {{ end }}
-    </ul>
-</div>
-{{ end }}
-
 {{ if os.FileExists "index-about.md" }}
 <div class="markdown-content">
     {{ readFile "index-about.md" | markdownify }}
