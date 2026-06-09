@@ -1,7 +1,8 @@
 {{ $fr := eq .Site.Language.Lang "fr" }}
 <section class="newsletter">
-  <h3 class="newsletter-title">{{ if $fr }}Abonnez-vous à la newsletter{{ else }}Subscribe to the newsletter{{ end }}</h3>
-  <p class="newsletter-subtitle">{{ if $fr }}Recevez les nouveaux articles directement dans votre boîte mail. Pas de spam, désabonnement en un clic.{{ else }}Get new posts straight to your inbox. No spam, unsubscribe anytime.{{ end }}</p>
+  <p class="newsletter-follow">
+    {{ if $fr }}Envie d'en savoir plus sur moi ? Suivez-moi sur <a href="https://x.com/sepiropht" target="_blank" rel="noopener me">X</a>.{{ else }}Want to know more about me? Follow me on <a href="https://x.com/sepiropht" target="_blank" rel="noopener me">X</a>.{{ end }}
+  </p>
   <form class="newsletter-form" id="newsletter-form" novalidate
     data-success="{{ if $fr }}Merci ! Vérifiez votre boîte mail.{{ else }}Thanks for subscribing! Check your inbox.{{ end }}"
     data-error="{{ if $fr }}Une erreur est survenue. Veuillez réessayer.{{ else }}Something went wrong. Please try again.{{ end }}">
