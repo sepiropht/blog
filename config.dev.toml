@@ -60,12 +60,6 @@ canonifyURLs = false
      pre = "<span data-feather='home'></span>"
      url = "/"
      weight = 1
-    [[languages.en.menu.main]]
-      identifier = "posts"
-      pre = "<span data-feather='book'></span>"
-      name = "Posts"
-      url = "/posts/"
-      weight = 1
     # [[languages.en.menu.main]]
     #   identifier = "books"
     #   pre = "<span data-feather='book-open'></span>"
@@ -92,12 +86,6 @@ canonifyURLs = false
      url = "/"
      weight = 1
 
-    [[languages.fr.menu.main]]
-      identifier = "posts"
-      pre = "<span data-feather='book'></span>"
-      name = "Articles"
-      url = "/fr/posts/"
-      weight = 1
     # [[languages.fr.menu.main]]
     #   identifier = "books"
     #   pre = "<span data-feather='book-open'></span>"
