@@ -34,5 +34,5 @@ jobs:
           SITE_URL: https://elimbi.com
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
-          SEND_MODE: running # set to 'draft' to create campaigns without sending
+          SEND_MODE: draft # 'draft' = create campaign for review; set to 'running' to auto-send
         run: node .github/scripts/send-newsletter.mjs
