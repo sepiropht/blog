@@ -2,9 +2,9 @@
     {{ if eq .Type "post" }}
         {{- partial "post.html" . -}}
         {{- partial "toc.html" . -}}
+        {{- partial "newsletter.html" . -}}
         {{- partial "related-posts.html" . -}}
         {{- partial "all-posts.html" . -}}
-        {{- partial "newsletter.html" . -}}
     {{ end }}
 
     {{ if eq .Type "page" }}
