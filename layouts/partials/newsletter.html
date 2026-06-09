@@ -1,0 +1,15 @@
+{{ $fr := eq .Site.Language.Lang "fr" }}
+<section class="newsletter">
+  <h3 class="newsletter-title">{{ if $fr }}Abonnez-vous à la newsletter{{ else }}Subscribe to the newsletter{{ end }}</h3>
+  <p class="newsletter-subtitle">{{ if $fr }}Recevez les nouveaux articles directement dans votre boîte mail. Pas de spam, désabonnement en un clic.{{ else }}Get new posts straight to your inbox. No spam, unsubscribe anytime.{{ end }}</p>
+  <form class="newsletter-form" id="newsletter-form" novalidate
+    data-success="{{ if $fr }}Merci ! Vérifiez votre boîte mail.{{ else }}Thanks for subscribing! Check your inbox.{{ end }}"
+    data-error="{{ if $fr }}Une erreur est survenue. Veuillez réessayer.{{ else }}Something went wrong. Please try again.{{ end }}">
+    <input class="newsletter-input" type="email" name="email" required
+      placeholder="{{ if $fr }}Votre email…{{ else }}Your email…{{ end }}"
+      aria-label="{{ if $fr }}Adresse email{{ else }}Email address{{ end }}" />
+    <button class="newsletter-button" type="submit">{{ if $fr }}S'abonner{{ else }}Subscribe{{ end }}</button>
+  </form>
+  <p class="newsletter-message" id="newsletter-message" role="status" aria-live="polite"></p>
+</section>
+<script src="/js/newsletter.js" defer></script>

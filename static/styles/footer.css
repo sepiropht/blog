@@ -113,6 +113,117 @@ img[src*="chess"] {
   height: auto;
 }
 
+/* Newsletter subscription form */
+.newsletter {
+  margin-top: 3rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  background: var(--card-background, #f8f8f8);
+}
+
+.newsletter-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.newsletter-subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.newsletter-input {
+  flex: 1 1 220px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+}
+
+.newsletter-button {
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--accent-color, #007bff);
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.newsletter-button:hover {
+  opacity: 0.9;
+}
+
+.newsletter-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.newsletter-message {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.newsletter-message.ok {
+  color: #1a7f37;
+}
+
+.newsletter-message.error {
+  color: #cf222e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .newsletter {
+    border-color: #444;
+    background: #2a2a2a;
+  }
+
+  .newsletter-input {
+    border-color: #555;
+    background: #1e1e1e;
+    color: #eee;
+  }
+
+  .newsletter-message.ok {
+    color: #3fb950;
+  }
+
+  .newsletter-message.error {
+    color: #f85149;
+  }
+}
+
+body.dark .newsletter {
+  border-color: #444;
+  background: #2a2a2a;
+}
+
+body.dark .newsletter-input {
+  border-color: #555;
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark .newsletter-message.ok {
+  color: #3fb950;
+}
+
+body.dark .newsletter-message.error {
+  color: #f85149;
+}
+
 /* Year headings on the home page post list */
 .home-posts .post-year {
   margin: 2.5rem 0 1rem;
