@@ -1,0 +1,10 @@
+<div class="all-posts list-posts">
+    <h3>{{ if eq .Language.Lang "fr" }}Tous les articles{{ else }}All Articles{{ end }}</h3>
+    {{ $posts := where .Site.RegularPages "Params.type" "post" }}
+    {{ range $posts.GroupByDate "2006" }}
+        <h4 class="post-year">{{ .Key }}</h4>
+        {{ range .Pages.ByDate.Reverse }}
+            {{- partial "list-posts.html" . -}}
+        {{ end }}
+    {{ end }}
+</div>
