@@ -75,7 +75,7 @@ Deployment is automatic via Vercel when pushing to the master branch. No manual 
 Located in `/api` directory:
 
 - **`subscribe.js`** - Newsletter subscription endpoint
-  - Integrates with Listmonk API (https://listmonk.sepiropht.me)
+  - Integrates with Listmonk API (https://listmonk.elimbi.com)
   - Sends welcome emails via Nodemailer
   - Requires env vars: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `LISTMONK_USER`, `LISTMONK_TOKEN`, `EMAIL_FROM`
 

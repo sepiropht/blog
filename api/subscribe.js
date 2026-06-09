@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
 
     // Step 1: Add subscriber to list
-    const subscribeResponse = await fetch('https://listmonk.sepiropht.me/api/subscribers', {
+    const subscribeResponse = await fetch('https://listmonk.elimbi.com/api/subscribers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
