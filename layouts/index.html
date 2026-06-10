@@ -5,6 +5,13 @@
 </div>
 {{ end }}
 
+{{ $fr := eq .Language.Lang "fr" }}
+<div class="post-filters">
+    <button class="post-filter is-active" data-filter="all">{{ if $fr }}Tout{{ else }}All{{ end }}</button>
+    <button class="post-filter" data-filter="blog">Blog</button>
+    <button class="post-filter" data-filter="x">{{ if $fr }}Posts X{{ else }}X posts{{ end }}</button>
+</div>
+
 <div class="home-posts list-posts">
     {{ $posts := where .Site.RegularPages "Params.type" "post" }}
     {{ range $posts.GroupByDate "2006" }}
@@ -14,4 +21,5 @@
         {{ end }}
     {{ end }}
 </div>
+<script src="/js/home-filter.js" defer></script>
 {{ end }}

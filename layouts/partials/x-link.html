@@ -1,0 +1,3 @@
+{{ with .Params.x_url }}
+<p class="x-origin">{{ if eq $.Language.Lang "fr" }}Initialement publié sur{{ else }}Originally posted on{{ end }} <a href="{{ . }}" target="_blank" rel="noopener">X</a>.</p>
+{{ end }}

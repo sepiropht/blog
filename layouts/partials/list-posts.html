@@ -1,4 +1,4 @@
-<div class="post-title">
+<div class="post-title" data-x="{{ if in .Params.tags "x" }}true{{ else }}false{{ end }}">
     <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
     <div class="flex-break"></div>
     <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date}}</span>

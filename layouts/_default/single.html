@@ -1,6 +1,7 @@
 {{ define "main" }}
     {{ if eq .Type "post" }}
         {{- partial "post.html" . -}}
+        {{- partial "x-link.html" . -}}
         {{- partial "toc.html" . -}}
         {{- partial "newsletter.html" . -}}
         {{- partial "related-posts.html" . -}}
