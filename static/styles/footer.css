@@ -102,9 +102,10 @@ img[src*="chess"] {
   margin-top: 2.5rem;
   padding: 1rem 1.1rem;
   max-width: 520px;
-  border: 1px solid var(--border-color, #e0e0e0);
+  border: 1px solid var(--dark-tertiary-color, #e0e0e0);
   border-radius: 8px;
-  background: var(--card-background, #f8f8f8);
+  background: var(--dark-secondary-color, #f8f8f8);
+  color: var(--dark-text-color, #111);
 }
 
 .newsletter-follow {
@@ -123,10 +124,10 @@ img[src*="chess"] {
   flex: 1 1 180px;
   padding: 0.45rem 0.7rem;
   font-size: 0.9rem;
-  border: 1px solid var(--border-color, #e0e0e0);
+  border: 1px solid var(--dark-tertiary-color, #e0e0e0);
   border-radius: 6px;
-  background: #fff;
-  color: inherit;
+  background: var(--dark-secondary-color, #fff);
+  color: var(--dark-text-color, #111);
 }
 
 .newsletter-button {
@@ -164,52 +165,8 @@ img[src*="chess"] {
   color: #cf222e;
 }
 
-@media (prefers-color-scheme: dark) {
-  .newsletter {
-    border-color: #444;
-    background: #2a2a2a;
-  }
-
-  .newsletter-input {
-    border-color: #555;
-    background: #1e1e1e;
-    color: #eee;
-  }
-
-  .newsletter-input::placeholder {
-    color: #888;
-  }
-
-  .newsletter-message.ok {
-    color: #3fb950;
-  }
-
-  .newsletter-message.error {
-    color: #f85149;
-  }
-}
-
-body.dark .newsletter {
-  border-color: #444;
-  background: #2a2a2a;
-}
-
-body.dark .newsletter-input {
-  border-color: #555;
-  background: #1e1e1e;
-  color: #eee;
-}
-
-body.dark .newsletter-input::placeholder {
-  color: #888;
-}
-
-body.dark .newsletter-message.ok {
-  color: #3fb950;
-}
-
-body.dark .newsletter-message.error {
-  color: #f85149;
+.newsletter-input::placeholder {
+  opacity: 0.55;
 }
 
 /* "All articles" archive section on each post (SEO internal linking) */
