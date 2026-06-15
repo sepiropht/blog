@@ -176,6 +176,10 @@ img[src*="chess"] {
     color: #eee;
   }
 
+  .newsletter-input::placeholder {
+    color: #888;
+  }
+
   .newsletter-message.ok {
     color: #3fb950;
   }
@@ -194,6 +198,10 @@ body.dark .newsletter-input {
   border-color: #555;
   background: #1e1e1e;
   color: #eee;
+}
+
+body.dark .newsletter-input::placeholder {
+  color: #888;
 }
 
 body.dark .newsletter-message.ok {
