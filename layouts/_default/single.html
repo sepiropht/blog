@@ -1,10 +1,12 @@
 {{ define "main" }}
     {{ if eq .Type "post" }}
         {{- partial "post.html" . -}}
+        <div class="container">
         {{- partial "x-link.html" . -}}
         {{- partial "newsletter.html" . -}}
         {{- partial "related-posts.html" . -}}
         {{- partial "all-posts.html" . -}}
+        </div>
     {{ end }}
 
     {{ if eq .Type "page" }}
