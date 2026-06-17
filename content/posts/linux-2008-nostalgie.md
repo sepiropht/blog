@@ -29,6 +29,8 @@ It's JavaScript, not a real emulation. But it captures what that era meant: the 
 
 What were you doing in 2008?
 
+{{< video src="/videos/linux-2008-nostalgie.mp4" controls="true" >}}
+
 ---
 
 *Originally posted on [X](https://x.com/sepiropht/status/2067286366753361996)*

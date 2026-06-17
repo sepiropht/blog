@@ -29,6 +29,8 @@ C'est du JavaScript, pas une émulation complète. Mais ça capture l'essentiel 
 
 Et vous, vous faisiez quoi en 2008 ?
 
+{{< video src="/videos/linux-2008-nostalgie.mp4" controls="true" >}}
+
 ---
 
 *Publié originalement sur [X](https://x.com/sepiropht/status/2067286366753361996)*
