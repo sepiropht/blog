@@ -3,7 +3,7 @@ weight: 10
 title: "Stockfish + LLM : un vrai coach d'échecs sans hallucinations"
 date: 2026-06-17T16:37:53.000Z
 description: "Comment associer Stockfish et un LLM pour obtenir des commentaires de parties d'échecs précis, justes, et sans hallucinations."
-tags: ['echecs', 'llm', 'ia', 'stockfish', 'chess']
+tags: ['echecs', 'llm', 'ia', 'stockfish', 'chess', 'x']
 image: 'img/chess-llm-stockfish.jpg'
 type: post
 showTableOfContents: false

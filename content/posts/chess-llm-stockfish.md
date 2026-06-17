@@ -3,7 +3,7 @@ weight: 10
 title: 'Stockfish + LLM: A Real Chess Coach Without Hallucinations'
 date: 2026-06-17T16:37:53.000Z
 description: 'How to combine Stockfish and an LLM to get accurate, grounded chess commentary with zero hallucinations.'
-tags: ['chess', 'llm', 'ai', 'stockfish']
+tags: ['chess', 'llm', 'ai', 'stockfish', 'x']
 image: 'img/chess-llm-stockfish.jpg'
 type: post
 showTableOfContents: false

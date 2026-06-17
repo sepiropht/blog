@@ -3,7 +3,7 @@ weight: 10
 title: 'In 2008, I Almost Got Expelled From Engineering School Because of Linux'
 date: 2026-06-17T16:40:52.000Z
 description: 'Ubuntu Hardy Heron, Compiz, and the all-nighters that changed everything.'
-tags: ['linux', 'ubuntu', 'nostalgia', 'self-hosting']
+tags: ['linux', 'ubuntu', 'nostalgia', 'self-hosting', 'x']
 type: post
 showTableOfContents: false
 draft: false

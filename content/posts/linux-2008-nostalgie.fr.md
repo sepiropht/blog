@@ -3,7 +3,7 @@ weight: 10
 title: "En 2008, j'ai failli être viré de mon école d'ingénieur à cause de Linux"
 date: 2026-06-17T16:40:52.000Z
 description: "Ubuntu Hardy Heron, Compiz, et les nuits blanches qui ont tout changé."
-tags: ['linux', 'ubuntu', 'nostalgie', 'self-hosting']
+tags: ['linux', 'ubuntu', 'nostalgie', 'self-hosting', 'x']
 type: post
 showTableOfContents: false
 draft: false
