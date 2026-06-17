@@ -10,6 +10,8 @@ showTableOfContents: false
 draft: false
 ---
 
+![Stockfish + LLM chess coach](/img/chess-llm-stockfish.jpg)
+
 Ever since LLMs became accessible, my dream as a chess player was to combine them with Stockfish — to finally get plain-English commentary instead of long engine lines.
 
 But I wanted the commentary to be accurate, grounded, and hallucination-free. I've never been closer to that goal. ♟

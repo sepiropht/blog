@@ -10,6 +10,8 @@ showTableOfContents: false
 draft: false
 ---
 
+![Stockfish + LLM chess coach](/img/chess-llm-stockfish.jpg)
+
 Depuis que nous avons accès aux LLM, mon rêve de joueur d'échecs était de les associer à Stockfish pour enfin avoir des commentaires explicatifs au lieu de longues lignes d'ordinateur.
 
 Et je voulais ces commentaires justes, précis, et sans hallucinations. Je n'ai jamais été aussi proche du but. ♟
