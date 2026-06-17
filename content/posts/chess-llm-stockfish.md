@@ -1,45 +1,29 @@
 ---
 weight: 10
-title: 'Stockfish + LLM: A Real Chess Coach Without Hallucinations'
+title: "Stockfish + LLM : un vrai coach d'échecs sans hallucinations"
 date: 2026-06-17T16:37:53.000Z
-description: 'How to combine Stockfish and an LLM to get accurate, grounded chess commentary with zero hallucinations.'
-tags: ['chess', 'llm', 'ai', 'stockfish', 'x']
+description: "Comment associer Stockfish et un LLM pour obtenir des commentaires de parties d'échecs précis, justes, et sans hallucinations."
+tags: ['echecs', 'llm', 'ia', 'stockfish', 'chess', 'x']
 image: 'img/chess-llm-stockfish.jpg'
 type: post
 showTableOfContents: false
 draft: false
 ---
 
-Ever since LLMs became accessible, my dream as a chess player was to combine them with Stockfish — to finally get plain-English commentary instead of long engine lines.
+Depuis que nous avons accès aux LLM, mon rêve de joueur d'échecs était de les associer à Stockfish pour enfin avoir des commentaires explicatifs au lieu de longues lignes d'ordinateur.
 
-But I wanted the commentary to be accurate, grounded, and hallucination-free. I've never been closer to that goal. ♟
+Et je voulais ces commentaires justes, précis, et sans hallucinations. Je n'ai jamais été aussi proche du but. ♟
 
-## The Problem: LLMs Can't Read a Board
+Le secret ? C'est qu'on ne laisse jamais le LLM lire l'échiquier tout seul, parce que c'est exactement là qu'il se met à inventer. À la place, un vrai moteur d'échecs fait le travail d'observation et lui tend des faits déjà vérifiés : le matériel exact, la nature des fous, la structure, la phase de la partie.
 
-The key insight: never let the LLM look at the chessboard on its own. That's exactly where it starts making things up.
+L'évaluation de Stockfish lui arrive traduite en mots plutôt qu'en chiffres, par exemple « léger avantage aux Blancs », pour qu'il ne puisse pas inventer un score. Et quand il s'agit de citer un coup précis, il ne pioche que dans la liste des meilleures variantes calculées par Stockfish, jamais ailleurs, donc fini le « Tour h4 » quand il n'y a aucune tour sur la colonne.
 
-Instead, a real chess engine does the observation work and hands the LLM pre-verified facts: the exact material balance, bishop color complex, pawn structure, game phase.
+Enfin, chaque coup qu'il mentionne est revérifié contre la position avant d'être affiché.
 
-## The Architecture
-
-Stockfish's evaluation reaches the LLM translated into words rather than numbers — for example "slight advantage for White" — so it can't invent a score.
-
-When it comes to citing a specific move, it only draws from Stockfish's list of top calculated variations, never from its own imagination. No more "Rook to h4" when there's no rook on that file.
-
-Finally, every move it mentions gets cross-checked against the actual position before being displayed.
-
-## The Division of Labor
-
-In short:
-
-- **Stockfish calculates** the best variations
-- **The engine verifies** the facts (moves, material, position)
-- **The LLM explains** in plain language
-
-Each does what it does best. That's how you get a real coach. ♟
+Au fond, Stockfish calcule, le moteur vérifie, et le LLM se contente d'expliquer. Chacun fait ce qu'il sait faire de mieux, et c'est comme ça qu'on obtient un vrai coach. ♟
 
 {{< image src="/img/chess-llm-stockfish.jpg" alt="Stockfish + LLM chess coach" >}}
 
 ---
 
-*Originally posted on [X](https://x.com/sepiropht/status/2067285614760726922)*
+*Publié originalement sur [X](https://x.com/sepiropht/status/2067285614760726922)*
