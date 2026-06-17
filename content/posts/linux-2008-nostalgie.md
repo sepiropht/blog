@@ -1,36 +1,22 @@
 ---
 weight: 10
-title: 'In 2008, I Almost Got Expelled From Engineering School Because of Linux'
+title: "En 2008, j'ai failli être viré de mon école d'ingénieur à cause de Linux"
 date: 2026-06-17T16:40:52.000Z
-description: 'Ubuntu Hardy Heron, Compiz, and the all-nighters that changed everything.'
-tags: ['linux', 'ubuntu', 'nostalgia', 'self-hosting', 'x']
+description: "Ubuntu Hardy Heron, Compiz, et les nuits blanches qui ont tout changé."
+tags: ['linux', 'ubuntu', 'nostalgie', 'self-hosting', 'x']
 type: post
 showTableOfContents: false
 draft: false
 ---
 
-In 2008, I was about to get kicked out of engineering school because I couldn't grasp thermodynamics.
+En 2008 j'étais sur le point de me faire virer de mon école d'ingénieur parce que je ne captais rien à la thermodynamique. Je préférais passer des nuits blanches à installer Linux sur mon nouveau et premier laptop, un HP Pavilion de 1 Go, même pour l'époque c'était pas une machine de guerre.
 
-I was spending all-nighters installing Linux on my brand new first laptop — an HP Pavilion with 1 GB of RAM. Even for the time, that was no powerhouse.
+À la manière de [@levelsio](https://x.com/levelsio), j'ai voulu recréer mes premières expériences numériques sur Linux avec Ubuntu Hardy Heron 8.04 et son fameux Compiz qui impressionnait pas mal à l'époque. Aujourd'hui je pourrai plus supporter ça.
 
-## Ubuntu Hardy Heron and Compiz
-
-Inspired by [levelsio](https://x.com/levelsio), I wanted to recreate my earliest Linux experiences using **Ubuntu Hardy Heron 8.04** and its famous **Compiz** window manager.
-
-The rotating cube desktop, windows that wobbled like jelly, fire burning as you closed them — I couldn't stand any of that today. But in 2008, it felt like magic.
-
-## What I Rebuilt
-
-Out of nostalgia, I recreated a simulation of that interface: [nostalgy2008.elimbi.com](http://nostalgy2008.elimbi.com)
-
-It's JavaScript, not a real emulation. But it captures what that era meant: the freedom to tinker, break things, and start over.
-
----
-
-What were you doing in 2008?
+Et vous, vous faisiez quoi en 2008 ?
 
 {{< video src="/videos/linux-2008-nostalgie.mp4" controls="true" >}}
 
 ---
 
-*Originally posted on [X](https://x.com/sepiropht/status/2067286366753361996)*
+*Publié originalement sur [X](https://x.com/sepiropht/status/2067286366753361996)*
