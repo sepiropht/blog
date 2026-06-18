@@ -15,6 +15,8 @@ En 2008 j'étais sur le point de me faire virer de mon école d'ingénieur parce
 
 Et vous, vous faisiez quoi en 2008 ?
 
+Si vous voulez tester : [nostalgy2008.elimbi.com](http://nostalgy2008.elimbi.com)
+
 {{< video src="/videos/linux-2008-nostalgie.mp4" controls="true" >}}
 
 ---
