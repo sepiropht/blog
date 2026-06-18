@@ -22,6 +22,8 @@ Enfin, chaque coup qu'il mentionne est revérifié contre la position avant d'ê
 
 Au fond, Stockfish calcule, le moteur vérifie, et le LLM se contente d'expliquer. Chacun fait ce qu'il sait faire de mieux, et c'est comme ça qu'on obtient un vrai coach. ♟
 
+Si vous voulez tester : [chessmentorai.com](https://chessmentorai.com)
+
 {{< image src="/img/chess-llm-stockfish.jpg" alt="Stockfish + LLM chess coach" >}}
 
 ---
