@@ -1,7 +1,7 @@
 {{ $fr := eq .Site.Language.Lang "fr" }}
 <section class="newsletter">
   <p class="newsletter-follow">
-    {{ if $fr }}Envie d'en savoir plus sur moi ? Suivez-moi sur <a href="https://x.com/sepiropht" target="_blank" rel="noopener me">X</a>.{{ else }}Want to know more about me? Follow me on <a href="https://x.com/sepiropht" target="_blank" rel="noopener me">X</a>.{{ end }}
+    {{ if $fr }}Abonnez-vous à la newsletter.{{ else }}Subscribe to the newsletter.{{ end }}
   </p>
   <form class="newsletter-form" id="newsletter-form" novalidate
     data-success="{{ if $fr }}Merci ! Vérifiez votre boîte mail.{{ else }}Thanks for subscribing! Check your inbox.{{ end }}"
