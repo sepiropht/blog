@@ -23,7 +23,9 @@ Only manual step left: buying the domain (deliberately — no saved payment meth
 
 What's the self-hosted service you're most proud of running right now?
 
-{{< tweet id="2067777588760621220" >}}
+{{< video src="/videos/after-yesterday-s-nostalgic-linux-post--i-ve-been-reflecting-20260619.mp4" controls="true" >}}
+
+{{< tweet id="2067286366753361996" >}}
 
 ---
 

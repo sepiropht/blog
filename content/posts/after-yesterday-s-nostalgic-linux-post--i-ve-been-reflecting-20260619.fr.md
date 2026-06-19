@@ -23,7 +23,9 @@ La seule étape manuelle restante : acheter le domaine (délibérément — pas 
 
 Quel est le service self-hosted dont vous êtes le plus fier en ce moment ?
 
-{{< tweet id="2067777588760621220" >}}
+{{< video src="/videos/after-yesterday-s-nostalgic-linux-post--i-ve-been-reflecting-20260619.mp4" controls="true" >}}
+
+{{< tweet id="2067286366753361996" >}}
 
 ---
 
