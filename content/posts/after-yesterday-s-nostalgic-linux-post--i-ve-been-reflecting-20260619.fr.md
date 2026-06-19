@@ -1,6 +1,6 @@
 ---
 title: "Après le post nostalgique d'hier sur Linux, je réfléchis au chemin parcouru"
-date: 2026-06-17T16:40:52Z
+date: 2026-06-19T16:40:52Z
 tags: ['x', 'linux', 'self-hosting']
 type: post
 showTableOfContents: false
