@@ -1,0 +1,7 @@
+{{ $id := .Get "id" }}
+<div class="tweet-embed">
+  <blockquote class="twitter-tweet" data-lang="{{ .Page.Language.Lang }}">
+    <a href="https://twitter.com/sepiropht/status/{{ $id }}"></a>
+  </blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
