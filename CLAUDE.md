@@ -148,3 +148,39 @@ For local testing of API functions:
 4. **Bilingual Content**: Hugo's multilingual mode with automatic client-side redirection for French users.
 
 5. **Git Submodules**: The theme is managed as a git submodule. Always use `git submodule update` commands when updating themes.
+
+## Workflow : Créer un post depuis un tweet X
+
+Cette opération est fréquente. Respecter cette structure dès le premier coup.
+
+### Structure du post (règle fixe)
+
+1. **Texte complet du tweet** en prose markdown, tel quel
+2. **Médias bruts** (vidéo/image) via `{{< video src="/videos/fichier.mp4" controls="true" >}}` — PAS via l'embed X
+3. **Tweet quoté** (si présent) via `{{< tweet id="QUOTED_TWEET_ID" >}}` (script officiel X)
+4. **Attribution** : `*Originally published on [X](https://x.com/sepiropht/status/TWEET_ID)*`
+
+Ne jamais embarquer le tweet principal lui-même — le texte est déjà en prose, ce serait une répétition.
+
+### Frontmatter pour un post X
+
+```yaml
+title: "5-8 premiers mots du tweet"
+date: <datetime du tweet>
+tags: ['x', 'sujet1', 'sujet2']
+type: post
+showTableOfContents: false
+draft: false
+```
+
+### Shortcode tweet (déjà en place)
+
+`layouts/shortcodes/tweet.html` — usage : `{{< tweet id="TWEET_ID" >}}`
+
+### Récupérer le contenu du tweet (technique)
+
+- Playwright via CDP port 9224 sur la machine hôte (`brave-automation`, seul container avec CDP actif)
+- Cookies X dans SQLite : `/home/pi/brave/config/.config/BraveSoftware/Brave-Browser/Default/Cookies`
+- Déchiffrement : PBKDF2-SHA1("peanuts", "saltysalt", 1 iter, 16 bytes) + AES-CBC(iv=`" "*16`) + skip 32 bytes de préfixe
+- Si le tweet quoté n'apparaît pas dans le DOM → scroller + screenshot pour identifier son ID visuellement
+- Vidéos déjà présentes dans git history → `git show <commit>:static/videos/fichier.mp4 > static/videos/fichier.mp4`
