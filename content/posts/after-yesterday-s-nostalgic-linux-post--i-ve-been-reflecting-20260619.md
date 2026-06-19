@@ -1,6 +1,6 @@
 ---
 title: "After yesterday's nostalgic Linux post, I've been reflecting on how far my setup has come"
-date: 2026-06-19T16:40:52Z
+date: 2026-06-18T16:40:52Z
 tags: ['x', 'linux', 'self-hosting']
 type: post
 showTableOfContents: false
