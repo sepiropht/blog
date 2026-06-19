@@ -1,0 +1,14 @@
+{{ $id := .Get "id" }}
+{{ $author := .Get "author" }}
+{{ $text := .Get "text" }}
+{{ $media := .Get "media" }}
+<blockquote class="tweet-quote">
+  <div class="tweet-quote-header">
+    <span class="tweet-quote-author">@{{ $author }}</span>
+    <a class="tweet-quote-link" href="https://x.com/{{ $author }}/status/{{ $id }}" target="_blank" rel="noopener">↗</a>
+  </div>
+  <p class="tweet-quote-text">{{ $text }}</p>
+  {{ if $media }}
+    <div class="tweet-quote-media">{{ $media | safeHTML }}</div>
+  {{ end }}
+</blockquote>
