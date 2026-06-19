@@ -6,46 +6,6 @@
         :root {
             --accent-color: {{ .Site.Params.AccentColor | default "#FF4D4D" }};
         }
-        .tweet-quote {
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            padding: 16px;
-            margin: 1.5rem 0;
-            background: #f7f9fa;
-            font-style: normal;
-        }
-        .dark .tweet-quote {
-            background: #1e2732;
-            border-color: #38444d;
-        }
-        .tweet-quote-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        .tweet-quote-author {
-            font-weight: 700;
-            font-size: 0.95em;
-        }
-        .tweet-quote-link {
-            margin-left: auto;
-            color: #1da1f2;
-            text-decoration: none;
-            font-size: 0.85em;
-        }
-        .tweet-quote-text {
-            margin: 0 0 10px 0;
-            font-size: 0.95em;
-            line-height: 1.5;
-            white-space: pre-wrap;
-        }
-        .tweet-quote-media img,
-        .tweet-quote-media video {
-            width: 100%;
-            border-radius: 8px;
-            margin-top: 8px;
-        }
     </style>
 
     {{ $title := .Title | default .Site.Title }}
