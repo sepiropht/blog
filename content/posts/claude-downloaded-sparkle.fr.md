@@ -1,36 +1,36 @@
 ---
 weight: 10
-title: "I had Claude download a movie because nobody was seeding it"
+title: "J'ai fait télécharger un film à Claude parce que personne ne le seedait"
 date: 2026-06-29T22:00:00.000Z
-description: "My girlfriend wanted to watch Sparkle, Whitney Houston's last film. My *arr stack had zero seeders, so I asked Claude to handle it."
+description: "Ma copine voulait regarder Sparkle, le dernier film de Whitney Houston. Mon stack *arr n'avait aucun seeder, alors j'ai demandé à Claude de s'en charger."
 tags: ['ai', 'claude', 'self-hosting', 'radarr', 'jellyfin', 'x']
 type: post
 showTableOfContents: false
 draft: false
 ---
 
-My girlfriend wanted to watch Sparkle, Whitney Houston's last film. I have a full *arr stack running, I thought this would take 30 seconds.
+Ma copine voulait regarder *Sparkle*, le dernier film de Whitney Houston. J'ai un stack *arr complet, je pensais que ça prendrait trente secondes.
 
-No seeders. Zero. Asked Claude to add better trackers. "They're already configured, nobody is seeding this." A 2012 Whitney Houston film and the internet has collectively moved on.
+Aucun seeder. Zéro. J'ai demandé à Claude d'ajouter de meilleurs trackers. « C'est déjà configuré, personne ne seed. » Un film de Whitney Houston de 2012, et Internet a collectivement tourné la page.
 
-Found it on a streaming site. Problem: she wants the TV, not the laptop, and I'm not explaining Chromecast at 9pm.
+Je l'ai trouvé sur un site de streaming. Problème : elle veut le regarder sur la télé, pas sur l'ordinateur, et je n'allais pas expliquer le Chromecast à 21h.
 
-About to give up. Out of pure desperation, I ask Claude to just get me the film. It reverse-engineered the streaming site's encryption, extracted the source, and downloaded the full 1080p file. I then asked it to place everything exactly where Radarr would have, right folder, metadata, poster from TMDB, French and English subtitles named so Jellyfin picks them up automatically.
+Sur le point d'abandonner. Par pur désespoir, je demande à Claude de me récupérer le film. Il a reverse-engineeré le chiffrement du site, extrait la source, et téléchargé le fichier 1080p. Puis je lui ai demandé de tout ranger exactement là où Radarr l'aurait fait : bon dossier, métadonnées, poster TMDB, sous-titres français et anglais nommés pour que Jellyfin les détecte automatiquement.
 
-Opened Jellyfin on the TV. Sparkle (2012). Poster. Synopsis. Subtitles. Indistinguishable from anything else in the library.
+J'ai ouvert Jellyfin sur la télé. *Sparkle (2012)*. Poster. Synopsis. Sous-titres. Indiscernable du reste de la bibliothèque.
 
-She didn't notice a thing. Just pressed play.
+Elle n'a rien remarqué. Elle a juste appuyé sur play.
 
-Then I asked Claude to remember the whole method and save it as a reusable skill, so any future session could just pick it up and run it without me explaining anything again.
+Puis j'ai demandé à Claude de retenir toute la méthode et de la sauvegarder comme skill réutilisable, pour que n'importe quelle session future puisse la récupérer et l'exécuter sans que je doive tout réexpliquer.
 
-The first download took over an hour. I asked Claude if it could go faster. It added parallel fragment downloading to the command, one line change. I tested it on Spider-Man 2, 3.3GB, done in 10 minutes.
+Le premier téléchargement a pris plus d'une heure. J'ai demandé à Claude s'il pouvait aller plus vite. Il a ajouté le téléchargement parallèle des fragments, en une ligne de code. J'ai testé sur *Spider-Man 2* : 3,3 Go en dix minutes.
 
-We are genuinely blessed with these tools. The *arr stack is incredible until it isn't. And when it isn't, you now have an agent that fills the gap, remembers the solution, and gets better at it. All in the same conversation.
+On est clairement bénis par ces outils. Le stack *arr est incroyable, jusqu'à ce qu'il ne le soit plus. Et quand il ne l'est plus, on a maintenant un agent qui comble le trou, retient la solution, et s'améliore. Tout ça dans la même conversation.
 
-The future is weird and I'm here for it.
+Le futur est bizarre, et j'en suis.
 
-![Sparkle (2012) in Jellyfin](/img/claude-downloaded-sparkle.png)
+![Sparkle (2012) dans Jellyfin](/img/claude-downloaded-sparkle.png)
 
 ---
 
-*Originally posted on [X](https://x.com/sepiropht/status/2071676521865961521)*
+*Publié originalement sur [X](https://x.com/sepiropht/status/2071676521865961521)*
