@@ -151,36 +151,59 @@ For local testing of API functions:
 
 ## Workflow : Créer un post depuis un tweet X
 
-Cette opération est fréquente. Respecter cette structure dès le premier coup.
+Cette opération est fréquente. Quand l'utilisateur donne un lien X et demande un nouvel article, suivre exactement cette méthode.
 
-### Structure du post (règle fixe)
+### Étapes obligatoires
 
-1. **Texte complet du tweet** en prose markdown, tel quel
-2. **Médias bruts** (vidéo/image) via `{{< video src="/videos/fichier.mp4" controls="true" >}}` — PAS via l'embed X
-3. **Tweet quoté** (si présent) via `{{< tweet id="QUOTED_TWEET_ID" >}}` (script officiel X)
-4. **Attribution** : `*Originally published on [X](https://x.com/sepiropht/status/TWEET_ID)*`
+1. **Récupérer le tweet**
+   - Utiliser `FetchURL` sur l'URL X pour obtenir le texte complet, **verbatim** (aucune modification).
+   - Identifier tous les médias : images **et** vidéos.
+   - Pour les images : extraire l'URL `pbs.twimg.com/media/` de la page.
+   - Pour les vidéos : utiliser `yt-dlp` (ex: `yt-dlp -o "static/videos/<slug>.%(ext)s" <URL>`).
 
-Ne jamais embarquer le tweet principal lui-même — le texte est déjà en prose, ce serait une répétition.
+2. **Télécharger les médias**
+   - Images dans `static/img/<slug>.<ext>`.
+   - Vidéos dans `static/videos/<slug>.mp4`.
+   - Vérifier que les fichiers sont valides (`file`, `ls -lh`).
 
-### Frontmatter pour un post X
+3. **Créer les deux versions linguistiques**
+   - `content/posts/<slug>.md` — version anglaise.
+   - `content/posts/<slug>.fr.md` — version française.
+   - Si le tweet est en anglais : `.md` = verbatim anglais, `.fr.md` = traduction française.
+   - Si le tweet est en français : `.fr.md` = verbatim français, `.md` = traduction anglaise.
 
-```yaml
-title: "5-8 premiers mots du tweet"
-date: <datetime du tweet>
-tags: ['x', 'sujet1', 'sujet2']
-type: post
-showTableOfContents: false
-draft: false
-```
+4. **Structure du post (règle fixe)**
 
-### Shortcode tweet (déjà en place)
+   ```yaml
+   ---
+   weight: 10
+   title: "Titre du post"
+   date: <datetime du tweet>
+   description: "Courte description"
+   tags: ['x', 'sujet1', 'sujet2']
+   type: post
+   showTableOfContents: false
+   draft: false
+   ---
+   ```
 
-`layouts/shortcodes/tweet.html` — usage : `{{< tweet id="TWEET_ID" >}}`
+   - Le **texte complet du tweet** en prose markdown, tel quel.
+   - Les **images** via markdown : `![alt](/img/<slug>.png)`.
+   - Les **vidéos** via shortcode : `{{< video src="/videos/<slug>.mp4" controls="true" >}}`.
+   - **Attribution** en bas : `*Originally posted on [X](https://x.com/sepiropht/status/TWEET_ID)*` (EN) / `*Publié originalement sur [X](https://x.com/sepiropht/status/TWEET_ID)*` (FR).
 
-### Récupérer le contenu du tweet (technique)
+5. **Tags**
+   - Par défaut inclure `'x'`.
+   - Si l'utilisateur mentionne un article similaire existant (ex: « prends les tags de first-journal-entry »), copier les tags de cet article pour les deux langues.
 
-- Playwright via CDP port 9224 sur la machine hôte (`brave-automation`, seul container avec CDP actif)
-- Cookies X dans SQLite : `/home/pi/brave/config/.config/BraveSoftware/Brave-Browser/Default/Cookies`
-- Déchiffrement : PBKDF2-SHA1("peanuts", "saltysalt", 1 iter, 16 bytes) + AES-CBC(iv=`" "*16`) + skip 32 bytes de préfixe
-- Si le tweet quoté n'apparaît pas dans le DOM → scroller + screenshot pour identifier son ID visuellement
-- Vidéos déjà présentes dans git history → `git show <commit>:static/videos/fichier.mp4 > static/videos/fichier.mp4`
+6. **Vérifier et publier**
+   - Lancer `hugo --gc --minify` pour valider le build.
+   - Si le build passe : `git add`, `git commit`, `git push`.
+   - Si le push échoue à cause de conflits avec la remote, résoudre proprement (stash, pull, push) sans perdre les modifications existantes de l'utilisateur.
+
+### Ce qu'il ne faut PAS faire
+
+- Ne pas modifier le texte du tweet.
+- Ne pas utiliser l'embed X pour le tweet principal.
+- Ne pas oublier les vidéos.
+- Ne pas créer une seule langue quand le site est bilingue.
