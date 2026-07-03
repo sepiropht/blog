@@ -1,7 +1,7 @@
 ---
 weight: 10
 title: "I got back into weightlifting for the nth time"
-date: 2026-07-03T03:08:00.000Z
+date: 2026-07-03
 description: "I got back into weightlifting and used Kimi to log my sessions through the self-hosted wger API."
 tags: ['x', 'fitness', 'self-hosting', 'wger', 'ai', 'kimi']
 type: post

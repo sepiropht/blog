@@ -1,7 +1,7 @@
 ---
 weight: 10
 title: "Je me suis remis à la musculation pour la énième fois"
-date: 2026-07-03T03:08:00.000Z
+date: 2026-07-03
 description: "Je me suis remis à la musculation et j'utilise Kimi pour enregistrer mes séances via l'API wger auto-hébergée."
 tags: ['x', 'fitness', 'self-hosting', 'wger', 'ia', 'kimi']
 type: post
