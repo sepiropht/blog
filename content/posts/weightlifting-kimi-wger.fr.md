@@ -11,7 +11,7 @@ draft: false
 
 Je me suis remis à la musculation pour la énième fois. Et pour une fois, j'ai l'impression que ça va tenir.
 
-J'ai installé wger (open-source, auto-hébergé sur mon homelab) pour suivre mes progrès. Sauf que l'interface m'a perdu dès le départ. Alors j'ai donné les clés à Kimi, il enregistre mes séances, et dialogue avec l'API à ma place.
+J'ai installé [wger](https://github.com/wger-project/wger) (open-source, auto-hébergé sur mon homelab) pour suivre mes progrès. Sauf que l'interface m'a perdu dès le départ. Alors j'ai donné les clés à Kimi, il enregistre mes séances, et dialogue avec l'API à ma place.
 
 Maintenant, chaque jour d'entraînement, je lui demande simplement :
 où en étais-je la dernière fois ?

@@ -11,7 +11,7 @@ draft: false
 
 I got back into weightlifting for the nth time. And for once, I feel like it's going to stick.
 
-I installed wger (open-source, self-hosted on my homelab) to track my progress. Except the interface lost me right away. So I handed the keys to Kimi, it logs my sessions, and talks to the API on my behalf.
+I installed [wger](https://github.com/wger-project/wger) (open-source, self-hosted on my homelab) to track my progress. Except the interface lost me right away. So I handed the keys to Kimi, it logs my sessions, and talks to the API on my behalf.
 
 Now every training day, I just ask it:
 where did I leave off last time?
