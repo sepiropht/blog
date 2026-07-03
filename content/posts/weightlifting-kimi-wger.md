@@ -13,6 +13,8 @@ I got back into weightlifting for the nth time. And for once, I feel like it's g
 
 I installed [wger](https://github.com/wger-project/wger) (open-source, self-hosted on my homelab) to track my progress. Except the interface lost me right away. So I handed the keys to Kimi, it logs my sessions, and talks to the API on my behalf.
 
+I don't use the wger web app or the mobile app. I find both really not great. My only interface is Kimi web.
+
 Now every training day, I just ask it:
 where did I leave off last time?
 what should I aim for today?

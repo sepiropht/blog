@@ -13,6 +13,8 @@ Je me suis remis à la musculation pour la énième fois. Et pour une fois, j'ai
 
 J'ai installé [wger](https://github.com/wger-project/wger) (open-source, auto-hébergé sur mon homelab) pour suivre mes progrès. Sauf que l'interface m'a perdu dès le départ. Alors j'ai donné les clés à Kimi, il enregistre mes séances, et dialogue avec l'API à ma place.
 
+Je n'utilise ni la web app de wger ni l'app mobile. Je trouve les deux vraiment pas terribles. Ma seule interface, c'est Kimi web.
+
 Maintenant, chaque jour d'entraînement, je lui demande simplement :
 où en étais-je la dernière fois ?
 quoi viser aujourd'hui ?
