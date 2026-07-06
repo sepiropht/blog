@@ -1,13 +1,13 @@
 ---
-title: "Un des gros usages que je fais des LLM en ce moment : leur faire prendre le relais dans mon navigateur"
-date: 2026-07-06T21:55:25Z
+title: "Un de mes plus gros usages des LLM en ce moment : leur faire prendre le relais dans mon navigateur pour des tâches chiantes"
+date: 2026-07-06T22:18:10Z
 tags: ['x', 'llm', 'browser-automation', 'docker']
 type: post
 showTableOfContents: false
 draft: false
 ---
 
-Un des gros usages que je fais des LLM en ce moment : leur faire prendre le relais dans mon navigateur pour des trucs chiants.
+Un de mes plus gros usages des LLM en ce moment : leur faire prendre le relais dans mon navigateur pour des trucs chiants.
 
 Je deviens de plus en plus fainéant. Dès que je tombe sur une nouvelle interface, je me logue une fois, puis je lâche l'agent dessus.
 
@@ -27,4 +27,4 @@ Repo (docker-compose + tout ce qu'il faut pour qu'un LLM s'y connecte) : [github
 
 ---
 
-*Publié originalement sur [X](https://x.com/sepiropht/status/2074250892594016395)*
+*Publié originalement sur [X](https://x.com/sepiropht/status/2074256617202409780)*

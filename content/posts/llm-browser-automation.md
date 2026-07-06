@@ -1,6 +1,6 @@
 ---
-title: "One of my biggest LLM use cases right now: getting them to take over my browser"
-date: 2026-07-06T21:55:25Z
+title: "One of my biggest LLM use cases right now: getting them to take over my browser for tedious tasks"
+date: 2026-07-06T22:18:10Z
 tags: ['x', 'llm', 'browser-automation', 'docker']
 type: post
 showTableOfContents: false
@@ -27,4 +27,4 @@ Repo (docker-compose + everything an LLM needs to connect to it): [github.com/se
 
 ---
 
-*Originally posted on [X](https://x.com/sepiropht/status/2074250892594016395)*
+*Originally posted on [X](https://x.com/sepiropht/status/2074256617202409780)*
