@@ -1,9 +1,16 @@
 baseURL = "https://elimbi.com/"
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "William Elimbi"
 theme = "gokarna"
 relativeURLs = true
 canonifyURLs = false
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [related]
   threshold = 80
