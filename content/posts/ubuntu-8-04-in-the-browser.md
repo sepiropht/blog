@@ -4,6 +4,8 @@ title: "With k3 I put Ubuntu 8.04 in the browser"
 date: 2026-07-17T22:17:15.000Z
 description: "Real Ubuntu 8.04 running in the browser via k3. Try it at ubuntu.elimbi.com — be patient, it's slow."
 tags: ['x', 'linux', 'ubuntu', 'k3', 'self-hosting']
+related:
+  - /posts/linux-2008-nostalgie
 type: post
 showTableOfContents: false
 draft: false

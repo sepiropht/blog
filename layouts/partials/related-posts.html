@@ -1,4 +1,14 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{/* Pin posts listed in frontmatter `related` first, then fill with auto-related */}}
+{{ $pinned := slice }}
+{{ with .Params.related }}
+    {{ range . }}
+        {{ with $.Site.GetPage . }}
+            {{ $pinned = $pinned | append . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ $auto := .Site.RegularPages.Related . }}
+{{ $related := $pinned | union $auto | first 5 }}
 {{ $fallback := .Site.Params.avatarURL | default "/img/me.jpg" }}
 {{ if $related }}
 <div class="related-posts">
