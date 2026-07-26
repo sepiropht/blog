@@ -1,0 +1,491 @@
+<!doctype html>
+{{- $isFr := eq .Site.Language.Lang "fr" -}}
+{{- $projects := slice
+  (dict
+    "id" "01"
+    "name" "ChessMentor AI"
+    "url" "https://chessmentorai.com/"
+    "img" "/img/projects/chessmentorai.webp"
+    "accent" "#f2b84b"
+    "tagEn" "AI Chess Coach"
+    "tagFr" "Coach d'échecs IA"
+    "descEn" "Imports your Lichess & Chess.com games, runs free Stockfish 18 analysis, and coaches you in plain language instead of engine notation."
+    "descFr" "Importe vos parties Lichess & Chess.com, lance une analyse Stockfish 18 gratuite, et vous coache en langage clair plutôt qu'en notation d'engine."
+  )
+  (dict
+    "id" "02"
+    "name" "saveit.ink"
+    "url" "https://saveit.ink/"
+    "img" "/img/projects/saveit.webp"
+    "accent" "#ff6fa5"
+    "tagEn" "Piano Learning"
+    "tagFr" "Apprentissage piano"
+    "descEn" "Turns any YouTube song into a beat-synced chord chart, then drills your voicings, grooves and progressions — jazz, gospel, blues and beyond."
+    "descFr" "Transforme n'importe quelle chanson YouTube en grille d'accords synchronisée, puis entraîne vos voicings et progressions — jazz, gospel, blues et plus."
+  )
+  (dict
+    "id" "03"
+    "name" "Agent IA"
+    "url" "http://ev3race.com/"
+    "img" "/img/projects/ev3race.webp"
+    "accent" "#4da6ff"
+    "tagEn" "AI Automation"
+    "tagFr" "Automatisation IA"
+    "descEn" "Custom AI agents and workflow automation for small businesses — lead qualification, invoice follow-ups, quotes and CRM, wired into existing tools."
+    "descFr" "Agents IA sur mesure et automatisation pour PME — qualification de leads, relances de factures, devis et CRM, connectés à vos outils existants."
+  )
+  (dict
+    "id" "04"
+    "name" "KOV Nation"
+    "url" "https://test.kovnation.com/"
+    "img" "/img/projects/kovnation.webp"
+    "accent" "#ef4444"
+    "tagEn" "Artist Website"
+    "tagFr" "Site d'artiste"
+    "descEn" "Artist site for Killamel (KOV Nation) — discography, music videos, biography and booking, built for a Cameroonian hip-hop act."
+    "descFr" "Site artiste de Killamel (KOV Nation) — discographie, clips, biographie et booking, pensé pour un artiste hip-hop camerounais."
+  )
+  (dict
+    "id" "05"
+    "name" "Tubetotext"
+    "url" "https://tubetotext.com/"
+    "img" "/img/projects/tubetotext.webp"
+    "accent" "#2dd9c4"
+    "tagEn" "AI Outreach Agent"
+    "tagFr" "Agent de prospection IA"
+    "descEn" "An agent that researches prospects, writes cold emails in your voice, sends at the right time, and follows up until someone replies."
+    "descFr" "Un agent qui recherche vos prospects, rédige des emails à froid dans votre style, envoie au bon moment, et relance jusqu'à obtenir une réponse."
+  )
+  (dict
+    "id" "06"
+    "name" "Piano Jazz Concept"
+    "url" "https://piano-jazz-concept.sepiropht.me/"
+    "img" "/img/projects/pianojazz.webp"
+    "accent" "#9b8cff"
+    "tagEn" "Music Catalog"
+    "tagFr" "Catalogue musical"
+    "descEn" "A collaborative catalog of piano jazz standards and composers — browse, contribute missing pieces, and correct entries as a community."
+    "descFr" "Un catalogue collaboratif de standards de piano jazz et de leurs compositeurs — parcourez, contribuez les morceaux manquants, corrigez les entrées."
+  )
+-}}
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Title }} — William Elimbi</title>
+<meta name="description" content="{{ .Description }}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }} — William Elimbi">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06080b;
+    --bg2:#0a0e13;
+    --ink:#e9edf3;
+    --dim:#7c8896;
+    --line:rgba(233,237,243,0.14);
+    --cyan:#39f2e0;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    overflow-x:hidden;
+    min-height:100vh;
+  }
+  canvas#glbg{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    display:block;
+  }
+  .scanlines{
+    position:fixed;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background:repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.028) 0px,
+      rgba(255,255,255,0.028) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    mix-blend-mode:overlay;
+    opacity:0.5;
+  }
+  .grain{
+    position:fixed;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    opacity:0.05;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .wrap{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 28px 120px;}
+
+  /* topbar */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 0;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--dim);
+  }
+  .topbar .mark{color:var(--ink);font-weight:600;}
+  .topbar .mark b{color:var(--cyan);}
+  .topbar nav{display:flex;gap:22px;align-items:center;}
+  .topbar a{color:var(--dim);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s, border-color .2s;}
+  .topbar a:hover{color:var(--ink);border-color:var(--line);}
+  .lang-toggle{display:flex;gap:8px;}
+  .lang-toggle a.active{color:var(--cyan);}
+
+  /* hero */
+  .hero{padding:64px 0 84px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--cyan);
+    border:1px solid rgba(57,242,224,0.35);
+    background:rgba(57,242,224,0.06);
+    padding:6px 12px;border-radius:999px;
+    margin-bottom:28px;
+  }
+  .eyebrow .pulse{
+    width:6px;height:6px;border-radius:50%;background:var(--cyan);
+    box-shadow:0 0 8px var(--cyan);
+    animation:pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
+  h1.title{
+    font-family:'Archivo Black',sans-serif;
+    font-size:clamp(3.2rem,10vw,7.5rem);
+    line-height:0.92;
+    margin:0 0 28px;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+    background:linear-gradient(180deg,#ffffff 0%, #aeb7c2 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{
+    max-width:640px;
+    font-size:15px;
+    line-height:1.75;
+    color:var(--dim);
+  }
+  .lede b{color:var(--ink);font-weight:500;}
+  .stats-row{
+    display:flex;flex-wrap:wrap;gap:36px;
+    margin-top:48px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .stat{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);}
+  .stat b{display:block;font-family:'Archivo Black',sans-serif;font-size:26px;color:var(--ink);letter-spacing:0;text-transform:none;margin-bottom:4px;}
+
+  /* grid */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:22px;
+  }
+  .card{
+    position:relative;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    overflow:hidden;
+    text-decoration:none;
+    color:var(--ink);
+    display:block;
+    opacity:0;
+    transform:translateY(24px);
+    animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards;
+    transition:border-color .3s ease, box-shadow .3s ease;
+    will-change:transform;
+  }
+  @keyframes rise{to{opacity:1;transform:translateY(0);}}
+  .card:hover{
+    border-color:var(--card-accent, var(--cyan));
+    box-shadow:0 20px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px var(--card-accent, var(--cyan)) inset, 0 0 40px -8px var(--card-accent, var(--cyan));
+  }
+  .card-media{
+    position:relative;
+    aspect-ratio:16/10;
+    overflow:hidden;
+    background:#0d1116;
+    border-bottom:1px solid var(--line);
+  }
+  .card-media img{
+    width:100%;height:100%;object-fit:cover;object-position:top;
+    display:block;
+    filter:saturate(0.85) brightness(0.92);
+    transform:scale(1.02);
+    transition:transform .6s cubic-bezier(.2,.7,.3,1), filter .4s ease;
+  }
+  .card:hover .card-media img{transform:scale(1.09);filter:saturate(1.05) brightness(1);}
+  .card-media::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(6,8,11,0.9) 100%);
+  }
+  .card-head{
+    position:absolute;top:12px;left:14px;right:14px;z-index:2;
+    display:flex;align-items:center;justify-content:space-between;
+    font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+  }
+  .card-head .designation{color:#fff;background:rgba(6,8,11,0.55);backdrop-filter:blur(4px);padding:4px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);}
+  .card-head .status{display:flex;align-items:center;gap:6px;color:#c7fff3;background:rgba(6,8,11,0.55);backdrop-filter:blur(4px);padding:4px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);}
+  .card-head .status .dot{width:5px;height:5px;border-radius:50%;background:#39f2a0;box-shadow:0 0 6px #39f2a0;animation:pulse 1.8s ease-in-out infinite;}
+  .card-body{padding:20px 22px 24px;}
+  .card-tag{
+    font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--card-accent, var(--cyan));
+    margin-bottom:10px;
+  }
+  .card h2{
+    font-family:'Archivo Black',sans-serif;
+    font-size:22px;letter-spacing:-0.01em;
+    margin:0 0 10px;
+    text-transform:none;
+    color:#fff;
+  }
+  .card p{
+    font-size:12.5px;line-height:1.65;color:var(--dim);margin:0 0 18px;
+  }
+  .card .launch{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:#fff;
+  }
+  .card .launch svg{transition:transform .25s ease;}
+  .card:hover .launch svg{transform:translate(3px,-3px);}
+  .card .launch .bar{flex:0 0 18px;height:1px;background:var(--card-accent,var(--cyan));transition:flex-basis .3s ease;}
+  .card:hover .launch .bar{flex-basis:30px;}
+
+  footer.sitefoot{
+    position:relative;z-index:2;
+    margin-top:90px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:12px;
+    justify-content:space-between;
+    font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--dim);
+  }
+  footer.sitefoot a{color:var(--dim);}
+  footer.sitefoot a:hover{color:var(--ink);}
+
+  @media (prefers-reduced-motion: reduce){
+    .card{animation:none;opacity:1;transform:none;}
+    .eyebrow .pulse, .card-head .status .dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+<canvas id="glbg"></canvas>
+<div class="scanlines"></div>
+<div class="grain"></div>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="mark">W<b>·</b>E // {{ if $isFr }}PROJETS{{ else }}PROJECTS{{ end }}</div>
+    <nav>
+      <a href="/">{{ if $isFr }}← Accueil{{ else }}← Home{{ end }}</a>
+      <div class="lang-toggle">
+        {{ if $isFr }}
+          <a href="/projects/">EN</a><span>/</span><a class="active" href="/fr/projects/">FR</a>
+        {{ else }}
+          <a class="active" href="/projects/">EN</a><span>/</span><a href="/fr/projects/">FR</a>
+        {{ end }}
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow"><span class="pulse"></span>{{ if $isFr }}SÉLECTION — {{ len $projects }} EN LIGNE{{ else }}SELECTED WORK — {{ len $projects }} LIVE{{ end }}</div>
+    <h1 class="title">{{ if $isFr }}Projets{{ else }}Projects{{ end }}</h1>
+    <p class="lede">
+      {{ if $isFr }}
+        Des <b>applications</b>, <b>agents</b> et <b>outils</b> que j'ai conçus et livrés de bout en bout — du coaching aux échecs à la théorie musicale, en passant par l'automatisation. En ligne, en production, à un clic.
+      {{ else }}
+        <b>Apps</b>, <b>agents</b> and <b>tools</b> I've designed and shipped end to end — from chess coaching to music theory to workflow automation. Live, in production, one click away.
+      {{ end }}
+    </p>
+    <div class="stats-row">
+      <div class="stat"><b>{{ len $projects }}</b>{{ if $isFr }}Produits en ligne{{ else }}Live products{{ end }}</div>
+      <div class="stat"><b>2</b>{{ if $isFr }}Domaines : IA & musique{{ else }}Domains: AI & music{{ end }}</div>
+      <div class="stat"><b>01</b>{{ if $isFr }}Développeur{{ else }}Developer{{ end }}</div>
+    </div>
+  </section>
+
+  <section class="grid">
+    {{ range $p := $projects }}
+    <a class="card" style="--card-accent:{{ $p.accent }}" href="{{ $p.url }}" target="_blank" rel="noopener noreferrer">
+      <div class="card-media">
+        <img src="{{ $p.img }}" alt="{{ $p.name }}" loading="lazy" decoding="async">
+        <div class="card-head">
+          <span class="designation">SYS · {{ $p.id }}</span>
+          <span class="status"><span class="dot"></span>{{ if $isFr }}EN LIGNE{{ else }}ONLINE{{ end }}</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-tag">{{ if $isFr }}{{ $p.tagFr }}{{ else }}{{ $p.tagEn }}{{ end }}</div>
+        <h2>{{ $p.name }}</h2>
+        <p>{{ if $isFr }}{{ $p.descFr }}{{ else }}{{ $p.descEn }}{{ end }}</p>
+        <span class="launch"><span class="bar"></span>{{ if $isFr }}Lancer{{ else }}Launch{{ end }}
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </span>
+      </div>
+    </a>
+    {{ end }}
+  </section>
+
+  <footer class="sitefoot">
+    <span>{{ if $isFr }}Conçu et développé par William Elimbi{{ else }}Designed & built by William Elimbi{{ end }}</span>
+    <a href="/">elimbi.com</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var canvas = document.getElementById('glbg');
+  var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if(!gl){
+    canvas.style.background = 'radial-gradient(ellipse at 30% 20%, #0d1620 0%, #06080b 60%)';
+    return;
+  }
+
+  var vsSrc = 'attribute vec2 a_pos; void main(){ gl_Position = vec4(a_pos,0.0,1.0); }';
+  var fsSrc = [
+    'precision mediump float;',
+    'uniform vec2 u_resolution;',
+    'uniform float u_time;',
+    'uniform vec2 u_mouse;',
+    'float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453123); }',
+    'float noise(vec2 p){',
+    '  vec2 i=floor(p), f=fract(p);',
+    '  float a=hash(i), b=hash(i+vec2(1.0,0.0)), c=hash(i+vec2(0.0,1.0)), d=hash(i+vec2(1.0,1.0));',
+    '  vec2 u=f*f*(3.0-2.0*f);',
+    '  return mix(a,b,u.x) + (c-a)*u.y*(1.0-u.x) + (d-b)*u.x*u.y;',
+    '}',
+    'float fbm(vec2 p){',
+    '  float v=0.0, a=0.5;',
+    '  for(int i=0;i<5;i++){ v+=a*noise(p); p*=2.02; a*=0.5; }',
+    '  return v;',
+    '}',
+    'void main(){',
+    '  vec2 uv = gl_FragCoord.xy / u_resolution.xy;',
+    '  float aspect = u_resolution.x/u_resolution.y;',
+    '  vec2 p = uv; p.x *= aspect;',
+    '  vec2 mouse = u_mouse; mouse.x *= aspect;',
+    '  float t = u_time*0.045;',
+    '  vec2 warp = p*2.6 + vec2(fbm(p*2.0+t), fbm(p*2.0-t))*1.1;',
+    '  float n = fbm(warp + t);',
+    '  vec2 gridUv = p*13.0 + vec2(fbm(p*1.3+t)*0.5);',
+    '  vec2 gf = abs(fract(gridUv)-0.5);',
+    '  float line = smoothstep(0.0,0.02, min(gf.x,gf.y));',
+    '  float grid = 1.0-line;',
+    '  vec3 base = mix(vec3(0.016,0.024,0.035), vec3(0.03,0.06,0.075), n);',
+    '  vec3 cyan = vec3(0.16,0.9,0.85);',
+    '  vec3 amber = vec3(0.95,0.62,0.16);',
+    '  vec3 col = base;',
+    '  col += grid*0.045*mix(cyan,amber,0.5+0.5*sin(t*3.0+p.x*4.0));',
+    '  float glow = smoothstep(0.62,1.0,n);',
+    '  col += glow*0.22*cyan;',
+    '  float d = distance(p, mouse);',
+    '  col += 0.14*cyan*smoothstep(0.45,0.0,d);',
+    '  float vig = smoothstep(1.15,0.25,length(uv-0.5));',
+    '  col *= vig;',
+    '  gl_FragColor = vec4(col,1.0);',
+    '}'
+  ].join('\n');
+
+  function compile(type, src){
+    var s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  var vs = compile(gl.VERTEX_SHADER, vsSrc);
+  var fs = compile(gl.FRAGMENT_SHADER, fsSrc);
+  var prog = gl.createProgram();
+  gl.attachShader(prog, vs);
+  gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+
+  var buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  var posLoc = gl.getAttribLocation(prog, 'a_pos');
+  gl.enableVertexAttribArray(posLoc);
+  gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+
+  var uRes = gl.getUniformLocation(prog, 'u_resolution');
+  var uTime = gl.getUniformLocation(prog, 'u_time');
+  var uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  var mouse = [0.5, 0.5];
+  window.addEventListener('pointermove', function(e){
+    mouse[0] = e.clientX / window.innerWidth;
+    mouse[1] = 1.0 - e.clientY / window.innerHeight;
+  }, {passive:true});
+
+  var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+  function resize(){
+    canvas.width = Math.floor(window.innerWidth * dpr);
+    canvas.height = Math.floor(window.innerHeight * dpr);
+    gl.viewport(0,0,canvas.width, canvas.height);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  var start = performance.now();
+  function frame(now){
+    var t = (now - start) / 1000;
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, t);
+    gl.uniform2f(uMouse, mouse[0], mouse[1]);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    if(!reduced) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  if(reduced){
+    setTimeout(function(){ requestAnimationFrame(frame); }, 50);
+  }
+})();
+</script>
+
+<script>
+  document.querySelectorAll('.card').forEach(function(card, i){
+    card.style.animationDelay = (i * 0.07) + 's';
+    var rect;
+    card.addEventListener('pointermove', function(e){
+      rect = card.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = 'perspective(700px) rotateX(' + (y * -6) + 'deg) rotateY(' + (x * 8) + 'deg) translateY(-2px)';
+    });
+    card.addEventListener('pointerleave', function(){
+      card.style.transform = '';
+    });
+  });
+</script>
+</body>
+</html>
