@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 // Creates and sends a Listmonk campaign for each newly added blog post.
-// Triggered by .github/workflows/newsletter.yml on push to master.
+// Run by /mnt/storage/listmonk/send-newsletter-cron.sh (self-hosted cron).
 
 import { execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
+import { marked } from 'marked';
 
 const {
   LISTMONK_URL,
@@ -97,6 +98,22 @@ function escapeHtml(s = '') {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// --- Extract the raw markdown body (everything after the YAML frontmatter) ---
+function extractBody(file) {
+  const raw = readFileSync(file, 'utf8');
+  const m = raw.match(/^---\r?\n[\s\S]*?\r?\n---\s*\r?\n([\s\S]*)$/);
+  return (m ? m[1] : raw).trim();
+}
+
+// --- Rewrite site-relative image/link URLs (/img/x.jpg) to absolute (https://elimbi.com/...) ---
+function absolutizeUrls(html) {
+  const base = SITE_URL.replace(/\/+$/, '');
+  return html.replace(/((?:src|href)=")(\/[^"]*)(")/g, (m, pre, path, post) => {
+    if (path.startsWith('//')) return m; // protocol-relative, leave as-is
+    return pre + base + path + post;
+  });
+}
+
 const posts = addedPosts();
 if (posts.length === 0) {
   console.log('No newly added posts in this push. Nothing to send.');
@@ -110,17 +127,19 @@ for (const file of posts) {
   if (String(fm.draft).toLowerCase() === 'true') { console.log(`Skip ${file}: draft`); continue; }
 
   const title = fm.title || slugFor(file, fm);
-  const description = fm.description || '';
   const url = `${SITE_URL}/posts/${slugFor(file, fm)}/`;
 
   console.log(`\nPost: "${title}"\n  URL: ${url}`);
   const live = await waitForLive(url);
   console.log(`  live: ${live}`);
 
+  // Full post content (markdown -> HTML) so subscribers read the whole article.
+  const contentHtml = absolutizeUrls(marked.parse(extractBody(file)));
+
   const body = `
 <h1>${escapeHtml(title)}</h1>
-${description ? `<p>${escapeHtml(description)}</p>` : ''}
-<p><a href="${url}">Read the full post &rarr;</a></p>
+${contentHtml}
+<p><a href="${url}">Read on the blog &rarr;</a></p>
 `.trim();
 
   const created = await lm('/api/campaigns', 'POST', {
