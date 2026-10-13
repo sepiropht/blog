@@ -21,6 +21,36 @@
     {
       "source": "/.well-known/nostr.json",
       "destination": "/api/nostr"
+    },
+    {
+      "source": "/cv",
+      "destination": "/cv.pdf"
+    },
+    {
+      "source": "/cv/",
+      "destination": "/cv.pdf"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/cv",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"cv.pdf\"" }
+      ]
+    },
+    {
+      "source": "/cv/",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"cv.pdf\"" }
+      ]
+    },
+    {
+      "source": "/cv.pdf",
+      "headers": [
+        { "key": "Content-Disposition", "value": "inline; filename=\"cv.pdf\"" }
+      ]
     }
   ]
 }
