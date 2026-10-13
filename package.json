@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "hugo server -D --bind 0.0.0.0"
   },
