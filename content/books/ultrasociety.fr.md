@@ -1,9 +1,9 @@
 ---
 weight: 10
-title: "Ultrasociety: Comment 10 000 ans de guerre ont fait de nous ce que nous sommes"
+title: "Ultrasociety de Peter Turchin : résumé et avis"
 image: "/img/ultrasociety-fr.jpg"
 date: 2025-12-14T10:00:00Z
-description: "La thèse provocatrice de Peter Turchin selon laquelle la guerre, et non la paix, a été le principal moteur de la coopération humaine et de la civilisation"
+description: "Résumé et avis sur Ultrasociety : pour Peter Turchin, 10 000 ans de guerre, et non la paix, ont fait de l'humain l'espèce la plus coopérative. Idées clés."
 tags: ["Histoire", "Évolution", "Sociologie", "Guerre", "Civilisation"]
 type: post
 showTableOfContents: true

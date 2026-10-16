@@ -1,8 +1,8 @@
 ---
 weight: 10
-title: 'How I Back Up My Data'
+title: "How I Back Up My Homelab: Borg Backup + AWS S3 Glacier (3-2-1)"
 date: 2024-08-22T14:00:00.315Z
-description: "Don't lost your data"
+description: "My homelab backup plan following the 3-2-1 rule: deduplicated Borg Backup plus a cheap off-site copy on Amazon S3 Glacier to survive disk failure or fire."
 tags: ['aws', 'self-hosting', 'backup']
 type: post
 showTableOfContents: true

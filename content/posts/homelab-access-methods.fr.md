@@ -1,8 +1,8 @@
 ---
-title: "Accéder à son Homelab depuis l'Extérieur : Toutes les Méthodes"
+title: "Accéder à son homelab à distance : WireGuard, Tailscale, NetBird"
 date: 2026-01-08T11:00:00Z
 image: "/img/homelab-access.jpg"
-description: "Un tour d'horizon des façons d'accéder à ton homelab depuis l'extérieur : ouverture de ports, WireGuard, Tailscale et NetBird."
+description: "CGNAT ou IP fixe : 4 façons d'accéder à son homelab depuis l'extérieur (ouverture de ports, WireGuard, Tailscale, NetBird), avantages, limites et sécurité."
 tags: ["homelab", "réseau", "sécurité", "vpn", "auto-hébergement"]
 type: post
 showTableOfContents: true

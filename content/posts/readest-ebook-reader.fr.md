@@ -1,9 +1,9 @@
 ---
-title: "Readest : le lecteur d'ebooks open-source multi-plateforme qui synchronise tout"
+title: "Readest : avis sur le lecteur d'ebooks open-source vs KOReader"
 date: 2026-01-19
 type: post
 tags: ["self-hosting", "books", "ebook", "open-source", "readest", "lecture", "epub", "koreader"]
-description: "Découvrez Readest, un lecteur d'ebooks open-source moderne disponible sur macOS, Windows, Linux, Android, iOS et Web. Synchronisation des livres, annotations et progression de lecture entre tous vos appareils."
+description: "Readest synchronise livres, notes et progression entre ordinateur, mobile et web. Comparaison avec KOReader sur ma Kobo, support OPDS et limites actuelles."
 image: "/img/readest.webp"
 ---
 

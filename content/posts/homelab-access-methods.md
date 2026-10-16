@@ -1,8 +1,8 @@
 ---
-title: "Accessing Your Homelab from the Outside: All the Methods"
+title: "Access Your Homelab Remotely: WireGuard vs Tailscale vs NetBird"
 date: 2026-01-08T11:00:00Z
 image: "/img/homelab-access.jpg"
-description: "An overview of ways to access your homelab from the outside: port forwarding, WireGuard, Tailscale, and NetBird."
+description: "Behind CGNAT or not, compare 4 ways to reach your homelab from outside: port forwarding, WireGuard, Tailscale and NetBird, with pros, cons and security tips."
 tags: ["homelab", "networking", "security", "vpn", "self-hosting"]
 type: post
 showTableOfContents: true

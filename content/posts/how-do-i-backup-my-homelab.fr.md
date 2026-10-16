@@ -1,8 +1,8 @@
 ---
 weight: 10
-title: 'Comment je sauvegarde mes données'
+title: "Sauvegarder son homelab : Borg Backup + AWS S3 Glacier (3-2-1)"
 date: 2024-08-22T14:00:00.315Z
-description: 'Ne perdez plus vous données'
+description: "Mon plan de sauvegarde homelab selon la règle 3-2-1 : archives dédupliquées avec Borg Backup et copie hors site sur Amazon S3 Glacier contre panne ou incendie."
 tags: ['aws', 'auto-hebergemenent', 'sauvegarde']
 type: post
 showTableOfContents: true

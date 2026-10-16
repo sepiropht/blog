@@ -1,9 +1,9 @@
 ---
 weight: 10
-title: "Ultrasociety: How 10,000 Years of War Made Us Who We Are"
+title: "Ultrasociety by Peter Turchin: Summary & Review"
 image: "/img/ultrasociety-en.jpg"
 date: 2025-12-14T10:00:00Z
-description: "Peter Turchin's provocative thesis that war, not peace, has been the primary driver of human cooperation and civilization"
+description: "Summary and review of Ultrasociety: Peter Turchin argues 10,000 years of war, not peace, made humans the most cooperative species on Earth. Key ideas inside."
 tags: ["History", "Evolution", "Sociology", "War", "Civilization"]
 type: post
 showTableOfContents: true
