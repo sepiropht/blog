@@ -1,9 +1,9 @@
 ---
-title: "Readest : avis sur le lecteur d'ebooks open-source vs KOReader"
+title: "Readest vs KOReader sur Kobo : self-host, Docker et synchro"
 date: 2026-01-19
 type: post
 tags: ["self-hosting", "books", "ebook", "open-source", "readest", "lecture", "epub", "koreader"]
-description: "Readest synchronise livres, notes et progression entre ordinateur, mobile et web. Comparaison avec KOReader sur ma Kobo, support OPDS et limites actuelles."
+description: "Readest vs KOReader sur Kobo : peut-on self-host le serveur de synchro Readest avec Docker ? Mon avis honnête sur la synchro, l'OPDS et les limites."
 image: "/img/readest.webp"
 ---
 

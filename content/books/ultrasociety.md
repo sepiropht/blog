@@ -1,9 +1,9 @@
 ---
 weight: 10
-title: "Ultrasociety by Peter Turchin: Summary & Review"
+title: "Ultrasociety by Peter Turchin: Book Summary & Review"
 image: "/img/ultrasociety-en.jpg"
 date: 2025-12-14T10:00:00Z
-description: "Summary and review of Ultrasociety: Peter Turchin argues 10,000 years of war, not peace, made humans the most cooperative species on Earth. Key ideas inside."
+description: "Ultrasociety book summary: Peter Turchin argues 10,000 years of war, not peace, made humans the most cooperative species on Earth. Key ideas and review."
 tags: ["History", "Evolution", "Sociology", "War", "Civilization"]
 type: post
 showTableOfContents: true

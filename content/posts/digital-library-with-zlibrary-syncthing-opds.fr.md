@@ -1,10 +1,10 @@
 ---
-title: "Z-Library sur Kobo via OPDS : ma bibliothèque self-hosted"
+title: "OPDS sur Kobo : vos ebooks Z-Library sur liseuse (guide)"
 date: 2025-10-09
 lastmod: 2026-01-19
 type: post
 tags: ["self-hosting", "books", "opds", "syncthing", "z-library", "ebook", "kobo", "koreader", "liseuse"]
-description: "Vos ebooks Z-Library sur Kobo, KOReader ou PocketBook : bot Telegram, synchro Syncthing et serveur OPDS dir2opds. Guide pas à pas avec Docker Compose."
+description: "Installez un serveur OPDS pour votre Kobo et récupérez vos ebooks Z-Library : bot Telegram, synchro Syncthing et dir2opds avec Docker Compose. Guide."
 ---
 
 ## Créer sa bibliothèque numérique self-hosted : le guide complet

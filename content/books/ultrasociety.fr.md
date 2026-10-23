@@ -1,9 +1,9 @@
 ---
 weight: 10
-title: "Ultrasociety de Peter Turchin : résumé et avis"
+title: "Ultrasociety de Peter Turchin : résumé du livre et avis"
 image: "/img/ultrasociety-fr.jpg"
 date: 2025-12-14T10:00:00Z
-description: "Résumé et avis sur Ultrasociety : pour Peter Turchin, 10 000 ans de guerre, et non la paix, ont fait de l'humain l'espèce la plus coopérative. Idées clés."
+description: "Ultrasociety, le livre de Peter Turchin : 10 000 ans de guerre, et non la paix, ont fait de l'humain l'espèce la plus coopérative. Résumé et idées clés."
 tags: ["Histoire", "Évolution", "Sociologie", "Guerre", "Civilisation"]
 type: post
 showTableOfContents: true
