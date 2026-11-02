@@ -1,5 +1,39 @@
 {{ define "main" }}
-{{- partial "newsletter.html" . -}}
+{{ $fr := eq .Language.Lang "fr" }}
+<section class="home-intro">
+    <div class="home-portrait-frame">
+        <img class="home-portrait" src="{{ "img/me.jpg" | relURL }}" alt="William Elimbi" width="640" height="640">
+    </div>
+    <h1>William Elimbi</h1>
+    <p class="home-bio">
+        {{ if $fr }}
+        J'auto-héberge mes outils et j'écris sur ce que je construis, et sur ce que je lis.
+        {{ else }}
+        I self-host my tools and write about what I build, and what I read.
+        {{ end }}
+    </p>
+    <ul class="home-socials">
+        <li>
+            <a href="https://www.youtube.com/@williamelimbi" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+                YouTube
+            </a>
+        </li>
+        <li>
+            <a href="https://x.com/sepiropht" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2.3h3.3l-7.2 8.3L23 21.7h-6.2l-4.7-6.2-5.4 6.2H3.4l7.7-8.8L1.3 2.3H7.6l4.3 5.6 6.3-5.6zm-1.2 17.5h1.8L7.1 4.1H5.2l11.8 15.7z"/></svg>
+                X
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/william-mbotta-elimbi/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3-1.9 0-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.3zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.5C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+                LinkedIn
+            </a>
+        </li>
+    </ul>
+    {{- partial "newsletter.html" . -}}
+</section>
 
 {{ if os.FileExists "index-about.md" }}
 <div class="markdown-content">
@@ -7,7 +41,7 @@
 </div>
 {{ end }}
 
-{{ $fr := eq .Language.Lang "fr" }}
+<div class="home-archive">
 <div class="post-filters">
     <button class="post-filter is-active" data-filter="all">{{ if $fr }}Tout{{ else }}All{{ end }}</button>
     <button class="post-filter" data-filter="blog">Blog</button>
@@ -22,6 +56,7 @@
             {{- partial "list-posts.html" . -}}
         {{ end }}
     {{ end }}
+</div>
 </div>
 <script src="/js/home-filter.js" defer></script>
 {{ end }}

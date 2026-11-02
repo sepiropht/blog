@@ -97,6 +97,90 @@ img[src*="chess"] {
   height: auto;
 }
 
+/* First screen: photo, a short intro, social links. Posts start below the fold. */
+.home-intro {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100dvh - 80px);
+}
+
+.home-portrait-frame {
+  width: 148px;
+  height: 148px;
+  margin: 0 0 1.15rem;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* Source is 640px square. Show the face: x 310–590, y 150–430. */
+.home-portrait {
+  display: block;
+  width: calc(148px * 640 / 280);
+  height: calc(148px * 640 / 280);
+  max-width: none;
+  margin: calc(-150 * 148px / 280) 0 0 calc(-310 * 148px / 280);
+}
+
+.home-intro h1 {
+  margin: 0 0 0.45rem;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.home-bio {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.home-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin: 1.05rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.98rem;
+  text-decoration: none;
+}
+
+.home-socials svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+
+.home-socials a:focus-visible {
+  outline: 2px solid var(--accent-color, #ff4d4d);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.home-intro .newsletter--home {
+  margin-top: 1.7rem;
+  margin-bottom: 0;
+}
+
+.home-intro .newsletter--home .newsletter-follow {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.home-archive {
+  padding-top: 2.5rem;
+}
+
 /* Newsletter — one field, button inside it. Home page leads with it. */
 .newsletter {
   margin-top: 2.5rem;
