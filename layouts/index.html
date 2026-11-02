@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{- partial "newsletter.html" . -}}
+
 {{ if os.FileExists "index-about.md" }}
 <div class="markdown-content">
     {{ readFile "index-about.md" | markdownify }}

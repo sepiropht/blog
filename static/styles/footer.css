@@ -97,64 +97,112 @@ img[src*="chess"] {
   height: auto;
 }
 
-/* Newsletter subscription form — compact */
+/* Newsletter — one field, button inside it. Home page leads with it. */
 .newsletter {
   margin-top: 2.5rem;
-  padding: 1rem 1.1rem;
-  max-width: 520px;
-  border: 1px solid var(--dark-tertiary-color, #e0e0e0);
-  border-radius: 8px;
-  background: var(--dark-secondary-color, #f8f8f8);
-  color: var(--dark-text-color, #111);
+  max-width: 36rem;
+  color: inherit;
+}
+
+.newsletter--home {
+  margin-top: 0.25rem;
+  margin-bottom: 2.75rem;
 }
 
 .newsletter-follow {
-  margin: 0 0 0.75rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
+  margin: 0 0 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.newsletter--home .newsletter-follow {
+  font-size: 1.25rem;
+  letter-spacing: -0.015em;
 }
 
 .newsletter-form {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 4px;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 12px;
+  background: transparent;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.newsletter-form:focus-within {
+  border-color: var(--accent-color, #ff4d4d);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color, #ff4d4d) 20%, transparent);
 }
 
 .newsletter-input {
-  flex: 1 1 180px;
-  padding: 0.45rem 0.7rem;
-  font-size: 0.9rem;
-  border: 1px solid var(--dark-tertiary-color, #e0e0e0);
-  border-radius: 6px;
-  background: var(--dark-secondary-color, #fff);
-  color: var(--dark-text-color, #111);
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.newsletter-input::placeholder {
+  opacity: 0.45;
 }
 
 .newsletter-button {
-  padding: 0.45rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.65rem 1.05rem;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  background: var(--accent-color, #007bff);
+  background: var(--accent-color, #ff4d4d);
   color: #fff;
-  transition: opacity 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .newsletter-button:hover {
-  opacity: 0.9;
+  filter: brightness(0.94);
 }
 
 .newsletter-button:disabled {
   opacity: 0.6;
   cursor: default;
+  filter: none;
+}
+
+.newsletter-button:focus-visible,
+.post-filter:focus-visible {
+  outline: 2px solid var(--accent-color, #ff4d4d);
+  outline-offset: 2px;
 }
 
 .newsletter-message {
-  margin: 0.75rem 0 0;
+  margin: 0.65rem 0 0;
   font-size: 0.9rem;
-  min-height: 1.2em;
+  min-height: 0;
+}
+
+.newsletter-message:empty {
+  display: none;
 }
 
 .newsletter-message.ok {
@@ -165,7 +213,17 @@ img[src*="chess"] {
   color: #cf222e;
 }
 
-.newsletter-input::placeholder {
+html:has(#dark-theme:not([disabled])) .newsletter-message.ok {
+  color: #3fb950;
+}
+
+html:has(#dark-theme:not([disabled])) .newsletter-message.error {
+  color: #ff7b72;
+}
+
+.newsletter-note {
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
   opacity: 0.55;
 }
 
@@ -246,9 +304,13 @@ body.dark .all-posts .post-year {
 .post-filter.is-active {
   opacity: 1;
   font-weight: 600;
-  background: var(--accent-color, #007bff);
-  color: #fff;
-  border-color: transparent;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  color: inherit;
+  border-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
+.home-posts.list-posts .post-title {
+  margin-left: 0;
 }
 
 /* "Originally posted on X" note */
