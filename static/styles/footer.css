@@ -168,8 +168,12 @@ img[src*="chess"] {
 }
 
 .home-intro .newsletter--home {
-  margin-top: 1.7rem;
-  margin-bottom: 0;
+  margin-top: 0.1rem;
+  margin-bottom: 2.75rem;
+}
+
+.home-intro .home-socials {
+  margin-top: 0.1rem;
 }
 
 .home-intro .newsletter--home .newsletter-follow {
