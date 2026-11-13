@@ -29,6 +29,7 @@ enableRobotsTXT = true
   dateFormat = "January 2, 2006"
   socialIcons = [
     {name = "twitter", url = "https://twitter.com/sepiropht"},
+    {name = "tiktok", url = "https://www.tiktok.com/@sepiropht"},
     {name = "email", url = "mailto:sepiropht@sepiropht.me"}
   ]
   metaKeywords = ["blog", "sepiropht", "self-hosting", "no-google"]
